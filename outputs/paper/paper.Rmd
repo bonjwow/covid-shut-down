@@ -1,0 +1,129 @@
+---
+title: "TBD"
+subtitle: "TBD"
+author: "TBD"
+thanks: "Code and data are available at: LINK."
+date: "`r format(Sys.time(), '%d %B %Y')`"
+abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
+output:
+  bookdown::pdf_document2:
+toc: FALSE
+bibliography: references.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(ggplot2)
+library(kableExtra)
+library(janitor)
+```
+
+```{r, include=FALSE}
+#### Functions ####
+percent <- function(x, decimal = 2, format = "f") {   
+  paste0(formatC(x, format = format, digits = decimal), "%")
+}
+
+```
+
+# Data
+
+```{r, include=FALSE}
+dfBiz <- readr::read_csv("../../inputs/data/data_business_licences.csv")
+
+#### Boroughs ####
+# Toronto - 103 FSAs
+# https://en.wikipedia.org/wiki/List_of_postal_codes_of_Canada:_M
+# https://www.canadapost.ca/cpo/mc/assets/pdf/business/nps/machineable_presort_fsalist_february2014.pdf
+
+## Central Toronto
+borCentTor <- c("M4N", "M5N", "M4P", "M5P", "M4R", "M5R", "M4S", "M4T", "M4V")
+## Downtown Toronto
+borDownTor <- c("M5A", "M7A", "M5B", "M5C", "M5E", "M5G", "M6G", "M5H", "M5J", "M5K", "M5L", "M5S", "M5T", "M5V", "M4W", "M5W", "M4X", "M5X", "M4Y")
+## East Toronto
+borEastTor <- c("M4E", "M4K", "M4L", "M4M", "M7Y")
+## East York
+borEastYork <- c("M4B", "M4C", "M4G", "M4H", "M4J")
+## Etobicoke
+borEtob <- c("M9A", "M9B", "M9C", "M9P", "M9R", "M8V", "M9V", "M8W", "M9W", "M8X", "M8Y", "M8Z")
+## North York
+borNorYork <- c("M3A", "M4A", "M6A", "M3B", "M6B", "M3C", "M2H", "M3H", "M2J", "M3J", "M2K", "M3K", "M2L", "M3L", "M6L", "M9L", "M2M", "M3M", "M5M", "M9M", "M2N", "M3N", "M2P", "M2R" )
+## Scarborough
+borScarb <- c("M1B", "M1C", "M1E", "M1G", "M1H", "M1J", "M1K", "M1L", "M1M", "M1N", "M1P", "M1R", "M1S", "M1T", "M1V", "M1W", "M1X")
+## West Toronto
+borWestTor <- c("M6H", "M6J", "M6K", "M6P", "M6R", "M6S")
+## York
+borYork <- c("M6C", "M6E", "M6M", "M6N", "M9N")
+## All
+borAll <- c(borCentTor, borDownTor, borEastTor, borEastYork, borEtob, borNorYork, borScarb, borWestTor, borYork)
+
+
+dfBiz <-
+  dfBiz %>%
+  janitor::clean_names() %>%
+  select('licence_no',
+         'category',
+         'licence_address_line_3') %>%
+  filter(category == "EATING ESTABLISHMENT") %>%
+  # Remove empty rows
+  mutate_all(~ifelse(. %in% c("N/A", "null", ""), NA, .)) %>%
+  na.omit() %>%
+  # Rename 'licence_address_line_3' fsa
+  rename(fsa = 'licence_address_line_3') %>%
+  mutate(fsa = substr(fsa, 1, 3)) %>%
+  
+  # Group FSAs by borough
+  mutate(fsa = ifelse(!fsa %in% borAll,"NA", fsa)) %>%
+  mutate(fsa = ifelse(fsa %in% borCentTor,"Central Toronto", fsa)) %>%
+  mutate(fsa = ifelse(fsa %in% borDownTor,"Downtown Toronto", fsa)) %>%
+  mutate(fsa = ifelse(fsa %in% borEastTor,"East Toronto", fsa)) %>%
+  mutate(fsa = ifelse(fsa %in% borEastYork,"East York", fsa)) %>%
+  mutate(fsa = ifelse(fsa %in% borEtob,"Etobicoke", fsa)) %>%
+  mutate(fsa = ifelse(fsa %in% borNorYork,"North York", fsa)) %>%
+  mutate(fsa = ifelse(fsa %in% borScarb,"Scarborough", fsa)) %>%
+  mutate(fsa = ifelse(fsa %in% borWestTor,"West Toronto", fsa)) %>%
+  mutate(fsa = ifelse(fsa %in% borYork,"York", fsa)) %>%
+
+  # Count number of rows by borough group
+  count(fsa)
+
+print(dfBiz)
+```
+
+```{r, echo = FALSE}
+#### Pie Chart ####
+
+data <- data.frame(
+  group = dfBiz$fsa,
+  value = dfBiz$n
+)
+
+data <- data %>% 
+  arrange(desc(group)) %>%
+  mutate(prop = value / sum(data$value) *100) %>%
+  mutate(ypos = cumsum(prop)- 0.5*prop )
+
+print(data)
+
+# Basic piechart
+ggplot(data, aes(x="", y=prop, fill=group)) +
+  geom_bar(stat="identity", width=1, color="white") +
+  coord_polar("y", start=0) +
+  theme_void() + 
+  geom_text(aes(y = ypos, label = percent(prop)), color = "white", size=3) +
+  scale_fill_brewer(palette="Paired")
+```
+
+
+\newpage
+
+# Appendix {-}
+
+\newpage
+
+
+# References
+
+
