@@ -14,6 +14,7 @@ This project is one of course assignments of [INF2178: Experimental Design for D
   git clone https://github.com/bonjwow/covid-shut-down.git
   ```
 2. Run `00-import_business_licences.R` in the `scripts` folder to obtain the most updated data from Open Data Portal
+3. Run `01-data_cleaning_business_licences.R` to clean the dataset
 
 ## License
 Distributed under the MIT License. See `LICENSE` for more information.
