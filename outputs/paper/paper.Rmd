@@ -60,6 +60,9 @@ ggplot(dfBoroughs, aes(x="", y = prop, fill = group)) +
   scale_fill_brewer(palette = "Paired")
 ```
 
+```{r, echo = FALSE}
+print(dfBoroughs$prop)
+```
 
 \newpage
 
