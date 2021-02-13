@@ -55,21 +55,21 @@ dfBiz <-
          'cancel_date') %>%
   filter(category == "EATING ESTABLISHMENT") %>%
   
-  ### Remove empty rows
-  mutate_all(~ifelse(. %in% c("N/A", "null", ""), NA, .)) %>%
-  na.omit() %>%
-  
+  # ### Remove empty rows
+  # mutate_all(~ifelse(. %in% c("N/A", "null", ""), NA, .)) %>%
+  # na.omit() %>%
+
   ### Remove rows including 'Cancel Date'
-  # filter(!grepl('-', cancel_date)) %>%
-  
+  filter(!grepl('-', cancel_date)) %>%
+
   ### Remove rows including 'NO SEATING' or 'TAKE OUT'
   filter(!grepl('NO SEATING', conditions)) %>%
   filter(!grepl('TAKE OUT', conditions)) %>%
-  
+
   ### Rename 'licence_address_line_3' fsa
   rename(fsa = 'licence_address_line_3') %>%
   mutate(fsa = substr(fsa, 1, 3)) %>%
-  
+
   ### Group FSAs by borough
   mutate(fsa = ifelse(!fsa %in% borAll,"NA", fsa)) %>%
   mutate(fsa = ifelse(fsa %in% borCentTor,"Central Toronto", fsa)) %>%
@@ -81,7 +81,7 @@ dfBiz <-
   mutate(fsa = ifelse(fsa %in% borScarb,"Scarborough", fsa)) %>%
   mutate(fsa = ifelse(fsa %in% borWestTor,"West Toronto", fsa)) %>%
   mutate(fsa = ifelse(fsa %in% borYork,"York", fsa)) %>%
-  
+
   ### Count number of rows by borough group
   count(fsa)
 
@@ -91,11 +91,10 @@ dfBiz <-
 # group_by(conditions, add = TRUE) %>%
 # mutate(percentage = paste0(round(100 * n / totalNumb, 2), '%'))
 
-# print(dfBiz)
+print(dfBiz)
 
 #### Save data ### 
 write_csv(dfBiz, "inputs/data/clean_business_licences.csv")
-
 
 
 
