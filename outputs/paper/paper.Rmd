@@ -56,8 +56,65 @@ ggplot(dfBoroughs, aes(x="", y = prop, fill = group)) +
 ```{r, echo = FALSE}
 #### Sampling Simulation ####
 
-### Q1: What region is your restaurant located in?
+set.seed(853)
 
+### Questions
+# Q1: What region is your restaurant located in?
+# Q2: What best describes the scale of your restaurant?
+# Q3: What best describes your restaurant segmentation?
+# Q4: How many years has your restaurant been in operation?
+# Q5: Prior to (intervention start date), how many people did you employ?
+# Q6: How many people do you currently employ?
+
+sample_size <- 200
+
+simulated_dataset_treated <- 
+  tibble(
+    type = rep("Treated", sample_size),
+    Q1 = sample(x = c(
+      "Downtown Toronto",
+      "North York",
+      "Scarborough",
+      "West Toronto",
+      "Etobicoke",
+      "York",
+      "Central Toronto",
+      "East Toronto",
+      "East York",
+      "Other"),
+      size = sample_size,
+      replace = TRUE, 
+      prob = c(0.28, 0.16, 0.14, 0.11, 0.09, 0.06, 0.06, 0.06, 0.04, 0)
+    ),
+    Q2 = sample(x = c(
+      "Small",
+      "Medium",
+      "Large"),
+      size = sample_size,
+      replace = TRUE, 
+      prob = c(0.15, 0.50, 0.35)
+    ),
+    Q3 = sample(x = c(
+      "Fast-food/quick service",
+      "Casual Dining",
+      "Fine Dining",
+      "Other"),
+      size = sample_size,
+      replace = TRUE, 
+      prob = c(0.45, 0.20, 0.10, 0.25)
+    ),
+    Q4 = sample(x = c(
+      "1-4 years",
+      "5-7 years",
+      "8-10 years",
+      "10 or more years"),
+      size = sample_size,
+      replace = TRUE, 
+      prob = c(0.40, 0.25, 0.20, 0.15)
+    ),
+    Q5 = rpois(n = sample_size, lambda = 30),
+    Q6 = rpois(n = sample_size, lambda = 15),
+  )
 
 ```
 
