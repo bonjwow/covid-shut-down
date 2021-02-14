@@ -54,6 +54,7 @@ ggplot(dfBoroughs, aes(x="", y = prop, fill = group)) +
 ```
 
 ```{r, echo = FALSE}
+### Sampling simulation
 print(dfBoroughs$prop)
 ```
 
