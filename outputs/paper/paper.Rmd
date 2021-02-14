@@ -13,7 +13,6 @@ bibliography: references.bib
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-
 library(tidyverse)
 library(ggplot2)
 library(kableExtra)
@@ -25,32 +24,26 @@ library(janitor)
 percent <- function(x, decimal = 2, format = "f") {   
   paste0(formatC(x, format = format, digits = decimal), "%")
 }
-
 ```
 
 # Data
 
 ```{r, echo = FALSE}
 #### Pie Chart ####
-
 ### Import cleaned business licences dataset
 dfCleanBiz <- readr::read_csv("../../inputs/data/clean_business_licences.csv")
-
 ### Create data frame
 dfBoroughs <- data.frame(
   group = dfCleanBiz$fsa,
   value = dfCleanBiz$n
 )
-
 ### Calculate percentages
 dfBoroughs <- dfBoroughs %>% 
   arrange(desc(group)) %>%
   mutate(prop = value / sum(dfBoroughs$value) *100) %>%
   mutate(ypos = cumsum(prop)- 0.5*prop ) %>%
   arrange(desc(prop))
-
 # print(dfBoroughs)
-
 ### Create pie chart
 ggplot(dfBoroughs, aes(x="", y = prop, fill = group)) +
   geom_bar(stat = "identity", width = 1, color = "white") +
@@ -61,13 +54,8 @@ ggplot(dfBoroughs, aes(x="", y = prop, fill = group)) +
 ```
 
 ```{r, echo = FALSE}
-#### Stratified Sampling ####
 print(dfBoroughs$prop)
-
-
 ```
-
-
 
 \newpage
 
@@ -77,5 +65,3 @@ print(dfBoroughs$prop)
 
 
 # References
-
-
