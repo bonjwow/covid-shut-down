@@ -54,8 +54,11 @@ ggplot(dfBoroughs, aes(x="", y = prop, fill = group)) +
 ```
 
 ```{r, echo = FALSE}
-### Sampling simulation
-print(dfBoroughs$prop)
+#### Sampling Simulation ####
+
+### Q1: What region is your restaurant located in?
+
+
 ```
 
 \newpage
