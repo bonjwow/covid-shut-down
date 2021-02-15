@@ -1,401 +1,331 @@
 type,Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9,Q10,Q11,Q12,Q13,Q14,Q15
-Treated,North York,Medium,Fast-food/quick service,5-7 years,26,14,Lower,Decline of 10% to 25%,75% or more,"Yes, prices were raised",UberEats,No,NA,No,NA
-Treated,Downtown Toronto,Large,Fast-food/quick service,10 or more years,37,15,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were raised",DoorDash,No,NA,Yes,1-2 days
-Treated,Scarborough,Large,Fast-food/quick service,1-4 years,29,18,Lower,Decline of 10% or less,75% or more,"Yes, prices were lowered",Other,Yes,30-50%,Yes,1-2 days
-Treated,North York,Medium,Other,5-7 years,36,20,Around the Same,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,Yes,15-30%,Yes,7 days
-Treated,Downtown Toronto,Large,Fast-food/quick service,8-10 years,31,22,Lower,Decline of 25% to 50%,50-75%,No changes were made,SkiptheDishes,Yes,30-50%,Yes,1-2 days
-Treated,North York,Large,Other,5-7 years,34,22,Lower,Decline of 10% to 25%,75% or more,No changes were made,UberEats,Yes,30-50%,Yes,3-4 days
-Treated,Downtown Toronto,Medium,Fast-food/quick service,1-4 years,25,15,Around the Same,Decline of 25% to 50%,75% or more,No changes were made,None,No,NA,Yes,1-2 days
-Treated,Downtown Toronto,Medium,Other,1-4 years,42,13,Lower,Decline of 10% to 25%,50-75%,"Yes, prices were lowered",In-house delivery service,Yes,30-50%,Yes,1-2 days
-Treated,Downtown Toronto,Medium,Fine Dining,10 or more years,35,14,Lower,Decline of 10% to 25%,75% or more,"Yes, prices were lowered",DoorDash,Yes,15% or less,Yes,7 days
-Treated,Downtown Toronto,Large,Other,1-4 years,33,18,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were raised",SkiptheDishes,No,NA,Yes,3-4 days
-Treated,East York,Large,Fast-food/quick service,1-4 years,32,14,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,Yes,15-30%,Yes,1-2 days
-Treated,Etobicoke,Medium,Fast-food/quick service,1-4 years,24,20,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,Yes,30-50%,No,NA
-Treated,Downtown Toronto,Large,Fast-food/quick service,1-4 years,37,22,Lower,Decline of 25% to 50%,75% or more,No changes were made,UberEats,Yes,30-50%,Yes,3-4 days
-Treated,Downtown Toronto,Medium,Fast-food/quick service,5-7 years,37,23,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",DoorDash,Yes,15-30%,Yes,1-2 days
-Treated,North York,Large,Casual Dining,5-7 years,28,25,Higher,Decline of 50% or more,75% or more,"Yes, prices were lowered",In-house delivery service,Yes,30-50%,Yes,1-2 days
-Treated,Downtown Toronto,Small,Other,8-10 years,34,29,Higher,Decline of 50% or more,75% or more,"Yes, prices were lowered",DoorDash,No,NA,Yes,7 days
-Treated,North York,Large,Other,1-4 years,32,18,Lower,Decline of 10% to 25%,75% or more,No changes were made,DoorDash,Yes,15-30%,Yes,5-6 days
-Treated,North York,Large,Fast-food/quick service,1-4 years,30,22,Lower,Decline of 10% to 25%,75% or more,"Yes, prices were lowered",SkiptheDishes,Yes,30-50%,Yes,1-2 days
-Treated,Downtown Toronto,Medium,Other,8-10 years,34,15,Lower,Decline of 10% or less,75% or more,No changes were made,SkiptheDishes,Yes,50-75%,No,NA
-Treated,Downtown Toronto,Medium,Other,5-7 years,24,23,Lower,Decline of 50% or more,30-50%,"Yes, prices were lowered",UberEats,Yes,15-30%,Yes,5-6 days
-Treated,East Toronto,Medium,Fast-food/quick service,1-4 years,28,22,Lower,Decline of 50% or more,75% or more,No changes were made,Other,Yes,30-50%,Yes,1-2 days
-Treated,Downtown Toronto,Large,Fast-food/quick service,5-7 years,33,16,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",Other,Yes,15% or less,Yes,1-2 days
-Treated,Downtown Toronto,Medium,Other,8-10 years,32,22,Higher,Decline of 50% or more,75% or more,No changes were made,DoorDash,No,NA,Yes,5-6 days
-Treated,West Toronto,Large,Fast-food/quick service,5-7 years,35,22,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",DoorDash,Yes,15-30%,No,NA
-Treated,Scarborough,Medium,Fast-food/quick service,1-4 years,35,22,Lower,Decline of 10% or less,75% or more,"Yes, prices were lowered",UberEats,Yes,75% or more,Yes,1-2 days
-Treated,North York,Large,Fast-food/quick service,1-4 years,30,21,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",Other,Yes,15-30%,Yes,5-6 days
-Treated,North York,Large,Other,10 or more years,32,17,Lower,Decline of 10% to 25%,30-50%,"Yes, prices were lowered",UberEats,Yes,15% or less,Yes,3-4 days
-Treated,Downtown Toronto,Large,Fast-food/quick service,1-4 years,45,20,Lower,Decline of 50% or more,75% or more,"Yes, prices were raised",UberEats,Yes,15% or less,Yes,1-2 days
-Treated,West Toronto,Medium,Casual Dining,8-10 years,30,12,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,Yes,15-30%,Yes,1-2 days
-Treated,York,Large,Fast-food/quick service,5-7 years,32,28,Around the Same,Decline of 50% or more,Did not offer takeout or delivery,"Yes, prices were raised",DoorDash,Yes,15-30%,Yes,1-2 days
-Treated,North York,Large,Fine Dining,5-7 years,26,14,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were raised",In-house delivery service,Yes,50-75%,Yes,1-2 days
-Treated,West Toronto,Medium,Fast-food/quick service,5-7 years,35,15,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were lowered",SkiptheDishes,Yes,30-50%,Yes,1-2 days
-Treated,North York,Medium,Fast-food/quick service,8-10 years,34,14,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were lowered",Other,Yes,15% or less,No,NA
-Treated,North York,Medium,Fast-food/quick service,10 or more years,36,21,Lower,Decline of 10% or less,75% or more,No changes were made,UberEats,Yes,50-75%,Yes,1-2 days
-Treated,Scarborough,Medium,Fast-food/quick service,1-4 years,30,19,Lower,Decline of 10% or less,50-75%,"Yes, prices were lowered",Other,Yes,15% or less,Yes,3-4 days
-Treated,West Toronto,Medium,Casual Dining,1-4 years,23,18,Lower,Decline of 10% to 25%,50-75%,No changes were made,UberEats,Yes,30-50%,Yes,3-4 days
-Treated,Central Toronto,Large,Fine Dining,10 or more years,38,18,Lower,Decline of 50% or more,75% or more,"Yes, prices were raised",UberEats,Yes,15-30%,Yes,1-2 days
-Treated,North York,Large,Fast-food/quick service,8-10 years,28,22,Higher,Decline of 25% to 50%,75% or more,No changes were made,SkiptheDishes,Yes,30-50%,Yes,3-4 days
-Treated,West Toronto,Large,Other,8-10 years,27,19,Lower,Decline of 10% to 25%,75% or more,"Yes, prices were lowered",UberEats,Yes,30-50%,Yes,1-2 days
-Treated,West Toronto,Medium,Fast-food/quick service,8-10 years,37,24,Lower,Decline of 10% to 25%,75% or more,"Yes, prices were lowered",UberEats,Yes,15% or less,Yes,1-2 days
-Treated,Scarborough,Large,Fast-food/quick service,1-4 years,21,24,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were lowered",SkiptheDishes,No,NA,Yes,1-2 days
-Treated,Downtown Toronto,Medium,Fine Dining,1-4 years,32,16,Higher,Decline of 10% or less,75% or more,No changes were made,Other,Yes,15-30%,Yes,1-2 days
-Treated,Downtown Toronto,Medium,Other,5-7 years,34,31,Higher,Decline of 50% or more,75% or more,"Yes, prices were lowered",Other,Yes,15-30%,Yes,3-4 days
-Treated,Etobicoke,Medium,Fine Dining,1-4 years,34,14,Lower,Decline of 10% to 25%,75% or more,No changes were made,Other,Yes,15-30%,No,NA
-Treated,Etobicoke,Medium,Fast-food/quick service,5-7 years,33,21,Lower,Decline of 50% or more,75% or more,"Yes, prices were raised",UberEats,Yes,30-50%,Yes,5-6 days
-Treated,West Toronto,Large,Fast-food/quick service,1-4 years,38,18,Lower,Decline of 10% to 25%,75% or more,"Yes, prices were lowered",UberEats,No,NA,Yes,7 days
-Treated,York,Medium,Fast-food/quick service,10 or more years,26,16,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were lowered",UberEats,Yes,15-30%,No,NA
-Treated,Downtown Toronto,Medium,Other,1-4 years,30,24,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were raised",SkiptheDishes,Yes,15-30%,Yes,3-4 days
-Treated,Downtown Toronto,Medium,Other,5-7 years,21,20,Lower,Decline of 50% or more,50-75%,"Yes, prices were lowered",UberEats,Yes,15-30%,Yes,1-2 days
-Treated,Downtown Toronto,Large,Fine Dining,5-7 years,22,25,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were raised",Other,Yes,15-30%,Yes,1-2 days
-Treated,Downtown Toronto,Large,Fast-food/quick service,1-4 years,31,25,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",DoorDash,Yes,15-30%,Yes,1-2 days
-Treated,West Toronto,Small,Casual Dining,5-7 years,23,14,Higher,Decline of 50% or more,75% or more,"Yes, prices were raised",None,Yes,50-75%,Yes,3-4 days
-Treated,Downtown Toronto,Large,Casual Dining,1-4 years,27,18,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,Yes,30-50%,Yes,1-2 days
-Treated,Downtown Toronto,Large,Fast-food/quick service,1-4 years,26,18,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were lowered",UberEats,Yes,30-50%,Yes,3-4 days
-Treated,York,Large,Fast-food/quick service,1-4 years,46,16,Lower,Decline of 25% to 50%,75% or more,No changes were made,SkiptheDishes,No,NA,Yes,1-2 days
-Treated,East Toronto,Medium,Fine Dining,8-10 years,17,15,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",SkiptheDishes,Yes,30-50%,Yes,1-2 days
-Treated,Downtown Toronto,Medium,Fast-food/quick service,8-10 years,21,25,Lower,Decline of 50% or more,75% or more,No changes were made,SkiptheDishes,Yes,15-30%,Yes,1-2 days
-Treated,Etobicoke,Medium,Casual Dining,5-7 years,34,21,Lower,Decline of 10% or less,75% or more,"Yes, prices were lowered",DoorDash,Yes,15-30%,Yes,3-4 days
-Treated,West Toronto,Large,Other,5-7 years,33,28,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were lowered",UberEats,Yes,15-30%,Yes,3-4 days
-Treated,Downtown Toronto,Large,Other,10 or more years,33,18,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",DoorDash,Yes,30-50%,Yes,1-2 days
-Treated,West Toronto,Large,Other,5-7 years,29,16,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,Yes,15-30%,Yes,1-2 days
-Treated,Downtown Toronto,Small,Other,10 or more years,34,15,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",DoorDash,Yes,30-50%,No,NA
-Treated,York,Medium,Fast-food/quick service,5-7 years,36,16,Higher,Decline of 25% to 50%,75% or more,No changes were made,None,Yes,30-50%,No,NA
-Treated,West Toronto,Small,Fine Dining,1-4 years,24,28,Lower,Decline of 10% to 25%,75% or more,"Yes, prices were raised",DoorDash,No,NA,Yes,5-6 days
-Treated,Downtown Toronto,Large,Other,1-4 years,36,21,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,Yes,15% or less,No,NA
-Treated,Downtown Toronto,Medium,Fast-food/quick service,1-4 years,23,11,Lower,Decline of 10% to 25%,75% or more,No changes were made,SkiptheDishes,Yes,50-75%,Yes,3-4 days
-Treated,Scarborough,Medium,Casual Dining,8-10 years,35,20,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",SkiptheDishes,Yes,30-50%,No,NA
-Treated,Scarborough,Large,Fast-food/quick service,10 or more years,27,19,Lower,Decline of 10% to 25%,75% or more,"Yes, prices were lowered",UberEats,Yes,15-30%,No,NA
-Treated,West Toronto,Large,Other,5-7 years,29,21,Lower,Decline of 10% to 25%,75% or more,"Yes, prices were lowered",UberEats,Yes,15-30%,Yes,1-2 days
-Treated,West Toronto,Large,Fine Dining,1-4 years,33,21,Around the Same,Decline of 25% to 50%,50-75%,"Yes, prices were lowered",UberEats,Yes,30-50%,Yes,1-2 days
-Treated,Downtown Toronto,Large,Fast-food/quick service,5-7 years,30,29,Lower,Decline of 25% to 50%,75% or more,No changes were made,Other,Yes,30-50%,Yes,1-2 days
-Treated,East Toronto,Medium,Other,10 or more years,33,20,Higher,Decline of 50% or more,75% or more,"Yes, prices were lowered",DoorDash,Yes,15-30%,Yes,1-2 days
-Treated,Downtown Toronto,Large,Other,10 or more years,26,15,Higher,Decline of 25% to 50%,75% or more,No changes were made,DoorDash,No,NA,Yes,7 days
-Treated,Etobicoke,Large,Other,5-7 years,27,24,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",DoorDash,Yes,30-50%,Yes,3-4 days
-Treated,Downtown Toronto,Large,Fast-food/quick service,1-4 years,30,18,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,Yes,30-50%,Yes,1-2 days
-Treated,Scarborough,Medium,Fast-food/quick service,8-10 years,29,23,Lower,Decline of 10% to 25%,75% or more,"Yes, prices were lowered",None,Yes,15-30%,Yes,3-4 days
-Treated,York,Medium,Other,1-4 years,21,24,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were raised",UberEats,Yes,30-50%,No,NA
-Treated,Downtown Toronto,Medium,Casual Dining,5-7 years,35,15,Lower,Decline of 50% or more,75% or more,No changes were made,UberEats,Yes,75% or more,Yes,3-4 days
-Treated,Scarborough,Large,Fast-food/quick service,1-4 years,26,26,Lower,Decline of 50% or more,50-75%,No changes were made,SkiptheDishes,Yes,50-75%,Yes,1-2 days
-Treated,Downtown Toronto,Large,Fast-food/quick service,10 or more years,38,21,Lower,Decline of 50% or more,75% or more,No changes were made,SkiptheDishes,Yes,75% or more,Yes,3-4 days
-Treated,Downtown Toronto,Medium,Casual Dining,1-4 years,36,28,Lower,Decline of 10% or less,75% or more,"Yes, prices were raised",Other,Yes,30-50%,No,NA
-Treated,York,Large,Other,5-7 years,28,23,Lower,Decline of 10% or less,75% or more,"Yes, prices were lowered",SkiptheDishes,Yes,15-30%,Yes,7 days
-Treated,Downtown Toronto,Medium,Fast-food/quick service,1-4 years,35,20,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",DoorDash,Yes,50-75%,Yes,1-2 days
-Treated,Downtown Toronto,Medium,Fine Dining,10 or more years,29,17,Lower,Decline of 50% or more,75% or more,No changes were made,DoorDash,No,NA,Yes,1-2 days
-Treated,Etobicoke,Medium,Casual Dining,5-7 years,33,25,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",Other,Yes,50-75%,Yes,1-2 days
-Treated,West Toronto,Medium,Fine Dining,10 or more years,30,22,Lower,Decline of 50% or more,50-75%,"Yes, prices were lowered",Other,No,NA,Yes,3-4 days
-Treated,West Toronto,Large,Fast-food/quick service,1-4 years,22,18,Higher,Decline of 50% or more,75% or more,"Yes, prices were raised",In-house delivery service,No,NA,Yes,1-2 days
-Treated,West Toronto,Medium,Fast-food/quick service,5-7 years,34,20,Higher,Decline of 50% or more,75% or more,"Yes, prices were raised",UberEats,Yes,15-30%,Yes,1-2 days
-Treated,Etobicoke,Medium,Fast-food/quick service,8-10 years,26,17,Lower,Decline of 10% or less,50-75%,"Yes, prices were lowered",UberEats,Yes,15-30%,Yes,3-4 days
-Treated,Scarborough,Large,Fast-food/quick service,8-10 years,23,14,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were lowered",DoorDash,Yes,75% or more,Yes,1-2 days
-Treated,Scarborough,Medium,Fast-food/quick service,1-4 years,24,24,Lower,Decline of 50% or more,75% or more,No changes were made,SkiptheDishes,Yes,15-30%,Yes,1-2 days
-Treated,York,Medium,Casual Dining,8-10 years,26,19,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,Yes,15% or less,Yes,3-4 days
-Treated,Scarborough,Medium,Fast-food/quick service,5-7 years,33,17,Higher,Decline of 50% or more,75% or more,"Yes, prices were lowered",Other,No,NA,Yes,1-2 days
-Treated,Downtown Toronto,Medium,Fast-food/quick service,1-4 years,28,23,Higher,Decline of 50% or more,75% or more,No changes were made,Other,Yes,30-50%,Yes,1-2 days
-Treated,Downtown Toronto,Medium,Other,1-4 years,29,29,Lower,Decline of 50% or more,75% or more,No changes were made,DoorDash,Yes,30-50%,Yes,1-2 days
-Treated,West Toronto,Large,Fast-food/quick service,5-7 years,31,19,Lower,Decline of 10% to 25%,75% or more,No changes were made,UberEats,No,NA,Yes,1-2 days
-Treated,Downtown Toronto,Medium,Fast-food/quick service,10 or more years,29,24,Around the Same,Decline of 50% or more,75% or more,"Yes, prices were lowered",DoorDash,Yes,15-30%,No,NA
-Treated,Central Toronto,Medium,Casual Dining,5-7 years,32,16,Lower,Decline of 25% to 50%,75% or more,No changes were made,In-house delivery service,Yes,15-30%,Yes,3-4 days
-Treated,East Toronto,Small,Fast-food/quick service,1-4 years,29,29,Higher,Decline of 50% or more,75% or more,"Yes, prices were raised",UberEats,No,NA,Yes,3-4 days
-Treated,North York,Medium,Other,1-4 years,24,16,Lower,Decline of 10% to 25%,75% or more,"Yes, prices were lowered",UberEats,Yes,30-50%,Yes,3-4 days
-Treated,Downtown Toronto,Medium,Fast-food/quick service,1-4 years,30,15,Lower,Decline of 25% to 50%,75% or more,No changes were made,SkiptheDishes,Yes,30-50%,No,NA
-Treated,North York,Large,Fast-food/quick service,10 or more years,29,27,Higher,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,No,NA,Yes,7 days
-Treated,North York,Medium,Casual Dining,5-7 years,29,21,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",Other,Yes,15% or less,Yes,3-4 days
-Treated,Downtown Toronto,Large,Fast-food/quick service,8-10 years,34,24,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,No,NA,No,NA
-Treated,Etobicoke,Large,Fast-food/quick service,1-4 years,33,16,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were lowered",SkiptheDishes,No,NA,Yes,1-2 days
-Treated,Downtown Toronto,Large,Fast-food/quick service,10 or more years,34,19,Lower,Decline of 10% to 25%,50-75%,"Yes, prices were lowered",Other,Yes,50-75%,Yes,3-4 days
-Treated,Scarborough,Medium,Fine Dining,5-7 years,28,23,Higher,Decline of 25% to 50%,75% or more,"Yes, prices were lowered",None,Yes,50-75%,Yes,1-2 days
-Treated,Downtown Toronto,Medium,Fast-food/quick service,1-4 years,24,27,Higher,Decline of 25% to 50%,75% or more,"Yes, prices were lowered",DoorDash,Yes,30-50%,Yes,3-4 days
-Treated,East Toronto,Large,Fast-food/quick service,8-10 years,29,15,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",Other,Yes,15-30%,Yes,5-6 days
-Treated,West Toronto,Medium,Fast-food/quick service,5-7 years,28,29,Higher,Decline of 50% or more,75% or more,No changes were made,UberEats,No,NA,Yes,3-4 days
-Treated,North York,Large,Other,8-10 years,34,28,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,Yes,50-75%,Yes,3-4 days
-Treated,Scarborough,Medium,Fine Dining,1-4 years,35,22,Lower,Decline of 25% to 50%,Did not offer takeout or delivery,"Yes, prices were lowered",DoorDash,Yes,15% or less,Yes,1-2 days
-Treated,North York,Medium,Fast-food/quick service,8-10 years,26,14,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were raised",Other,Yes,15-30%,Yes,5-6 days
-Treated,West Toronto,Large,Casual Dining,8-10 years,28,18,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",SkiptheDishes,Yes,15-30%,No,NA
-Treated,North York,Medium,Casual Dining,8-10 years,33,16,Higher,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,No,NA,No,NA
-Treated,Downtown Toronto,Small,Other,1-4 years,32,18,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,No,NA,No,NA
-Treated,Etobicoke,Medium,Other,1-4 years,30,27,Lower,Decline of 50% or more,75% or more,No changes were made,UberEats,Yes,30-50%,No,NA
-Treated,Downtown Toronto,Large,Other,8-10 years,29,22,Lower,Decline of 25% to 50%,50-75%,"Yes, prices were lowered",Other,Yes,30-50%,Yes,7 days
-Treated,Scarborough,Large,Fast-food/quick service,1-4 years,28,17,Lower,Decline of 50% or more,75% or more,No changes were made,DoorDash,Yes,30-50%,No,NA
-Treated,York,Medium,Fast-food/quick service,8-10 years,28,12,Lower,Decline of 10% or less,75% or more,No changes were made,DoorDash,Yes,30-50%,No,NA
-Treated,Downtown Toronto,Medium,Fast-food/quick service,1-4 years,27,19,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were lowered",In-house delivery service,Yes,30-50%,Yes,3-4 days
-Treated,West Toronto,Large,Fast-food/quick service,1-4 years,30,21,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were lowered",SkiptheDishes,Yes,30-50%,Yes,1-2 days
-Treated,North York,Large,Other,1-4 years,29,24,Around the Same,Decline of 10% or less,75% or more,"Yes, prices were lowered",Other,Yes,15% or less,Yes,5-6 days
-Treated,West Toronto,Medium,Fast-food/quick service,1-4 years,39,15,Higher,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,Yes,15-30%,Yes,5-6 days
-Treated,Etobicoke,Large,Casual Dining,1-4 years,24,21,Lower,Decline of 50% or more,75% or more,No changes were made,DoorDash,Yes,15% or less,Yes,1-2 days
-Treated,Etobicoke,Small,Fast-food/quick service,8-10 years,30,20,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were lowered",None,Yes,15-30%,Yes,1-2 days
-Treated,Downtown Toronto,Medium,Casual Dining,5-7 years,20,14,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",SkiptheDishes,Yes,30-50%,Yes,3-4 days
-Treated,Scarborough,Medium,Other,5-7 years,27,19,Lower,Decline of 50% or more,75% or more,No changes were made,UberEats,Yes,15-30%,Yes,7 days
-Treated,Scarborough,Large,Other,5-7 years,31,18,Lower,Decline of 10% or less,75% or more,"Yes, prices were raised",SkiptheDishes,Yes,15-30%,Yes,3-4 days
-Treated,North York,Large,Casual Dining,1-4 years,36,19,Higher,Decline of 50% or more,50-75%,"Yes, prices were raised",UberEats,Yes,15% or less,Yes,1-2 days
-Treated,Scarborough,Large,Other,5-7 years,33,26,Lower,Decline of 25% to 50%,75% or more,No changes were made,UberEats,Yes,15% or less,Yes,1-2 days
-Treated,West Toronto,Medium,Fast-food/quick service,1-4 years,26,13,Lower,Decline of 25% to 50%,75% or more,No changes were made,Other,Yes,15-30%,Yes,1-2 days
-Treated,North York,Large,Casual Dining,5-7 years,35,16,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were lowered",UberEats,Yes,30-50%,Yes,1-2 days
-Treated,West Toronto,Medium,Fine Dining,8-10 years,37,22,Lower,Decline of 50% or more,50-75%,"Yes, prices were lowered",Other,Yes,15-30%,Yes,1-2 days
-Treated,North York,Large,Fast-food/quick service,8-10 years,31,21,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",Other,Yes,15-30%,Yes,7 days
-Treated,Downtown Toronto,Medium,Casual Dining,10 or more years,32,25,Higher,Decline of 50% or more,75% or more,No changes were made,UberEats,Yes,15-30%,Yes,1-2 days
-Treated,Scarborough,Medium,Fine Dining,8-10 years,37,21,Lower,Decline of 25% to 50%,75% or more,No changes were made,UberEats,Yes,15-30%,Yes,1-2 days
-Treated,Etobicoke,Medium,Other,8-10 years,31,17,Lower,Decline of 50% or more,50-75%,No changes were made,DoorDash,Yes,15% or less,Yes,1-2 days
-Treated,Scarborough,Medium,Fine Dining,1-4 years,28,20,Around the Same,Decline of 25% to 50%,75% or more,No changes were made,Other,Yes,15% or less,Yes,5-6 days
-Treated,Downtown Toronto,Small,Fast-food/quick service,5-7 years,39,15,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",DoorDash,Yes,15-30%,Yes,3-4 days
-Treated,East York,Large,Other,1-4 years,28,18,Higher,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,Yes,15-30%,No,NA
-Treated,Etobicoke,Large,Other,8-10 years,40,22,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were raised",Other,No,NA,No,NA
-Treated,Downtown Toronto,Medium,Other,1-4 years,32,21,Lower,Decline of 25% to 50%,75% or more,No changes were made,UberEats,Yes,30-50%,No,NA
-Treated,Central Toronto,Large,Fine Dining,1-4 years,28,11,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,Yes,15-30%,No,NA
-Treated,East Toronto,Large,Fast-food/quick service,8-10 years,26,25,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,Yes,50-75%,Yes,5-6 days
-Treated,Etobicoke,Large,Other,8-10 years,30,18,Higher,Decline of 50% or more,75% or more,"Yes, prices were lowered",DoorDash,Yes,30-50%,Yes,7 days
-Treated,North York,Medium,Fast-food/quick service,10 or more years,22,24,Lower,Decline of 10% or less,75% or more,No changes were made,UberEats,Yes,15-30%,No,NA
-Treated,York,Medium,Fine Dining,8-10 years,35,22,Lower,Decline of 50% or more,75% or more,No changes were made,UberEats,Yes,15-30%,Yes,1-2 days
-Treated,Downtown Toronto,Small,Casual Dining,1-4 years,27,17,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were raised",UberEats,Yes,50-75%,Yes,3-4 days
-Treated,Downtown Toronto,Large,Fast-food/quick service,10 or more years,30,21,Higher,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,Yes,30-50%,Yes,3-4 days
-Treated,Downtown Toronto,Medium,Fast-food/quick service,5-7 years,30,26,Lower,Decline of 25% to 50%,50-75%,No changes were made,Other,Yes,15-30%,Yes,1-2 days
-Treated,East Toronto,Large,Fine Dining,1-4 years,44,20,Lower,Decline of 50% or more,75% or more,No changes were made,UberEats,Yes,30-50%,No,NA
-Treated,Scarborough,Medium,Casual Dining,5-7 years,20,21,Higher,Decline of 50% or more,75% or more,No changes were made,Other,Yes,15-30%,Yes,1-2 days
-Treated,North York,Large,Other,5-7 years,36,17,Lower,Decline of 25% to 50%,75% or more,No changes were made,UberEats,Yes,75% or more,Yes,7 days
-Treated,York,Small,Fast-food/quick service,1-4 years,26,18,Lower,Decline of 50% or more,75% or more,No changes were made,UberEats,Yes,30-50%,Yes,1-2 days
-Treated,West Toronto,Large,Other,1-4 years,29,28,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,No,NA,No,NA
-Treated,Scarborough,Large,Fast-food/quick service,5-7 years,28,18,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",DoorDash,Yes,15% or less,Yes,3-4 days
-Treated,North York,Medium,Fast-food/quick service,5-7 years,30,23,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were lowered",Other,No,NA,Yes,7 days
-Treated,Etobicoke,Medium,Casual Dining,5-7 years,28,15,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",In-house delivery service,No,NA,Yes,3-4 days
-Treated,Scarborough,Medium,Fast-food/quick service,5-7 years,31,19,Lower,Decline of 10% to 25%,75% or more,"Yes, prices were lowered",SkiptheDishes,Yes,15% or less,No,NA
-Treated,Etobicoke,Medium,Fine Dining,8-10 years,29,18,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,Yes,50-75%,No,NA
-Treated,West Toronto,Medium,Casual Dining,1-4 years,26,18,Higher,Decline of 50% or more,75% or more,"Yes, prices were lowered",Other,Yes,30-50%,Yes,5-6 days
-Treated,Downtown Toronto,Large,Other,5-7 years,26,24,Lower,Decline of 50% or more,50-75%,No changes were made,None,Yes,15-30%,Yes,3-4 days
-Treated,Etobicoke,Large,Fast-food/quick service,1-4 years,31,29,Lower,Decline of 50% or more,75% or more,"Yes, prices were raised",UberEats,Yes,15-30%,Yes,1-2 days
-Treated,North York,Medium,Fast-food/quick service,10 or more years,32,18,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were lowered",UberEats,Yes,50-75%,No,NA
-Treated,Central Toronto,Medium,Other,10 or more years,36,17,Higher,Decline of 50% or more,75% or more,"Yes, prices were lowered",DoorDash,Yes,15-30%,Yes,3-4 days
-Treated,North York,Large,Other,5-7 years,27,10,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",DoorDash,Yes,15% or less,Yes,3-4 days
-Treated,York,Medium,Fast-food/quick service,1-4 years,29,18,Lower,Decline of 10% to 25%,15-30%,"Yes, prices were lowered",DoorDash,Yes,15-30%,Yes,1-2 days
-Treated,Downtown Toronto,Large,Fast-food/quick service,5-7 years,27,20,Lower,Decline of 50% or more,75% or more,"Yes, prices were raised",Other,Yes,15% or less,Yes,1-2 days
-Treated,Downtown Toronto,Small,Fine Dining,1-4 years,36,23,Higher,Decline of 50% or more,75% or more,"Yes, prices were lowered",Other,Yes,15-30%,No,NA
-Treated,Scarborough,Large,Fast-food/quick service,1-4 years,35,21,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,Yes,15-30%,Yes,3-4 days
-Treated,Scarborough,Large,Casual Dining,5-7 years,35,20,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",Other,Yes,50-75%,Yes,1-2 days
-Treated,Downtown Toronto,Small,Fine Dining,8-10 years,28,14,Lower,Decline of 50% or more,50-75%,"Yes, prices were raised",In-house delivery service,Yes,15-30%,Yes,1-2 days
-Treated,Downtown Toronto,Large,Fine Dining,1-4 years,36,17,Lower,Decline of 10% to 25%,75% or more,"Yes, prices were lowered",UberEats,Yes,50-75%,Yes,3-4 days
-Treated,Scarborough,Medium,Fine Dining,5-7 years,29,21,Lower,Decline of 50% or more,75% or more,"Yes, prices were raised",SkiptheDishes,Yes,75% or more,No,NA
-Treated,North York,Medium,Other,8-10 years,27,22,Higher,Decline of 25% to 50%,75% or more,"Yes, prices were lowered",UberEats,Yes,50-75%,Yes,7 days
-Treated,Central Toronto,Small,Casual Dining,1-4 years,31,16,Lower,Decline of 50% or more,75% or more,No changes were made,UberEats,Yes,15-30%,Yes,1-2 days
-Treated,East Toronto,Medium,Fast-food/quick service,10 or more years,33,20,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",None,Yes,30-50%,Yes,3-4 days
-Treated,Etobicoke,Large,Other,1-4 years,20,17,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were lowered",DoorDash,Yes,15-30%,Yes,1-2 days
-Treated,East York,Large,Fast-food/quick service,1-4 years,26,14,Lower,Decline of 50% or more,75% or more,No changes were made,SkiptheDishes,Yes,30-50%,Yes,1-2 days
-Treated,Scarborough,Medium,Other,8-10 years,16,21,Lower,Decline of 50% or more,75% or more,"Yes, prices were raised",UberEats,Yes,15-30%,Yes,1-2 days
-Treated,Central Toronto,Medium,Fine Dining,1-4 years,23,23,Lower,Decline of 10% or less,75% or more,"Yes, prices were raised",UberEats,Yes,30-50%,Yes,1-2 days
-Treated,Downtown Toronto,Large,Fast-food/quick service,1-4 years,27,26,Lower,Decline of 10% or less,75% or more,"Yes, prices were lowered",DoorDash,Yes,30-50%,Yes,1-2 days
-Treated,West Toronto,Medium,Casual Dining,5-7 years,27,17,Lower,Decline of 10% to 25%,75% or more,"Yes, prices were lowered",UberEats,Yes,15-30%,Yes,3-4 days
-Treated,West Toronto,Small,Fast-food/quick service,1-4 years,34,17,Lower,Decline of 25% to 50%,50-75%,"Yes, prices were lowered",DoorDash,Yes,15-30%,Yes,1-2 days
-Treated,Downtown Toronto,Small,Other,10 or more years,26,15,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",SkiptheDishes,Yes,50-75%,Yes,1-2 days
-Treated,York,Large,Other,1-4 years,24,26,Lower,Decline of 10% to 25%,75% or more,"Yes, prices were lowered",UberEats,Yes,15% or less,Yes,1-2 days
-Treated,York,Medium,Fast-food/quick service,1-4 years,35,24,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",DoorDash,Yes,15-30%,Yes,3-4 days
-Treated,Downtown Toronto,Small,Fast-food/quick service,10 or more years,29,27,Lower,Decline of 25% to 50%,75% or more,No changes were made,SkiptheDishes,Yes,30-50%,Yes,3-4 days
-Treated,Central Toronto,Small,Fast-food/quick service,5-7 years,36,16,Higher,Decline of 25% to 50%,75% or more,"Yes, prices were lowered",UberEats,Yes,15-30%,Yes,7 days
-Treated,Scarborough,Medium,Casual Dining,10 or more years,25,24,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were lowered",None,Yes,15-30%,No,NA
-Treated,North York,Small,Other,1-4 years,30,14,Lower,Decline of 10% or less,75% or more,"Yes, prices were lowered",UberEats,Yes,30-50%,Yes,1-2 days
-Treated,Downtown Toronto,Medium,Fast-food/quick service,1-4 years,34,16,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,Yes,50-75%,Yes,1-2 days
-Treated,Downtown Toronto,Medium,Fine Dining,8-10 years,31,13,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",SkiptheDishes,Yes,30-50%,Yes,1-2 days
-Treated,York,Large,Fast-food/quick service,10 or more years,27,20,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were lowered",UberEats,Yes,15-30%,Yes,1-2 days
-Treated,North York,Medium,Casual Dining,5-7 years,34,12,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,Yes,15-30%,Yes,5-6 days
-Treated,Etobicoke,Medium,Casual Dining,10 or more years,37,15,Lower,Decline of 50% or more,75% or more,"Yes, prices were raised",SkiptheDishes,Yes,30-50%,Yes,5-6 days
-Treated,North York,Medium,Other,1-4 years,31,21,Around the Same,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,Yes,75% or more,No,NA
-Treated,Etobicoke,Large,Other,10 or more years,35,18,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were raised",In-house delivery service,Yes,75% or more,No,NA
-Treated,Scarborough,Medium,Fast-food/quick service,5-7 years,27,20,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",DoorDash,No,NA,Yes,1-2 days
-Treated,Downtown Toronto,Large,Fine Dining,8-10 years,27,26,Around the Same,Decline of 50% or more,15% or less,No changes were made,Other,No,NA,No,NA
-Treated,North York,Medium,Casual Dining,1-4 years,20,26,Lower,Decline of 10% to 25%,15% or less,No changes were made,Other,No,NA,No,NA
-Treated,Central Toronto,Medium,Fast-food/quick service,8-10 years,24,24,Around the Same,Decline of 50% or more,15-30%,No changes were made,Other,No,NA,No,NA
-Treated,Scarborough,Small,Fast-food/quick service,1-4 years,27,34,Around the Same,Decline of 10% to 25%,15% or less,"Yes, prices were lowered",Other,No,NA,No,NA
-Treated,North York,Medium,Fast-food/quick service,1-4 years,35,25,Around the Same,Decline of 50% or more,15% or less,No changes were made,UberEats,No,NA,No,NA
-Treated,Central Toronto,Medium,Fast-food/quick service,1-4 years,29,35,Around the Same,Decline of 50% or more,15% or less,No changes were made,DoorDash,No,NA,No,NA
-Treated,Downtown Toronto,Large,Other,5-7 years,22,30,Around the Same,Decline of 50% or more,75% or more,No changes were made,In-house delivery service,No,NA,No,NA
-Treated,Downtown Toronto,Small,Fast-food/quick service,10 or more years,25,37,Around the Same,Decline of 50% or more,15% or less,No changes were made,Other,No,NA,No,NA
-Treated,North York,Large,Fast-food/quick service,1-4 years,30,32,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,Other,No,NA,No,NA
-Treated,Scarborough,Large,Other,8-10 years,23,32,Around the Same,Decline of 10% to 25%,15% or less,No changes were made,Other,No,NA,No,NA
-Treated,Downtown Toronto,Large,Casual Dining,1-4 years,31,35,Around the Same,Decline of 10% to 25%,15% or less,No changes were made,Other,No,NA,No,NA
-Treated,East Toronto,Medium,Fast-food/quick service,10 or more years,33,37,Around the Same,Decline of 50% or more,15% or less,No changes were made,DoorDash,No,NA,No,NA
-Treated,East York,Medium,Casual Dining,1-4 years,25,27,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,In-house delivery service,No,NA,No,NA
-Treated,Downtown Toronto,Medium,Fast-food/quick service,8-10 years,35,38,Around the Same,Decline of 50% or more,15% or less,No changes were made,In-house delivery service,No,NA,No,NA
-Treated,York,Medium,Casual Dining,5-7 years,28,29,Around the Same,Decline of 25% to 50%,30-50%,No changes were made,UberEats,No,NA,No,NA
-Treated,Downtown Toronto,Small,Casual Dining,5-7 years,22,23,Around the Same,Decline of 50% or more,15% or less,No changes were made,DoorDash,No,NA,No,NA
-Treated,West Toronto,Large,Fast-food/quick service,10 or more years,24,26,Around the Same,Decline of 10% to 25%,15-30%,No changes were made,DoorDash,No,NA,No,NA
-Treated,West Toronto,Small,Fast-food/quick service,1-4 years,33,22,Around the Same,Decline of 10% or less,15% or less,No changes were made,In-house delivery service,No,NA,No,NA
-Treated,North York,Medium,Fast-food/quick service,10 or more years,37,29,Around the Same,Decline of 50% or more,15% or less,No changes were made,UberEats,No,NA,No,NA
-Treated,West Toronto,Large,Fast-food/quick service,10 or more years,33,39,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,UberEats,No,NA,No,NA
-Treated,Scarborough,Medium,Other,1-4 years,23,33,Around the Same,Decline of 50% or more,15% or less,No changes were made,Other,No,NA,No,NA
-Treated,Scarborough,Medium,Fast-food/quick service,10 or more years,30,29,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,UberEats,No,NA,No,NA
-Treated,Central Toronto,Medium,Fast-food/quick service,8-10 years,29,39,Around the Same,Decline of 50% or more,15% or less,No changes were made,Other,No,NA,No,NA
-Treated,North York,Medium,Fast-food/quick service,8-10 years,28,28,Around the Same,Decline of 50% or more,30-50%,No changes were made,UberEats,No,NA,No,NA
-Treated,North York,Medium,Fast-food/quick service,5-7 years,35,34,Around the Same,Decline of 25% to 50%,50-75%,No changes were made,DoorDash,No,NA,No,NA
-Treated,West Toronto,Medium,Fine Dining,1-4 years,25,20,Around the Same,Decline of 50% or more,15% or less,No changes were made,In-house delivery service,No,NA,No,NA
-Treated,Scarborough,Medium,Fast-food/quick service,5-7 years,29,35,Around the Same,Decline of 50% or more,15% or less,No changes were made,Other,No,NA,No,NA
-Treated,West Toronto,Medium,Other,8-10 years,37,35,Around the Same,Decline of 50% or more,50-75%,No changes were made,DoorDash,No,NA,No,NA
-Treated,Scarborough,Large,Other,1-4 years,33,36,Around the Same,Decline of 25% to 50%,15-30%,No changes were made,UberEats,No,NA,No,NA
-Treated,Downtown Toronto,Medium,Fine Dining,1-4 years,30,28,Around the Same,Decline of 10% to 25%,15% or less,No changes were made,DoorDash,No,NA,No,NA
-Treated,West Toronto,Small,Other,8-10 years,37,33,Around the Same,Decline of 10% to 25%,15% or less,No changes were made,Other,No,NA,No,NA
-Treated,Etobicoke,Small,Casual Dining,10 or more years,37,28,Around the Same,Decline of 50% or more,50-75%,No changes were made,UberEats,No,NA,No,NA
-Treated,North York,Medium,Other,8-10 years,27,40,Around the Same,Decline of 50% or more,15% or less,No changes were made,DoorDash,Yes,15% or less,No,NA
-Treated,Downtown Toronto,Large,Other,8-10 years,34,33,Around the Same,Decline of 50% or more,50-75%,No changes were made,UberEats,No,NA,No,NA
-Treated,North York,Medium,Other,5-7 years,34,37,Around the Same,Decline of 10% or less,Did not offer takeout or delivery,No changes were made,DoorDash,No,NA,Yes,Not Applicable
-Treated,Scarborough,Large,Fast-food/quick service,1-4 years,36,29,Higher,Decline of 50% or more,50-75%,No changes were made,In-house delivery service,No,NA,No,NA
-Treated,North York,Large,Fast-food/quick service,1-4 years,29,27,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,UberEats,No,NA,No,NA
-Treated,Etobicoke,Medium,Fast-food/quick service,10 or more years,31,30,Lower,Decline of 50% or more,15-30%,No changes were made,Other,No,NA,No,NA
-Treated,York,Large,Other,8-10 years,37,31,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,DoorDash,No,NA,No,NA
-Treated,East Toronto,Large,Other,1-4 years,33,41,Around the Same,Decline of 10% to 25%,30-50%,No changes were made,Other,No,NA,No,NA
-Treated,West Toronto,Medium,Other,10 or more years,34,42,Higher,Decline of 25% to 50%,15% or less,No changes were made,UberEats,No,NA,No,NA
-Treated,East York,Small,Fast-food/quick service,5-7 years,18,27,Around the Same,Decline of 50% or more,15% or less,No changes were made,DoorDash,No,NA,No,NA
-Treated,North York,Large,Other,1-4 years,26,34,Around the Same,Decline of 10% to 25%,15% or less,No changes were made,DoorDash,No,NA,No,NA
-Treated,West Toronto,Large,Casual Dining,10 or more years,26,28,Around the Same,Decline of 10% or less,15-30%,No changes were made,UberEats,No,NA,No,NA
-Treated,Downtown Toronto,Large,Fast-food/quick service,1-4 years,25,29,Around the Same,Decline of 10% or less,50-75%,No changes were made,DoorDash,No,NA,No,NA
-Treated,North York,Medium,Casual Dining,8-10 years,33,30,Higher,Decline of 50% or more,30-50%,No changes were made,None,No,NA,No,NA
-Treated,East Toronto,Medium,Other,1-4 years,21,35,Around the Same,Decline of 50% or more,15% or less,No changes were made,In-house delivery service,No,NA,Yes,Not Applicable
-Treated,East Toronto,Large,Fast-food/quick service,8-10 years,30,28,Around the Same,Decline of 25% to 50%,75% or more,No changes were made,In-house delivery service,No,NA,No,NA
-Treated,West Toronto,Medium,Other,8-10 years,21,37,Around the Same,Decline of 10% or less,15-30%,No changes were made,UberEats,No,NA,No,NA
-Treated,West Toronto,Large,Casual Dining,1-4 years,27,23,Higher,Decline of 25% to 50%,15% or less,No changes were made,UberEats,No,NA,No,NA
-Treated,North York,Large,Other,1-4 years,27,29,Around the Same,Decline of 10% or less,15% or less,No changes were made,UberEats,No,NA,No,NA
-Treated,North York,Large,Fast-food/quick service,1-4 years,31,29,Around the Same,Decline of 50% or more,15-30%,No changes were made,None,No,NA,No,NA
-Treated,Downtown Toronto,Small,Fine Dining,10 or more years,21,31,Around the Same,Decline of 50% or more,15-30%,No changes were made,UberEats,No,NA,No,NA
-Treated,North York,Medium,Fine Dining,10 or more years,22,28,Lower,Decline of 50% or more,15% or less,No changes were made,DoorDash,No,NA,No,NA
-Treated,North York,Large,Fast-food/quick service,1-4 years,35,31,Around the Same,Decline of 50% or more,15-30%,No changes were made,DoorDash,No,NA,No,NA
-Treated,York,Medium,Fast-food/quick service,5-7 years,36,28,Around the Same,Decline of 25% to 50%,50-75%,No changes were made,In-house delivery service,No,NA,No,NA
-Treated,Downtown Toronto,Medium,Casual Dining,1-4 years,29,26,Around the Same,Decline of 10% to 25%,15% or less,No changes were made,None,No,NA,No,NA
-Treated,Downtown Toronto,Medium,Casual Dining,5-7 years,29,23,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,SkiptheDishes,No,NA,No,NA
-Treated,North York,Medium,Casual Dining,8-10 years,28,37,Around the Same,Decline of 50% or more,15% or less,No changes were made,DoorDash,No,NA,No,NA
-Treated,York,Small,Other,1-4 years,33,29,Lower,Decline of 50% or more,15% or less,No changes were made,In-house delivery service,No,NA,No,NA
-Treated,North York,Large,Fast-food/quick service,10 or more years,27,27,Around the Same,Decline of 50% or more,50-75%,No changes were made,UberEats,No,NA,No,NA
-Treated,North York,Small,Casual Dining,1-4 years,30,42,Around the Same,Decline of 50% or more,15% or less,No changes were made,UberEats,No,NA,No,NA
-Treated,Scarborough,Large,Fast-food/quick service,1-4 years,28,32,Around the Same,Decline of 50% or more,15% or less,No changes were made,SkiptheDishes,No,NA,No,NA
-Treated,North York,Large,Fast-food/quick service,1-4 years,19,28,Around the Same,Decline of 50% or more,15-30%,No changes were made,None,No,NA,No,NA
-Treated,Etobicoke,Large,Fast-food/quick service,8-10 years,39,25,Around the Same,Decline of 50% or more,30-50%,No changes were made,SkiptheDishes,No,NA,No,NA
-Treated,Downtown Toronto,Small,Fast-food/quick service,5-7 years,24,27,Around the Same,Decline of 10% or less,Did not offer takeout or delivery,No changes were made,UberEats,No,NA,No,NA
-Treated,Downtown Toronto,Medium,Other,1-4 years,36,33,Around the Same,Decline of 50% or more,15% or less,No changes were made,DoorDash,No,NA,Yes,Not Applicable
-Treated,North York,Medium,Fast-food/quick service,5-7 years,25,43,Around the Same,Decline of 10% to 25%,15% or less,No changes were made,DoorDash,No,NA,No,NA
-Treated,North York,Large,Fast-food/quick service,1-4 years,32,19,Around the Same,Decline of 50% or more,30-50%,No changes were made,In-house delivery service,No,NA,No,NA
-Treated,Downtown Toronto,Small,Other,8-10 years,22,22,Around the Same,Decline of 50% or more,15% or less,No changes were made,Other,No,NA,No,NA
-Treated,Scarborough,Large,Other,10 or more years,28,30,Around the Same,Decline of 10% to 25%,50-75%,No changes were made,DoorDash,No,NA,No,NA
-Treated,Scarborough,Medium,Casual Dining,10 or more years,33,32,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,DoorDash,No,NA,No,NA
-Treated,Downtown Toronto,Large,Casual Dining,5-7 years,25,28,Around the Same,Decline of 50% or more,15% or less,No changes were made,UberEats,No,NA,No,NA
-Treated,East Toronto,Medium,Fast-food/quick service,1-4 years,23,31,Around the Same,Decline of 25% to 50%,15-30%,No changes were made,UberEats,No,NA,No,NA
-Treated,Etobicoke,Large,Fast-food/quick service,10 or more years,29,25,Around the Same,Decline of 50% or more,15% or less,No changes were made,DoorDash,No,NA,Yes,Not Applicable
-Treated,North York,Medium,Fast-food/quick service,8-10 years,22,33,Around the Same,Decline of 50% or more,15% or less,No changes were made,In-house delivery service,No,NA,No,NA
-Treated,York,Medium,Fast-food/quick service,1-4 years,34,33,Higher,Decline of 10% or less,15% or less,No changes were made,SkiptheDishes,No,NA,No,NA
-Treated,West Toronto,Medium,Fast-food/quick service,5-7 years,29,31,Around the Same,Decline of 50% or more,15% or less,No changes were made,UberEats,No,NA,No,NA
-Treated,North York,Medium,Fast-food/quick service,5-7 years,30,32,Around the Same,Decline of 10% to 25%,30-50%,No changes were made,In-house delivery service,No,NA,No,NA
-Treated,Downtown Toronto,Medium,Fast-food/quick service,8-10 years,24,19,Around the Same,Decline of 50% or more,15% or less,No changes were made,In-house delivery service,No,NA,No,NA
-Treated,Downtown Toronto,Medium,Other,1-4 years,40,36,Around the Same,Decline of 50% or more,15% or less,No changes were made,UberEats,No,NA,No,NA
-Treated,Scarborough,Medium,Fast-food/quick service,8-10 years,30,20,Around the Same,Decline of 50% or more,75% or more,No changes were made,UberEats,No,NA,No,NA
-Treated,East Toronto,Medium,Casual Dining,1-4 years,41,26,Lower,Decline of 50% or more,15% or less,No changes were made,Other,No,NA,No,NA
-Treated,Downtown Toronto,Medium,Casual Dining,8-10 years,26,39,Around the Same,Decline of 50% or more,Did not offer takeout or delivery,No changes were made,Other,No,NA,No,NA
-Treated,Etobicoke,Large,Other,10 or more years,26,33,Around the Same,Decline of 50% or more,30-50%,No changes were made,UberEats,No,NA,No,NA
-Treated,Downtown Toronto,Medium,Other,10 or more years,27,28,Around the Same,Decline of 50% or more,15% or less,No changes were made,UberEats,No,NA,No,NA
-Treated,Downtown Toronto,Large,Fast-food/quick service,5-7 years,28,28,Around the Same,Decline of 50% or more,15% or less,No changes were made,In-house delivery service,No,NA,No,NA
-Treated,Scarborough,Large,Casual Dining,8-10 years,28,32,Around the Same,Decline of 50% or more,15% or less,No changes were made,DoorDash,No,NA,No,NA
-Treated,Downtown Toronto,Medium,Fast-food/quick service,8-10 years,22,26,Around the Same,Decline of 10% or less,15% or less,No changes were made,In-house delivery service,No,NA,No,NA
-Treated,Central Toronto,Large,Other,8-10 years,34,31,Around the Same,Decline of 50% or more,15% or less,No changes were made,UberEats,No,NA,No,NA
-Treated,North York,Medium,Other,1-4 years,34,38,Lower,Decline of 25% to 50%,30-50%,No changes were made,UberEats,No,NA,No,NA
-Treated,West Toronto,Large,Other,8-10 years,27,29,Around the Same,Decline of 50% or more,30-50%,No changes were made,In-house delivery service,No,NA,No,NA
-Treated,Downtown Toronto,Medium,Fast-food/quick service,8-10 years,33,25,Around the Same,Decline of 50% or more,15% or less,No changes were made,Other,No,NA,No,NA
-Treated,Scarborough,Medium,Other,1-4 years,26,31,Around the Same,Decline of 50% or more,50-75%,No changes were made,Other,No,NA,No,NA
-Treated,Etobicoke,Medium,Other,5-7 years,28,23,Around the Same,Decline of 50% or more,15% or less,No changes were made,DoorDash,No,NA,No,NA
-Treated,North York,Medium,Fast-food/quick service,10 or more years,32,38,Around the Same,Decline of 25% to 50%,50-75%,No changes were made,None,No,NA,No,NA
-Treated,West Toronto,Large,Fast-food/quick service,5-7 years,43,28,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,In-house delivery service,No,NA,No,NA
-Treated,Downtown Toronto,Large,Fast-food/quick service,5-7 years,24,31,Lower,Decline of 50% or more,15% or less,No changes were made,Other,No,NA,No,NA
-Treated,Downtown Toronto,Small,Casual Dining,1-4 years,38,28,Around the Same,Decline of 50% or more,30-50%,No changes were made,SkiptheDishes,No,NA,No,NA
-Treated,Central Toronto,Large,Fast-food/quick service,1-4 years,28,30,Lower,Decline of 10% to 25%,15% or less,No changes were made,UberEats,No,NA,No,NA
-Treated,East York,Medium,Other,8-10 years,37,20,Around the Same,Decline of 10% or less,Did not offer takeout or delivery,No changes were made,Other,No,NA,No,NA
-Treated,Scarborough,Large,Fast-food/quick service,8-10 years,27,29,Lower,Decline of 25% to 50%,Did not offer takeout or delivery,No changes were made,UberEats,No,NA,No,NA
-Treated,York,Medium,Fast-food/quick service,1-4 years,24,26,Lower,Decline of 10% or less,15% or less,No changes were made,UberEats,No,NA,No,NA
-Treated,York,Medium,Fine Dining,5-7 years,27,33,Around the Same,Decline of 10% to 25%,15% or less,No changes were made,SkiptheDishes,No,NA,No,NA
-Treated,North York,Medium,Fast-food/quick service,1-4 years,28,44,Lower,Decline of 25% to 50%,15% or less,No changes were made,UberEats,No,NA,No,NA
-Treated,Central Toronto,Medium,Fast-food/quick service,8-10 years,24,31,Around the Same,Decline of 25% to 50%,15-30%,No changes were made,Other,No,NA,No,NA
-Treated,North York,Large,Other,5-7 years,29,32,Around the Same,Decline of 50% or more,30-50%,No changes were made,None,No,NA,No,NA
-Treated,Etobicoke,Small,Other,5-7 years,34,36,Around the Same,Decline of 10% or less,15% or less,No changes were made,Other,No,NA,No,NA
-Treated,East Toronto,Small,Casual Dining,1-4 years,37,31,Lower,Decline of 25% to 50%,15% or less,No changes were made,DoorDash,Yes,15% or less,Yes,Not Applicable
-Treated,Downtown Toronto,Medium,Other,5-7 years,30,31,Around the Same,Decline of 50% or more,15-30%,No changes were made,In-house delivery service,No,NA,No,NA
-Treated,West Toronto,Medium,Fast-food/quick service,1-4 years,31,22,Around the Same,Decline of 50% or more,15-30%,No changes were made,UberEats,No,NA,No,NA
-Treated,Downtown Toronto,Large,Fast-food/quick service,5-7 years,37,28,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,DoorDash,No,NA,No,NA
-Treated,North York,Small,Casual Dining,5-7 years,25,26,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,Other,No,NA,No,NA
-Treated,West Toronto,Medium,Fast-food/quick service,8-10 years,40,33,Around the Same,Decline of 50% or more,15% or less,No changes were made,Other,No,NA,No,NA
-Treated,Scarborough,Small,Fine Dining,5-7 years,40,31,Around the Same,Decline of 50% or more,15% or less,No changes were made,In-house delivery service,No,NA,No,NA
-Treated,Central Toronto,Medium,Fast-food/quick service,1-4 years,27,29,Around the Same,Decline of 10% or less,15-30%,No changes were made,Other,No,NA,No,NA
-Treated,North York,Medium,Fine Dining,8-10 years,33,35,Around the Same,Decline of 50% or more,15-30%,No changes were made,DoorDash,No,NA,No,NA
-Treated,Scarborough,Large,Fast-food/quick service,5-7 years,30,27,Around the Same,Decline of 25% to 50%,50-75%,No changes were made,DoorDash,No,NA,Yes,Not Applicable
-Treated,East Toronto,Medium,Other,5-7 years,31,32,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,In-house delivery service,No,NA,No,NA
-Treated,East York,Medium,Fast-food/quick service,1-4 years,30,36,Lower,Decline of 10% to 25%,15-30%,No changes were made,UberEats,Yes,15% or less,No,NA
-Treated,Etobicoke,Medium,Fine Dining,5-7 years,36,40,Lower,Decline of 50% or more,15% or less,No changes were made,DoorDash,No,NA,No,NA
-Treated,East Toronto,Medium,Fast-food/quick service,5-7 years,32,35,Higher,Decline of 25% to 50%,15% or less,"Yes, prices were lowered",UberEats,No,NA,No,NA
-Treated,North York,Medium,Fast-food/quick service,1-4 years,28,22,Around the Same,Decline of 50% or more,15% or less,No changes were made,SkiptheDishes,No,NA,No,NA
-Treated,Downtown Toronto,Medium,Casual Dining,5-7 years,33,32,Around the Same,Decline of 50% or more,15% or less,No changes were made,UberEats,Yes,15% or less,No,NA
-Treated,East York,Medium,Fast-food/quick service,8-10 years,24,27,Around the Same,Decline of 50% or more,15% or less,No changes were made,UberEats,No,NA,No,NA
-Treated,York,Medium,Casual Dining,5-7 years,38,32,Around the Same,Decline of 10% to 25%,75% or more,No changes were made,UberEats,No,NA,No,NA
-Treated,Downtown Toronto,Medium,Fine Dining,5-7 years,25,31,Around the Same,Decline of 50% or more,30-50%,No changes were made,DoorDash,No,NA,No,NA
-Treated,Downtown Toronto,Medium,Casual Dining,1-4 years,39,39,Around the Same,Decline of 50% or more,15% or less,No changes were made,SkiptheDishes,No,NA,Yes,1-2 days
-Treated,East York,Large,Casual Dining,1-4 years,20,30,Around the Same,Decline of 50% or more,15% or less,No changes were made,DoorDash,No,NA,No,NA
-Treated,Downtown Toronto,Medium,Fine Dining,1-4 years,33,32,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,SkiptheDishes,No,NA,No,NA
-Treated,East York,Large,Other,10 or more years,35,26,Around the Same,Decline of 50% or more,15-30%,No changes were made,Other,No,NA,No,NA
-Treated,Downtown Toronto,Medium,Other,5-7 years,26,28,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,SkiptheDishes,No,NA,No,NA
-Treated,Downtown Toronto,Small,Fast-food/quick service,8-10 years,29,42,Around the Same,Decline of 50% or more,15% or less,No changes were made,Other,No,NA,No,NA
-Treated,West Toronto,Medium,Casual Dining,5-7 years,34,37,Around the Same,Decline of 50% or more,15-30%,No changes were made,SkiptheDishes,No,NA,No,NA
-Treated,Central Toronto,Medium,Fast-food/quick service,5-7 years,25,35,Around the Same,Decline of 50% or more,Did not offer takeout or delivery,No changes were made,UberEats,No,NA,No,NA
-Treated,Downtown Toronto,Large,Casual Dining,1-4 years,37,29,Around the Same,Decline of 50% or more,15% or less,No changes were made,UberEats,No,NA,No,NA
-Treated,Etobicoke,Small,Fine Dining,8-10 years,28,26,Around the Same,Decline of 10% to 25%,Did not offer takeout or delivery,No changes were made,UberEats,No,NA,Yes,Not Applicable
-Treated,West Toronto,Medium,Fast-food/quick service,1-4 years,27,29,Around the Same,Decline of 10% or less,30-50%,"Yes, prices were raised",UberEats,No,NA,No,NA
-Treated,Etobicoke,Small,Fast-food/quick service,1-4 years,36,32,Around the Same,Decline of 50% or more,15-30%,No changes were made,UberEats,No,NA,No,NA
-Treated,North York,Small,Casual Dining,5-7 years,24,34,Around the Same,Decline of 50% or more,15% or less,No changes were made,UberEats,No,NA,No,NA
-Treated,Scarborough,Large,Fast-food/quick service,1-4 years,24,26,Around the Same,Decline of 25% to 50%,15-30%,No changes were made,Other,No,NA,No,NA
-Treated,Downtown Toronto,Large,Casual Dining,8-10 years,30,35,Around the Same,Decline of 10% to 25%,Did not offer takeout or delivery,No changes were made,In-house delivery service,No,NA,No,NA
-Treated,North York,Large,Casual Dining,5-7 years,34,22,Around the Same,Decline of 50% or more,30-50%,No changes were made,UberEats,No,NA,No,NA
-Treated,Scarborough,Medium,Other,8-10 years,34,34,Around the Same,Decline of 10% to 25%,30-50%,No changes were made,UberEats,No,NA,No,NA
-Treated,Scarborough,Medium,Fast-food/quick service,8-10 years,35,36,Lower,Decline of 10% to 25%,15% or less,No changes were made,Other,No,NA,No,NA
-Treated,North York,Small,Other,1-4 years,27,25,Around the Same,Decline of 25% to 50%,75% or more,No changes were made,In-house delivery service,No,NA,No,NA
-Treated,Downtown Toronto,Medium,Fast-food/quick service,8-10 years,33,32,Around the Same,Decline of 10% or less,15% or less,No changes were made,None,Yes,15% or less,No,NA
-Treated,Scarborough,Medium,Other,10 or more years,28,36,Around the Same,Decline of 50% or more,15% or less,No changes were made,DoorDash,No,NA,No,NA
-Treated,Scarborough,Large,Casual Dining,1-4 years,34,32,Around the Same,Decline of 50% or more,15-30%,No changes were made,In-house delivery service,No,NA,No,NA
-Treated,West Toronto,Medium,Fast-food/quick service,5-7 years,29,30,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,SkiptheDishes,No,NA,No,NA
-Treated,Downtown Toronto,Medium,Other,8-10 years,23,31,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,Other,No,NA,No,NA
-Treated,Etobicoke,Medium,Fast-food/quick service,8-10 years,29,37,Around the Same,Decline of 10% or less,15-30%,No changes were made,DoorDash,No,NA,No,NA
-Treated,York,Medium,Fast-food/quick service,5-7 years,23,38,Around the Same,Decline of 50% or more,15-30%,No changes were made,In-house delivery service,No,NA,No,NA
-Treated,Downtown Toronto,Large,Fast-food/quick service,5-7 years,24,31,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,In-house delivery service,No,NA,No,NA
-Treated,West Toronto,Medium,Casual Dining,5-7 years,34,33,Around the Same,Decline of 50% or more,30-50%,No changes were made,Other,No,NA,No,NA
-Treated,Central Toronto,Medium,Fast-food/quick service,8-10 years,36,31,Around the Same,Decline of 50% or more,15% or less,No changes were made,UberEats,No,NA,No,NA
-Treated,Scarborough,Large,Other,5-7 years,29,34,Around the Same,Decline of 10% to 25%,30-50%,No changes were made,UberEats,No,NA,No,NA
-Treated,East York,Large,Other,5-7 years,31,23,Around the Same,Decline of 50% or more,15% or less,No changes were made,DoorDash,No,NA,No,NA
-Treated,Etobicoke,Small,Other,10 or more years,34,22,Around the Same,Decline of 10% or less,15% or less,No changes were made,UberEats,No,NA,No,NA
-Treated,Downtown Toronto,Small,Casual Dining,1-4 years,38,28,Around the Same,Decline of 50% or more,Did not offer takeout or delivery,No changes were made,SkiptheDishes,No,NA,No,NA
-Treated,Central Toronto,Large,Fine Dining,5-7 years,29,21,Around the Same,Decline of 10% or less,15% or less,No changes were made,Other,No,NA,No,NA
-Treated,Scarborough,Large,Fast-food/quick service,1-4 years,24,39,Lower,Decline of 50% or more,15% or less,No changes were made,UberEats,No,NA,No,NA
-Treated,Etobicoke,Small,Fast-food/quick service,1-4 years,27,33,Around the Same,Decline of 10% or less,30-50%,No changes were made,SkiptheDishes,No,NA,No,NA
-Treated,Etobicoke,Medium,Casual Dining,8-10 years,37,40,Around the Same,Decline of 50% or more,15% or less,No changes were made,UberEats,No,NA,No,NA
-Treated,Scarborough,Large,Other,8-10 years,28,33,Around the Same,Decline of 10% to 25%,15-30%,No changes were made,None,No,NA,No,NA
-Treated,West Toronto,Large,Other,1-4 years,33,36,Around the Same,Decline of 50% or more,50-75%,No changes were made,Other,No,NA,No,NA
-Treated,Downtown Toronto,Large,Other,1-4 years,30,25,Lower,Decline of 50% or more,15% or less,No changes were made,Other,No,NA,No,NA
-Treated,Downtown Toronto,Large,Casual Dining,5-7 years,19,29,Around the Same,Decline of 50% or more,15-30%,No changes were made,UberEats,No,NA,No,NA
-Treated,Etobicoke,Medium,Fast-food/quick service,5-7 years,29,28,Around the Same,Decline of 50% or more,15% or less,No changes were made,In-house delivery service,No,NA,No,NA
-Treated,Central Toronto,Large,Other,1-4 years,24,34,Around the Same,Decline of 10% to 25%,15-30%,No changes were made,Other,Yes,15-30%,No,NA
-Treated,Etobicoke,Large,Fine Dining,10 or more years,24,35,Around the Same,Decline of 50% or more,15% or less,No changes were made,In-house delivery service,No,NA,No,NA
-Treated,West Toronto,Large,Casual Dining,1-4 years,32,28,Around the Same,Decline of 10% to 25%,15% or less,No changes were made,DoorDash,No,NA,No,NA
-Treated,Downtown Toronto,Large,Fast-food/quick service,1-4 years,29,26,Higher,Decline of 10% to 25%,15% or less,No changes were made,Other,No,NA,No,NA
-Treated,Downtown Toronto,Large,Casual Dining,1-4 years,30,34,Around the Same,Decline of 50% or more,15% or less,No changes were made,UberEats,No,NA,No,NA
-Treated,East Toronto,Medium,Casual Dining,8-10 years,31,32,Around the Same,Decline of 50% or more,15% or less,No changes were made,In-house delivery service,No,NA,No,NA
-Treated,Downtown Toronto,Large,Fast-food/quick service,1-4 years,29,29,Around the Same,Decline of 50% or more,15-30%,No changes were made,In-house delivery service,No,NA,No,NA
-Treated,Downtown Toronto,Large,Casual Dining,1-4 years,27,24,Around the Same,Decline of 50% or more,15-30%,No changes were made,UberEats,No,NA,No,NA
-Treated,West Toronto,Small,Casual Dining,1-4 years,28,29,Around the Same,Decline of 10% or less,15% or less,No changes were made,UberEats,No,NA,No,NA
-Treated,North York,Medium,Other,10 or more years,31,26,Around the Same,Decline of 10% to 25%,15% or less,No changes were made,UberEats,Yes,15% or less,Yes,Not Applicable
-Treated,Scarborough,Medium,Other,8-10 years,19,30,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,UberEats,No,NA,No,NA
-Treated,York,Medium,Fast-food/quick service,8-10 years,26,28,Around the Same,Decline of 50% or more,15% or less,No changes were made,DoorDash,No,NA,No,NA
-Treated,York,Medium,Casual Dining,5-7 years,35,33,Around the Same,Decline of 50% or more,50-75%,No changes were made,SkiptheDishes,Yes,15% or less,No,NA
-Treated,Etobicoke,Medium,Other,5-7 years,30,26,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,DoorDash,No,NA,No,NA
-Treated,Downtown Toronto,Large,Fast-food/quick service,8-10 years,33,29,Around the Same,Decline of 10% to 25%,15% or less,No changes were made,DoorDash,No,NA,No,NA
-Treated,Scarborough,Small,Other,5-7 years,28,27,Around the Same,Decline of 50% or more,15% or less,No changes were made,UberEats,No,NA,No,NA
-Treated,Scarborough,Medium,Fast-food/quick service,1-4 years,29,32,Around the Same,Decline of 50% or more,15-30%,No changes were made,None,No,NA,No,NA
-Treated,East Toronto,Medium,Other,1-4 years,25,25,Around the Same,Decline of 50% or more,15% or less,No changes were made,DoorDash,No,NA,No,NA
-Treated,Downtown Toronto,Medium,Casual Dining,1-4 years,33,24,Around the Same,Decline of 50% or more,15% or less,No changes were made,UberEats,No,NA,No,NA
-Treated,Etobicoke,Large,Casual Dining,8-10 years,31,30,Lower,Decline of 25% to 50%,30-50%,No changes were made,None,No,NA,No,NA
-Treated,Etobicoke,Small,Casual Dining,5-7 years,34,23,Around the Same,Decline of 50% or more,15% or less,No changes were made,In-house delivery service,No,NA,No,NA
-Treated,Central Toronto,Medium,Fast-food/quick service,10 or more years,32,33,Around the Same,Decline of 25% to 50%,30-50%,No changes were made,DoorDash,No,NA,No,NA
-Treated,Scarborough,Medium,Other,1-4 years,37,26,Higher,Decline of 25% to 50%,50-75%,No changes were made,In-house delivery service,No,NA,No,NA
-Treated,West Toronto,Medium,Other,5-7 years,30,30,Around the Same,Decline of 50% or more,15% or less,No changes were made,Other,No,NA,No,NA
-Treated,Downtown Toronto,Medium,Other,1-4 years,26,33,Higher,Decline of 50% or more,15-30%,No changes were made,SkiptheDishes,No,NA,No,NA
-Treated,East Toronto,Medium,Fast-food/quick service,10 or more years,32,24,Higher,Decline of 50% or more,15% or less,No changes were made,UberEats,No,NA,No,NA
-Treated,North York,Medium,Other,10 or more years,34,39,Around the Same,Decline of 10% to 25%,15% or less,No changes were made,DoorDash,No,NA,No,NA
-Treated,North York,Medium,Casual Dining,1-4 years,29,24,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,In-house delivery service,No,NA,No,NA
-Treated,Downtown Toronto,Medium,Other,1-4 years,31,26,Around the Same,Decline of 50% or more,30-50%,No changes were made,Other,No,NA,No,NA
-Treated,Downtown Toronto,Medium,Fine Dining,1-4 years,29,33,Higher,Decline of 25% to 50%,15% or less,No changes were made,Other,No,NA,Yes,Not Applicable
-Treated,North York,Medium,Fast-food/quick service,5-7 years,28,26,Around the Same,Decline of 10% or less,15% or less,No changes were made,None,No,NA,No,NA
+Treated,Downtown Toronto,Medium,Casual Dining,8-10 years,32,24,Lower,Decline of 50% or more,15-30%,"Yes, prices were lowered",DoorDash,Yes,30-50%,Yes,5-6 days
+Treated,West Toronto,Large,Other,10 or more years,36,13,Lower,Decline of 10% or less,75% or more,"Yes, prices were lowered",UberEats,Yes,15% or less,No,NA
+Treated,Scarborough,Medium,Other,1-4 years,24,27,Around the Same,Decline of 50% or more,50-75%,No changes were made,UberEats,Yes,30-50%,Yes,3-4 days
+Treated,Downtown Toronto,Large,Fast-food/quick service,8-10 years,18,25,Lower,Decline of 10% or less,75% or more,No changes were made,Other,No,NA,No,NA
+Treated,Scarborough,Medium,Other,1-4 years,30,19,Lower,Decline of 50% or more,75% or more,No changes were made,DoorDash,Yes,15-30%,Yes,1-2 days
+Treated,North York,Large,Casual Dining,5-7 years,31,10,Lower,Decline of 25% to 50%,75% or more,No changes were made,DoorDash,No,NA,Yes,3-4 days
+Treated,West Toronto,Large,Fast-food/quick service,8-10 years,32,23,Lower,Decline of 50% or more,75% or more,No changes were made,DoorDash,Yes,75% or more,Yes,3-4 days
+Treated,West Toronto,Large,Other,1-4 years,28,14,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,No,NA,Yes,1-2 days
+Treated,Scarborough,Medium,Fast-food/quick service,1-4 years,32,21,Lower,Decline of 50% or more,75% or more,No changes were made,UberEats,Yes,30-50%,Yes,5-6 days
+Treated,East York,Medium,Casual Dining,1-4 years,33,22,Lower,Decline of 50% or more,75% or more,No changes were made,Other,Yes,50-75%,Yes,1-2 days
+Treated,West Toronto,Large,Other,8-10 years,24,22,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were lowered",DoorDash,No,NA,Yes,3-4 days
+Treated,Scarborough,Medium,Fast-food/quick service,5-7 years,37,18,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,Yes,30-50%,Yes,1-2 days
+Treated,Downtown Toronto,Medium,Fast-food/quick service,1-4 years,30,20,Lower,Decline of 25% to 50%,75% or more,No changes were made,UberEats,Yes,30-50%,Yes,1-2 days
+Treated,Downtown Toronto,Medium,Fast-food/quick service,1-4 years,29,17,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",None,Yes,30-50%,Yes,1-2 days
+Treated,Etobicoke,Large,Other,5-7 years,26,27,Lower,Decline of 50% or more,15-30%,No changes were made,DoorDash,Yes,50-75%,Yes,3-4 days
+Treated,East York,Medium,Other,5-7 years,28,23,Higher,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,Yes,50-75%,Yes,7 days
+Treated,North York,Medium,Fast-food/quick service,1-4 years,32,29,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,Yes,50-75%,Yes,1-2 days
+Treated,North York,Medium,Other,1-4 years,26,20,Around the Same,Decline of 10% or less,75% or more,"Yes, prices were lowered",In-house delivery service,Yes,15-30%,No,NA
+Treated,North York,Large,Fast-food/quick service,1-4 years,30,28,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were lowered",UberEats,No,NA,No,NA
+Treated,Central Toronto,Medium,Fast-food/quick service,10 or more years,32,23,Lower,Decline of 10% to 25%,75% or more,"Yes, prices were raised",UberEats,Yes,30-50%,No,NA
+Treated,Scarborough,Large,Other,10 or more years,39,20,Around the Same,Decline of 25% to 50%,75% or more,"Yes, prices were lowered",UberEats,Yes,15-30%,Yes,1-2 days
+Treated,Downtown Toronto,Large,Other,5-7 years,15,25,Lower,Decline of 10% to 25%,75% or more,"Yes, prices were lowered",SkiptheDishes,Yes,75% or more,No,NA
+Treated,Downtown Toronto,Medium,Fast-food/quick service,1-4 years,29,19,Lower,Decline of 10% to 25%,75% or more,No changes were made,SkiptheDishes,Yes,30-50%,No,NA
+Treated,North York,Medium,Fine Dining,5-7 years,30,24,Lower,Decline of 50% or more,Did not offer takeout or delivery,No changes were made,DoorDash,No,NA,Yes,3-4 days
+Treated,Etobicoke,Medium,Fast-food/quick service,10 or more years,36,22,Lower,Decline of 50% or more,75% or more,"Yes, prices were raised",Other,Yes,50-75%,Yes,1-2 days
+Treated,Downtown Toronto,Medium,Fast-food/quick service,8-10 years,42,14,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were lowered",UberEats,Yes,30-50%,Yes,3-4 days
+Treated,Scarborough,Medium,Fast-food/quick service,5-7 years,35,18,Lower,Decline of 50% or more,15% or less,"Yes, prices were lowered",Other,Yes,30-50%,Yes,1-2 days
+Treated,North York,Large,Casual Dining,10 or more years,32,16,Lower,Decline of 50% or more,30-50%,"Yes, prices were lowered",DoorDash,Yes,15-30%,Yes,1-2 days
+Treated,East Toronto,Large,Fast-food/quick service,8-10 years,24,19,Lower,Decline of 50% or more,75% or more,No changes were made,DoorDash,No,NA,Yes,1-2 days
+Treated,Etobicoke,Large,Fine Dining,1-4 years,38,16,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were lowered",Other,Yes,30-50%,Yes,1-2 days
+Treated,Scarborough,Medium,Fast-food/quick service,1-4 years,28,18,Lower,Decline of 10% to 25%,75% or more,"Yes, prices were lowered",UberEats,Yes,15-30%,Yes,3-4 days
+Treated,East York,Small,Fast-food/quick service,8-10 years,35,8,Lower,Decline of 10% to 25%,75% or more,No changes were made,UberEats,Yes,30-50%,Yes,3-4 days
+Treated,Downtown Toronto,Large,Fast-food/quick service,1-4 years,24,16,Lower,Decline of 10% to 25%,75% or more,"Yes, prices were raised",UberEats,No,NA,Yes,5-6 days
+Treated,Downtown Toronto,Medium,Fast-food/quick service,1-4 years,31,16,Lower,Decline of 50% or more,75% or more,No changes were made,SkiptheDishes,Yes,15-30%,Yes,1-2 days
+Treated,Downtown Toronto,Large,Fast-food/quick service,1-4 years,22,16,Lower,Decline of 10% to 25%,75% or more,"Yes, prices were lowered",UberEats,Yes,30-50%,Yes,1-2 days
+Treated,Downtown Toronto,Medium,Other,5-7 years,37,20,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",Other,Yes,50-75%,No,NA
+Treated,North York,Medium,Other,5-7 years,28,20,Higher,Decline of 50% or more,75% or more,No changes were made,UberEats,Yes,50-75%,Yes,1-2 days
+Treated,Downtown Toronto,Medium,Other,1-4 years,30,18,Lower,Decline of 50% or more,50-75%,"Yes, prices were lowered",DoorDash,Yes,15-30%,Yes,1-2 days
+Treated,West Toronto,Medium,Other,10 or more years,27,21,Around the Same,Decline of 10% or less,75% or more,"Yes, prices were lowered",DoorDash,Yes,15-30%,Yes,1-2 days
+Treated,North York,Medium,Other,1-4 years,31,14,Lower,Decline of 25% to 50%,75% or more,No changes were made,DoorDash,Yes,15% or less,No,NA
+Treated,Etobicoke,Large,Fast-food/quick service,1-4 years,21,15,Lower,Decline of 10% to 25%,75% or more,"Yes, prices were lowered",DoorDash,Yes,30-50%,Yes,1-2 days
+Treated,Downtown Toronto,Medium,Fast-food/quick service,1-4 years,31,12,Lower,Decline of 50% or more,75% or more,No changes were made,SkiptheDishes,Yes,30-50%,Yes,1-2 days
+Treated,North York,Large,Other,10 or more years,31,13,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were lowered",UberEats,Yes,15-30%,Yes,3-4 days
+Treated,North York,Medium,Fast-food/quick service,8-10 years,27,23,Lower,Decline of 50% or more,30-50%,No changes were made,Other,Yes,30-50%,Yes,3-4 days
+Treated,Downtown Toronto,Medium,Other,8-10 years,28,21,Lower,Decline of 10% to 25%,75% or more,"Yes, prices were raised",SkiptheDishes,Yes,15% or less,Yes,7 days
+Treated,West Toronto,Medium,Other,5-7 years,35,16,Lower,Decline of 10% or less,75% or more,No changes were made,UberEats,Yes,30-50%,Yes,7 days
+Treated,York,Medium,Fast-food/quick service,1-4 years,32,16,Lower,Decline of 50% or more,75% or more,"Yes, prices were raised",UberEats,Yes,15-30%,Yes,3-4 days
+Treated,North York,Small,Casual Dining,8-10 years,27,22,Lower,Decline of 50% or more,75% or more,"Yes, prices were raised",DoorDash,Yes,30-50%,Yes,1-2 days
+Treated,Scarborough,Medium,Fast-food/quick service,1-4 years,35,26,Lower,Decline of 25% to 50%,75% or more,No changes were made,DoorDash,Yes,15-30%,Yes,1-2 days
+Treated,East Toronto,Medium,Fast-food/quick service,8-10 years,22,18,Around the Same,Decline of 50% or more,75% or more,"Yes, prices were lowered",Other,Yes,30-50%,Yes,1-2 days
+Treated,Scarborough,Large,Fine Dining,8-10 years,26,20,Lower,Decline of 10% or less,75% or more,No changes were made,DoorDash,Yes,50-75%,Yes,3-4 days
+Treated,Downtown Toronto,Large,Other,1-4 years,21,16,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were lowered",UberEats,Yes,30-50%,Yes,3-4 days
+Treated,Downtown Toronto,Medium,Casual Dining,1-4 years,27,25,Lower,Decline of 10% to 25%,75% or more,No changes were made,Other,Yes,15-30%,Yes,1-2 days
+Treated,Scarborough,Large,Fast-food/quick service,1-4 years,41,25,Lower,Decline of 50% or more,50-75%,"Yes, prices were lowered",DoorDash,Yes,15% or less,Yes,1-2 days
+Treated,Central Toronto,Large,Fine Dining,10 or more years,32,25,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were raised",DoorDash,Yes,15-30%,Yes,3-4 days
+Treated,West Toronto,Large,Other,8-10 years,31,18,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were lowered",DoorDash,Yes,15-30%,Yes,1-2 days
+Treated,East York,Medium,Fast-food/quick service,1-4 years,30,22,Around the Same,Decline of 50% or more,50-75%,No changes were made,UberEats,Yes,30-50%,Yes,1-2 days
+Treated,North York,Small,Fast-food/quick service,1-4 years,30,22,Lower,Decline of 50% or more,75% or more,No changes were made,DoorDash,No,NA,No,NA
+Treated,York,Large,Casual Dining,10 or more years,36,21,Higher,Decline of 25% to 50%,75% or more,"Yes, prices were lowered",DoorDash,Yes,15-30%,Yes,3-4 days
+Treated,Downtown Toronto,Medium,Fine Dining,10 or more years,22,21,Higher,Decline of 10% or less,75% or more,No changes were made,UberEats,Yes,30-50%,Yes,1-2 days
+Treated,North York,Medium,Fast-food/quick service,1-4 years,31,20,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,Yes,50-75%,Yes,Not Applicable
+Treated,Scarborough,Large,Fine Dining,1-4 years,31,26,Higher,Decline of 10% to 25%,50-75%,"Yes, prices were raised",None,Yes,15-30%,Yes,3-4 days
+Treated,East Toronto,Small,Other,10 or more years,39,19,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,Yes,75% or more,Yes,5-6 days
+Treated,Scarborough,Small,Fast-food/quick service,1-4 years,32,19,Lower,Decline of 10% to 25%,75% or more,"Yes, prices were lowered",DoorDash,Yes,15% or less,No,NA
+Treated,West Toronto,Large,Other,8-10 years,27,22,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",None,Yes,30-50%,Yes,3-4 days
+Treated,West Toronto,Large,Fast-food/quick service,10 or more years,26,15,Higher,Decline of 10% to 25%,75% or more,"Yes, prices were raised",SkiptheDishes,Yes,30-50%,Yes,1-2 days
+Treated,North York,Medium,Other,8-10 years,39,25,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",In-house delivery service,No,NA,Yes,1-2 days
+Treated,Central Toronto,Large,Other,5-7 years,31,21,Lower,Decline of 10% to 25%,75% or more,No changes were made,UberEats,Yes,30-50%,Yes,1-2 days
+Treated,East Toronto,Large,Other,1-4 years,31,13,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,Yes,15-30%,Yes,3-4 days
+Treated,East York,Medium,Fast-food/quick service,1-4 years,27,24,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,Yes,15% or less,No,NA
+Treated,Etobicoke,Medium,Fast-food/quick service,5-7 years,26,23,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were lowered",None,Yes,30-50%,Yes,1-2 days
+Treated,Downtown Toronto,Large,Other,10 or more years,34,15,Higher,Decline of 50% or more,75% or more,"Yes, prices were lowered",Other,Yes,50-75%,No,NA
+Treated,Downtown Toronto,Small,Other,1-4 years,25,21,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were lowered",DoorDash,Yes,30-50%,Yes,1-2 days
+Treated,Central Toronto,Large,Fast-food/quick service,1-4 years,24,17,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",DoorDash,Yes,50-75%,No,NA
+Treated,East York,Medium,Fine Dining,1-4 years,32,12,Higher,Decline of 10% to 25%,75% or more,No changes were made,DoorDash,Yes,15-30%,No,NA
+Treated,Scarborough,Medium,Fast-food/quick service,5-7 years,37,17,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were lowered",DoorDash,Yes,15-30%,Yes,3-4 days
+Treated,Downtown Toronto,Large,Other,10 or more years,22,21,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were lowered",DoorDash,Yes,15% or less,Yes,7 days
+Treated,North York,Medium,Fine Dining,1-4 years,27,22,Lower,Decline of 50% or more,75% or more,No changes were made,UberEats,Yes,15-30%,Yes,3-4 days
+Treated,West Toronto,Medium,Casual Dining,1-4 years,26,19,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were lowered",UberEats,Yes,30-50%,Yes,3-4 days
+Treated,Etobicoke,Large,Fast-food/quick service,5-7 years,25,21,Higher,Decline of 10% or less,75% or more,"Yes, prices were lowered",UberEats,Yes,15-30%,Yes,3-4 days
+Treated,Downtown Toronto,Large,Other,5-7 years,27,25,Higher,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,Yes,15-30%,Yes,5-6 days
+Treated,North York,Large,Other,1-4 years,25,20,Lower,Decline of 50% or more,75% or more,No changes were made,UberEats,Yes,50-75%,Yes,1-2 days
+Treated,North York,Medium,Fast-food/quick service,5-7 years,30,20,Higher,Decline of 10% to 25%,75% or more,"Yes, prices were lowered",Other,Yes,50-75%,Yes,7 days
+Treated,Scarborough,Large,Fast-food/quick service,1-4 years,34,20,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",Other,Yes,50-75%,Yes,1-2 days
+Treated,West Toronto,Medium,Fast-food/quick service,5-7 years,25,10,Lower,Decline of 50% or more,75% or more,No changes were made,Other,No,NA,Yes,1-2 days
+Treated,East Toronto,Medium,Casual Dining,1-4 years,26,27,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",DoorDash,No,NA,No,NA
+Treated,East Toronto,Large,Fast-food/quick service,1-4 years,36,16,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,Yes,15-30%,Yes,3-4 days
+Treated,Downtown Toronto,Large,Other,1-4 years,25,23,Lower,Decline of 10% to 25%,75% or more,"Yes, prices were lowered",SkiptheDishes,No,NA,Yes,1-2 days
+Treated,Central Toronto,Large,Other,1-4 years,24,19,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were lowered",Other,Yes,50-75%,No,NA
+Treated,North York,Small,Other,1-4 years,27,19,Lower,Decline of 10% or less,75% or more,No changes were made,UberEats,Yes,15-30%,Yes,1-2 days
+Treated,Scarborough,Large,Other,8-10 years,26,21,Lower,Decline of 10% or less,75% or more,"Yes, prices were lowered",UberEats,Yes,15% or less,Yes,3-4 days
+Treated,West Toronto,Medium,Fine Dining,1-4 years,31,14,Higher,Decline of 25% to 50%,75% or more,No changes were made,UberEats,Yes,50-75%,No,NA
+Treated,East York,Large,Fast-food/quick service,8-10 years,31,24,Lower,Decline of 50% or more,75% or more,No changes were made,Other,Yes,50-75%,Yes,1-2 days
+Treated,West Toronto,Medium,Other,5-7 years,28,14,Lower,Decline of 10% to 25%,75% or more,"Yes, prices were lowered",DoorDash,No,NA,Yes,3-4 days
+Treated,York,Medium,Casual Dining,1-4 years,24,24,Higher,Decline of 10% to 25%,75% or more,"Yes, prices were raised",Other,Yes,15-30%,Yes,1-2 days
+Treated,Scarborough,Medium,Fast-food/quick service,5-7 years,34,21,Lower,Decline of 50% or more,75% or more,No changes were made,DoorDash,Yes,15% or less,Yes,1-2 days
+Treated,Downtown Toronto,Medium,Fast-food/quick service,1-4 years,25,21,Lower,Decline of 50% or more,75% or more,No changes were made,SkiptheDishes,Yes,15% or less,Yes,7 days
+Treated,East Toronto,Medium,Fine Dining,10 or more years,25,24,Lower,Decline of 10% to 25%,75% or more,No changes were made,UberEats,Yes,15-30%,Yes,1-2 days
+Treated,Downtown Toronto,Medium,Other,1-4 years,28,18,Lower,Decline of 10% to 25%,75% or more,"Yes, prices were raised",UberEats,No,NA,Yes,1-2 days
+Treated,Downtown Toronto,Medium,Fast-food/quick service,1-4 years,38,13,Lower,Decline of 50% or more,75% or more,No changes were made,DoorDash,Yes,15% or less,Yes,1-2 days
+Treated,Scarborough,Medium,Fine Dining,1-4 years,33,26,Lower,Decline of 10% to 25%,75% or more,"Yes, prices were lowered",Other,Yes,75% or more,Yes,1-2 days
+Treated,North York,Large,Fine Dining,1-4 years,33,24,Higher,Decline of 25% to 50%,75% or more,No changes were made,Other,Yes,30-50%,Yes,3-4 days
+Treated,Scarborough,Medium,Casual Dining,5-7 years,41,24,Lower,Decline of 25% to 50%,75% or more,No changes were made,Other,Yes,15% or less,Yes,1-2 days
+Treated,West Toronto,Large,Other,1-4 years,28,13,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were raised",Other,Yes,50-75%,Yes,3-4 days
+Treated,Scarborough,Large,Casual Dining,1-4 years,23,14,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",SkiptheDishes,Yes,30-50%,Yes,1-2 days
+Treated,Downtown Toronto,Medium,Fast-food/quick service,1-4 years,31,24,Lower,Decline of 50% or more,75% or more,No changes were made,UberEats,Yes,15-30%,Yes,3-4 days
+Treated,Downtown Toronto,Large,Fast-food/quick service,1-4 years,22,20,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were lowered",UberEats,Yes,75% or more,Yes,5-6 days
+Treated,Downtown Toronto,Small,Casual Dining,1-4 years,34,26,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",In-house delivery service,No,NA,Yes,3-4 days
+Treated,West Toronto,Large,Other,5-7 years,28,27,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",DoorDash,Yes,15-30%,Yes,5-6 days
+Treated,Etobicoke,Medium,Casual Dining,8-10 years,43,18,Higher,Decline of 50% or more,75% or more,"Yes, prices were raised",DoorDash,Yes,30-50%,Yes,1-2 days
+Treated,Central Toronto,Large,Casual Dining,1-4 years,27,19,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were lowered",DoorDash,Yes,30-50%,Yes,1-2 days
+Treated,Scarborough,Small,Casual Dining,8-10 years,15,20,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",DoorDash,Yes,15-30%,Yes,3-4 days
+Treated,Downtown Toronto,Medium,Fast-food/quick service,5-7 years,35,21,Around the Same,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,Yes,75% or more,Yes,3-4 days
+Treated,North York,Medium,Fine Dining,10 or more years,36,14,Lower,Decline of 10% or less,75% or more,"Yes, prices were raised",Other,Yes,50-75%,Yes,1-2 days
+Treated,Scarborough,Large,Fast-food/quick service,5-7 years,34,18,Lower,Decline of 10% or less,75% or more,"Yes, prices were lowered",UberEats,Yes,15-30%,Yes,1-2 days
+Treated,East Toronto,Medium,Fine Dining,8-10 years,27,16,Higher,Decline of 50% or more,50-75%,"Yes, prices were lowered",UberEats,No,NA,Yes,1-2 days
+Treated,East York,Medium,Fine Dining,1-4 years,23,20,Lower,Decline of 10% or less,75% or more,"Yes, prices were raised",UberEats,Yes,50-75%,No,NA
+Treated,West Toronto,Large,Fast-food/quick service,8-10 years,28,28,Lower,Decline of 10% to 25%,75% or more,"Yes, prices were raised",Other,Yes,50-75%,Yes,3-4 days
+Treated,Central Toronto,Medium,Fine Dining,8-10 years,22,24,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were raised",SkiptheDishes,Yes,30-50%,No,NA
+Treated,Downtown Toronto,Medium,Fast-food/quick service,5-7 years,32,13,Lower,Decline of 50% or more,75% or more,No changes were made,UberEats,Yes,15-30%,Yes,1-2 days
+Treated,Downtown Toronto,Small,Casual Dining,8-10 years,20,12,Lower,Decline of 10% or less,75% or more,"Yes, prices were lowered",UberEats,No,NA,Yes,1-2 days
+Treated,North York,Small,Fast-food/quick service,8-10 years,25,18,Lower,Decline of 50% or more,75% or more,No changes were made,Other,Yes,30-50%,No,NA
+Treated,Scarborough,Large,Fast-food/quick service,8-10 years,35,21,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,Yes,15-30%,Yes,1-2 days
+Treated,East Toronto,Medium,Fine Dining,8-10 years,24,26,Lower,Decline of 10% to 25%,75% or more,"Yes, prices were raised",UberEats,Yes,15-30%,Yes,5-6 days
+Treated,York,Medium,Casual Dining,1-4 years,44,18,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,Yes,15-30%,Yes,5-6 days
+Treated,Downtown Toronto,Medium,Other,5-7 years,29,16,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,Yes,30-50%,No,NA
+Treated,York,Medium,Other,5-7 years,28,20,Higher,Decline of 10% to 25%,75% or more,"Yes, prices were lowered",UberEats,Yes,15% or less,Yes,3-4 days
+Treated,Central Toronto,Medium,Fast-food/quick service,8-10 years,25,16,Lower,Decline of 50% or more,75% or more,No changes were made,UberEats,Yes,15% or less,No,NA
+Treated,Downtown Toronto,Medium,Fast-food/quick service,1-4 years,27,22,Lower,Decline of 10% to 25%,75% or more,"Yes, prices were lowered",SkiptheDishes,Yes,50-75%,Yes,1-2 days
+Treated,Central Toronto,Medium,Other,10 or more years,29,21,Around the Same,Decline of 50% or more,75% or more,"Yes, prices were lowered",DoorDash,No,NA,Yes,3-4 days
+Treated,Central Toronto,Medium,Casual Dining,1-4 years,26,16,Lower,Decline of 50% or more,75% or more,"Yes, prices were raised",Other,Yes,15% or less,Yes,3-4 days
+Treated,Downtown Toronto,Medium,Fast-food/quick service,1-4 years,33,19,Lower,Decline of 10% to 25%,75% or more,"Yes, prices were lowered",Other,Yes,75% or more,Yes,3-4 days
+Treated,North York,Medium,Other,8-10 years,30,14,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,No,NA,Yes,5-6 days
+Treated,Downtown Toronto,Large,Casual Dining,1-4 years,28,16,Lower,Decline of 50% or more,75% or more,No changes were made,Other,Yes,30-50%,Yes,5-6 days
+Treated,North York,Large,Fast-food/quick service,10 or more years,32,15,Lower,Decline of 50% or more,75% or more,No changes were made,SkiptheDishes,Yes,30-50%,Yes,5-6 days
+Treated,Etobicoke,Medium,Fast-food/quick service,1-4 years,21,17,Lower,Decline of 50% or more,75% or more,"Yes, prices were raised",SkiptheDishes,Yes,15-30%,Yes,1-2 days
+Treated,Scarborough,Medium,Fast-food/quick service,10 or more years,33,19,Lower,Decline of 50% or more,75% or more,"Yes, prices were raised",Other,Yes,15% or less,Yes,5-6 days
+Treated,Etobicoke,Small,Casual Dining,5-7 years,25,23,Lower,Decline of 10% to 25%,30-50%,"Yes, prices were lowered",UberEats,Yes,30-50%,Yes,3-4 days
+Treated,North York,Medium,Casual Dining,5-7 years,28,27,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",Other,Yes,30-50%,Yes,1-2 days
+Treated,East York,Large,Casual Dining,5-7 years,30,14,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",SkiptheDishes,Yes,30-50%,Yes,1-2 days
+Treated,Scarborough,Medium,Casual Dining,1-4 years,26,26,Around the Same,Decline of 50% or more,75% or more,"Yes, prices were lowered",None,Yes,15-30%,Yes,3-4 days
+Treated,Etobicoke,Large,Fast-food/quick service,10 or more years,32,24,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",DoorDash,No,NA,Yes,Not Applicable
+Treated,West Toronto,Large,Fast-food/quick service,10 or more years,21,15,Lower,Decline of 25% to 50%,75% or more,No changes were made,UberEats,Yes,15-30%,Yes,3-4 days
+Treated,North York,Large,Other,5-7 years,31,21,Lower,Decline of 50% or more,75% or more,"Yes, prices were lowered",UberEats,No,NA,Yes,1-2 days
+Treated,Scarborough,Medium,Fast-food/quick service,5-7 years,25,21,Lower,Decline of 10% to 25%,75% or more,"Yes, prices were lowered",UberEats,Yes,75% or more,No,NA
+Treated,North York,Large,Fine Dining,8-10 years,35,28,Lower,Decline of 10% or less,75% or more,"Yes, prices were lowered",UberEats,Yes,15-30%,Yes,3-4 days
+Treated,East Toronto,Medium,Fast-food/quick service,5-7 years,33,12,Lower,Decline of 10% to 25%,50-75%,"Yes, prices were lowered",DoorDash,Yes,75% or more,No,NA
+Treated,Downtown Toronto,Small,Casual Dining,5-7 years,29,16,Lower,Decline of 25% to 50%,75% or more,"Yes, prices were lowered",Other,Yes,15-30%,No,NA
+Treated,Downtown Toronto,Medium,Casual Dining,10 or more years,32,19,Lower,Decline of 10% or less,75% or more,"Yes, prices were lowered",DoorDash,Yes,30-50%,Yes,1-2 days
+Treated,Scarborough,Small,Fast-food/quick service,8-10 years,41,24,Higher,Decline of 50% or more,75% or more,No changes were made,DoorDash,Yes,75% or more,Yes,3-4 days
+Treated,Downtown Toronto,Large,Other,1-4 years,37,32,Lower,Decline of 50% or more,Did not offer takeout or delivery,No changes were made,None,No,NA,No,NA
+Treated,East York,Small,Fast-food/quick service,1-4 years,31,39,Around the Same,Decline of 10% or less,15-30%,No changes were made,SkiptheDishes,No,NA,No,NA
+Treated,North York,Medium,Fast-food/quick service,1-4 years,24,30,Around the Same,Decline of 10% or less,15% or less,No changes were made,UberEats,No,NA,No,NA
+Treated,Downtown Toronto,Medium,Casual Dining,8-10 years,31,24,Around the Same,Decline of 10% or less,15% or less,No changes were made,SkiptheDishes,No,NA,No,NA
+Treated,East Toronto,Large,Fine Dining,8-10 years,29,25,Around the Same,Decline of 50% or more,15% or less,No changes were made,DoorDash,No,NA,No,NA
+Treated,North York,Large,Casual Dining,1-4 years,26,21,Around the Same,Decline of 50% or more,30-50%,No changes were made,SkiptheDishes,No,NA,No,NA
+Treated,North York,Medium,Fine Dining,5-7 years,26,30,Around the Same,Decline of 50% or more,Did not offer takeout or delivery,No changes were made,UberEats,No,NA,No,NA
+Treated,Downtown Toronto,Medium,Other,8-10 years,35,23,Around the Same,Decline of 10% or less,15% or less,No changes were made,DoorDash,No,NA,No,NA
+Treated,Downtown Toronto,Medium,Fast-food/quick service,1-4 years,25,25,Around the Same,Decline of 10% to 25%,15% or less,No changes were made,DoorDash,No,NA,No,NA
+Treated,West Toronto,Medium,Casual Dining,10 or more years,35,24,Around the Same,Decline of 50% or more,15-30%,No changes were made,DoorDash,No,NA,No,NA
+Treated,York,Large,Fast-food/quick service,1-4 years,35,27,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,Other,No,NA,No,NA
+Treated,Central Toronto,Medium,Fast-food/quick service,1-4 years,24,27,Around the Same,Decline of 50% or more,15-30%,No changes were made,UberEats,No,NA,No,NA
+Treated,Scarborough,Medium,Fast-food/quick service,10 or more years,23,32,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,In-house delivery service,No,NA,No,NA
+Treated,East Toronto,Medium,Casual Dining,5-7 years,45,29,Around the Same,Decline of 50% or more,15-30%,No changes were made,In-house delivery service,No,NA,No,NA
+Treated,Downtown Toronto,Large,Casual Dining,10 or more years,22,34,Around the Same,Decline of 50% or more,15% or less,No changes were made,UberEats,No,NA,No,NA
+Treated,Downtown Toronto,Medium,Other,1-4 years,31,39,Around the Same,Decline of 50% or more,15% or less,No changes were made,SkiptheDishes,No,NA,No,NA
+Treated,North York,Medium,Fast-food/quick service,8-10 years,38,20,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,SkiptheDishes,No,NA,No,NA
+Treated,Downtown Toronto,Small,Fast-food/quick service,5-7 years,36,32,Around the Same,Decline of 25% to 50%,30-50%,No changes were made,UberEats,No,NA,No,NA
+Treated,Scarborough,Large,Other,10 or more years,40,36,Around the Same,Decline of 50% or more,15% or less,No changes were made,In-house delivery service,No,NA,No,NA
+Treated,Scarborough,Medium,Fast-food/quick service,1-4 years,32,29,Around the Same,Decline of 50% or more,15% or less,No changes were made,UberEats,No,NA,No,NA
+Treated,Central Toronto,Medium,Other,1-4 years,26,27,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,SkiptheDishes,No,NA,No,NA
+Treated,North York,Medium,Fast-food/quick service,8-10 years,32,30,Around the Same,Decline of 10% or less,15% or less,"Yes, prices were raised",UberEats,No,NA,No,NA
+Treated,West Toronto,Small,Casual Dining,1-4 years,28,34,Around the Same,Decline of 50% or more,30-50%,No changes were made,UberEats,No,NA,No,NA
+Treated,West Toronto,Small,Fast-food/quick service,10 or more years,36,27,Around the Same,Decline of 50% or more,15% or less,No changes were made,Other,No,NA,No,NA
+Treated,Etobicoke,Medium,Fine Dining,5-7 years,28,33,Around the Same,Decline of 50% or more,15% or less,No changes were made,DoorDash,No,NA,No,NA
+Treated,Etobicoke,Medium,Fast-food/quick service,8-10 years,35,36,Around the Same,Decline of 50% or more,15% or less,No changes were made,DoorDash,No,NA,No,NA
+Treated,North York,Large,Fast-food/quick service,10 or more years,30,29,Lower,Decline of 50% or more,50-75%,"Yes, prices were lowered",SkiptheDishes,No,NA,No,NA
+Treated,West Toronto,Large,Fast-food/quick service,10 or more years,32,32,Around the Same,Decline of 25% to 50%,15-30%,No changes were made,UberEats,No,NA,No,NA
+Treated,North York,Medium,Other,1-4 years,28,35,Around the Same,Decline of 25% to 50%,15-30%,No changes were made,Other,No,NA,No,NA
+Treated,Central Toronto,Medium,Casual Dining,8-10 years,29,30,Around the Same,Decline of 10% or less,30-50%,No changes were made,None,No,NA,No,NA
+Treated,Downtown Toronto,Large,Other,5-7 years,31,20,Around the Same,Decline of 50% or more,30-50%,No changes were made,None,No,NA,No,NA
+Treated,Downtown Toronto,Medium,Fast-food/quick service,8-10 years,23,33,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,SkiptheDishes,No,NA,No,NA
+Treated,West Toronto,Large,Fast-food/quick service,1-4 years,19,31,Around the Same,Decline of 10% to 25%,Did not offer takeout or delivery,No changes were made,UberEats,No,NA,No,NA
+Treated,Etobicoke,Large,Casual Dining,1-4 years,34,31,Around the Same,Decline of 50% or more,Did not offer takeout or delivery,No changes were made,DoorDash,No,NA,No,NA
+Treated,Etobicoke,Large,Casual Dining,5-7 years,24,33,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,Other,No,NA,No,NA
+Treated,Downtown Toronto,Medium,Other,8-10 years,26,36,Around the Same,Decline of 50% or more,15% or less,No changes were made,SkiptheDishes,No,NA,No,NA
+Treated,Downtown Toronto,Medium,Fast-food/quick service,5-7 years,32,34,Around the Same,Decline of 50% or more,15% or less,No changes were made,DoorDash,No,NA,No,NA
+Treated,Downtown Toronto,Small,Other,5-7 years,31,27,Around the Same,Decline of 50% or more,15% or less,No changes were made,SkiptheDishes,No,NA,No,NA
+Treated,Scarborough,Medium,Other,5-7 years,30,27,Around the Same,Decline of 10% to 25%,15% or less,No changes were made,DoorDash,No,NA,No,NA
+Treated,North York,Large,Fast-food/quick service,1-4 years,35,29,Around the Same,Decline of 10% to 25%,15% or less,No changes were made,Other,No,NA,No,NA
+Treated,Scarborough,Medium,Other,1-4 years,40,34,Around the Same,Decline of 25% to 50%,15-30%,No changes were made,Other,No,NA,No,NA
+Treated,Scarborough,Medium,Fine Dining,1-4 years,34,29,Around the Same,Decline of 25% to 50%,15-30%,No changes were made,UberEats,No,NA,No,NA
+Treated,Downtown Toronto,Medium,Casual Dining,5-7 years,37,27,Around the Same,Decline of 50% or more,15-30%,No changes were made,Other,No,NA,No,NA
+Treated,Etobicoke,Large,Fast-food/quick service,1-4 years,35,22,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,SkiptheDishes,No,NA,No,NA
+Treated,West Toronto,Medium,Casual Dining,5-7 years,27,29,Around the Same,Decline of 50% or more,15% or less,No changes were made,SkiptheDishes,No,NA,No,NA
+Treated,North York,Medium,Other,5-7 years,30,27,Around the Same,Decline of 50% or more,15% or less,No changes were made,DoorDash,No,NA,Yes,1-2 days
+Treated,Downtown Toronto,Medium,Fast-food/quick service,1-4 years,32,40,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,DoorDash,No,NA,No,NA
+Treated,York,Large,Other,1-4 years,39,22,Around the Same,Decline of 10% to 25%,15% or less,No changes were made,DoorDash,No,NA,No,NA
+Treated,Etobicoke,Medium,Fast-food/quick service,5-7 years,31,29,Around the Same,Decline of 50% or more,15% or less,No changes were made,In-house delivery service,No,NA,No,NA
+Treated,Scarborough,Medium,Fast-food/quick service,5-7 years,31,18,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,DoorDash,No,NA,No,NA
+Treated,West Toronto,Small,Fast-food/quick service,1-4 years,16,33,Around the Same,Decline of 50% or more,15% or less,No changes were made,In-house delivery service,No,NA,No,NA
+Treated,East York,Medium,Other,8-10 years,36,30,Around the Same,Decline of 10% or less,Did not offer takeout or delivery,No changes were made,DoorDash,No,NA,No,NA
+Treated,West Toronto,Large,Fast-food/quick service,1-4 years,29,33,Around the Same,Decline of 10% to 25%,15-30%,No changes were made,In-house delivery service,No,NA,No,NA
+Treated,Downtown Toronto,Medium,Casual Dining,8-10 years,31,25,Around the Same,Decline of 50% or more,15% or less,No changes were made,DoorDash,No,NA,No,NA
+Treated,Downtown Toronto,Large,Other,1-4 years,21,27,Lower,Decline of 50% or more,Did not offer takeout or delivery,No changes were made,Other,No,NA,No,NA
+Treated,Downtown Toronto,Medium,Casual Dining,1-4 years,32,35,Around the Same,Decline of 50% or more,15% or less,No changes were made,UberEats,No,NA,No,NA
+Treated,Downtown Toronto,Medium,Fast-food/quick service,1-4 years,28,22,Higher,Decline of 25% to 50%,15-30%,No changes were made,Other,No,NA,No,NA
+Treated,Downtown Toronto,Medium,Casual Dining,1-4 years,24,29,Higher,Decline of 10% to 25%,15% or less,No changes were made,None,No,NA,No,NA
+Treated,North York,Large,Fast-food/quick service,8-10 years,33,27,Lower,Decline of 10% or less,15-30%,No changes were made,None,No,NA,No,NA
+Treated,Central Toronto,Medium,Casual Dining,1-4 years,31,39,Around the Same,Decline of 50% or more,15% or less,No changes were made,DoorDash,No,NA,No,NA
+Treated,Downtown Toronto,Medium,Fast-food/quick service,1-4 years,25,27,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,UberEats,No,NA,No,NA
+Treated,Downtown Toronto,Large,Fine Dining,1-4 years,34,30,Around the Same,Decline of 50% or more,15% or less,No changes were made,Other,No,NA,No,NA
+Treated,Downtown Toronto,Small,Casual Dining,10 or more years,33,38,Around the Same,Decline of 50% or more,15% or less,No changes were made,In-house delivery service,No,NA,No,NA
+Treated,Central Toronto,Large,Casual Dining,1-4 years,30,32,Around the Same,Decline of 50% or more,15% or less,No changes were made,In-house delivery service,No,NA,No,NA
+Treated,Scarborough,Large,Other,1-4 years,30,27,Around the Same,Decline of 50% or more,15% or less,No changes were made,Other,No,NA,No,NA
+Treated,Etobicoke,Small,Other,1-4 years,32,30,Lower,Decline of 25% to 50%,15% or less,No changes were made,UberEats,No,NA,No,NA
+Treated,East York,Large,Fast-food/quick service,10 or more years,31,32,Around the Same,Decline of 50% or more,15-30%,No changes were made,SkiptheDishes,No,NA,No,NA
+Treated,East York,Small,Casual Dining,5-7 years,24,35,Lower,Decline of 25% to 50%,15% or less,No changes were made,DoorDash,No,NA,No,NA
+Treated,Downtown Toronto,Large,Other,5-7 years,41,27,Lower,Decline of 50% or more,15% or less,No changes were made,SkiptheDishes,Yes,15-30%,No,NA
+Treated,Etobicoke,Large,Fast-food/quick service,5-7 years,26,28,Around the Same,Decline of 50% or more,15-30%,No changes were made,UberEats,No,NA,No,NA
+Treated,Downtown Toronto,Large,Casual Dining,10 or more years,40,38,Around the Same,Decline of 50% or more,15% or less,No changes were made,UberEats,No,NA,No,NA
+Treated,Scarborough,Large,Other,1-4 years,29,36,Around the Same,Decline of 50% or more,15% or less,No changes were made,DoorDash,No,NA,No,NA
+Treated,Scarborough,Medium,Fast-food/quick service,10 or more years,30,32,Around the Same,Decline of 10% to 25%,15% or less,No changes were made,Other,No,NA,No,NA
+Treated,York,Small,Fast-food/quick service,1-4 years,28,21,Around the Same,Decline of 50% or more,15% or less,No changes were made,DoorDash,No,NA,No,NA
+Treated,Etobicoke,Large,Other,5-7 years,24,36,Lower,Decline of 10% to 25%,15% or less,No changes were made,UberEats,No,NA,No,NA
+Treated,Scarborough,Large,Casual Dining,10 or more years,34,26,Around the Same,Decline of 50% or more,15% or less,No changes were made,In-house delivery service,No,NA,No,NA
+Treated,East Toronto,Large,Casual Dining,1-4 years,28,28,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,UberEats,No,NA,Yes,Not Applicable
+Treated,East Toronto,Medium,Fine Dining,8-10 years,26,30,Lower,Decline of 25% to 50%,15% or less,No changes were made,Other,No,NA,No,NA
+Treated,Scarborough,Medium,Casual Dining,1-4 years,44,30,Around the Same,Decline of 50% or more,15% or less,No changes were made,SkiptheDishes,No,NA,No,NA
+Treated,Scarborough,Medium,Casual Dining,5-7 years,29,25,Around the Same,Decline of 50% or more,15% or less,No changes were made,Other,No,NA,No,NA
+Treated,Downtown Toronto,Large,Fast-food/quick service,5-7 years,28,38,Around the Same,Decline of 50% or more,15-30%,No changes were made,Other,No,NA,No,NA
+Treated,Downtown Toronto,Large,Fast-food/quick service,1-4 years,35,33,Higher,Decline of 10% or less,30-50%,No changes were made,SkiptheDishes,No,NA,No,NA
+Treated,West Toronto,Medium,Other,10 or more years,21,27,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,SkiptheDishes,No,NA,No,NA
+Treated,Downtown Toronto,Medium,Fast-food/quick service,5-7 years,24,23,Around the Same,Decline of 10% or less,15% or less,No changes were made,Other,No,NA,Yes,Not Applicable
+Treated,Downtown Toronto,Medium,Fast-food/quick service,8-10 years,36,34,Around the Same,Decline of 50% or more,15% or less,No changes were made,None,No,NA,No,NA
+Treated,West Toronto,Medium,Fine Dining,8-10 years,29,26,Around the Same,Decline of 50% or more,15% or less,No changes were made,SkiptheDishes,No,NA,No,NA
+Treated,Downtown Toronto,Medium,Casual Dining,1-4 years,40,33,Around the Same,Decline of 50% or more,15% or less,No changes were made,Other,No,NA,No,NA
+Treated,Etobicoke,Large,Fast-food/quick service,10 or more years,28,32,Around the Same,Decline of 50% or more,30-50%,No changes were made,DoorDash,No,NA,No,NA
+Treated,North York,Small,Fast-food/quick service,8-10 years,26,37,Around the Same,Decline of 50% or more,15% or less,No changes were made,In-house delivery service,No,NA,No,NA
+Treated,Downtown Toronto,Medium,Fine Dining,5-7 years,37,36,Around the Same,Decline of 10% or less,15-30%,No changes were made,In-house delivery service,No,NA,No,NA
+Treated,West Toronto,Medium,Fine Dining,1-4 years,30,31,Lower,Decline of 10% to 25%,15% or less,No changes were made,DoorDash,No,NA,No,NA
+Treated,North York,Large,Casual Dining,1-4 years,32,29,Higher,Decline of 25% to 50%,15% or less,No changes were made,In-house delivery service,No,NA,No,NA
+Treated,East Toronto,Medium,Fast-food/quick service,10 or more years,32,21,Higher,Decline of 50% or more,15% or less,No changes were made,DoorDash,No,NA,No,NA
+Treated,Central Toronto,Medium,Other,8-10 years,31,21,Around the Same,Decline of 50% or more,15% or less,No changes were made,DoorDash,No,NA,No,NA
+Treated,Etobicoke,Large,Fine Dining,8-10 years,34,15,Around the Same,Decline of 10% to 25%,Did not offer takeout or delivery,No changes were made,Other,No,NA,No,NA
+Treated,Downtown Toronto,Small,Fast-food/quick service,5-7 years,31,41,Higher,Decline of 50% or more,15-30%,No changes were made,None,No,NA,No,NA
+Treated,Etobicoke,Medium,Fine Dining,5-7 years,21,30,Around the Same,Decline of 10% to 25%,15% or less,No changes were made,DoorDash,No,NA,No,NA
+Treated,Downtown Toronto,Medium,Fast-food/quick service,1-4 years,31,42,Around the Same,Decline of 50% or more,15% or less,No changes were made,None,No,NA,No,NA
+Treated,Etobicoke,Medium,Casual Dining,8-10 years,32,33,Around the Same,Decline of 10% or less,15% or less,No changes were made,Other,No,NA,No,NA
+Treated,Downtown Toronto,Large,Casual Dining,5-7 years,30,31,Around the Same,Decline of 10% or less,15% or less,No changes were made,DoorDash,No,NA,No,NA
+Treated,North York,Medium,Fast-food/quick service,8-10 years,24,25,Around the Same,Decline of 50% or more,15% or less,No changes were made,DoorDash,No,NA,No,NA
+Treated,Etobicoke,Large,Fast-food/quick service,5-7 years,27,32,Higher,Decline of 50% or more,15% or less,No changes were made,Other,No,NA,No,NA
+Treated,East York,Small,Fine Dining,1-4 years,33,23,Higher,Decline of 50% or more,15% or less,No changes were made,UberEats,No,NA,No,NA
+Treated,West Toronto,Medium,Fast-food/quick service,1-4 years,36,21,Around the Same,Decline of 50% or more,Did not offer takeout or delivery,No changes were made,DoorDash,No,NA,No,NA
+Treated,Downtown Toronto,Medium,Fast-food/quick service,1-4 years,39,39,Around the Same,Decline of 50% or more,15% or less,No changes were made,DoorDash,No,NA,No,NA
+Treated,West Toronto,Medium,Other,1-4 years,29,26,Around the Same,Decline of 25% to 50%,75% or more,No changes were made,In-house delivery service,No,NA,No,NA
+Treated,Central Toronto,Large,Fine Dining,5-7 years,24,24,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,UberEats,No,NA,No,NA
+Treated,West Toronto,Large,Fast-food/quick service,10 or more years,28,36,Higher,Decline of 10% to 25%,15% or less,No changes were made,DoorDash,No,NA,No,NA
+Treated,Downtown Toronto,Medium,Other,10 or more years,32,30,Around the Same,Decline of 50% or more,15-30%,No changes were made,DoorDash,No,NA,No,NA
+Treated,East Toronto,Medium,Casual Dining,5-7 years,32,37,Around the Same,Decline of 50% or more,30-50%,No changes were made,UberEats,No,NA,No,NA
+Treated,North York,Medium,Other,5-7 years,25,29,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,UberEats,No,NA,No,NA
+Treated,York,Large,Other,1-4 years,30,25,Higher,Decline of 10% to 25%,15% or less,No changes were made,SkiptheDishes,Yes,15% or less,No,NA
+Treated,Downtown Toronto,Small,Other,8-10 years,19,35,Around the Same,Decline of 50% or more,15% or less,No changes were made,DoorDash,No,NA,No,NA
+Treated,East Toronto,Small,Fast-food/quick service,5-7 years,25,26,Lower,Decline of 50% or more,15-30%,No changes were made,UberEats,No,NA,No,NA
+Treated,Downtown Toronto,Small,Other,8-10 years,19,32,Lower,Decline of 10% to 25%,30-50%,"Yes, prices were raised",DoorDash,No,NA,No,NA
+Treated,Downtown Toronto,Small,Fine Dining,1-4 years,32,36,Around the Same,Decline of 50% or more,30-50%,No changes were made,DoorDash,No,NA,No,NA
+Treated,West Toronto,Small,Fine Dining,1-4 years,28,37,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,None,No,NA,No,NA
+Treated,West Toronto,Small,Fast-food/quick service,5-7 years,30,30,Around the Same,Decline of 25% to 50%,Did not offer takeout or delivery,No changes were made,UberEats,No,NA,No,NA
+Treated,West Toronto,Medium,Fast-food/quick service,1-4 years,29,24,Around the Same,Decline of 10% to 25%,15% or less,"Yes, prices were lowered",UberEats,No,NA,No,NA
+Treated,West Toronto,Large,Other,10 or more years,23,46,Higher,Decline of 25% to 50%,50-75%,No changes were made,In-house delivery service,No,NA,No,NA
+Treated,Etobicoke,Large,Fine Dining,8-10 years,26,22,Around the Same,Decline of 50% or more,15-30%,No changes were made,DoorDash,No,NA,No,NA
+Treated,Central Toronto,Large,Other,8-10 years,24,21,Lower,Decline of 50% or more,15% or less,No changes were made,Other,No,NA,No,NA
+Treated,York,Large,Fast-food/quick service,10 or more years,31,30,Around the Same,Decline of 50% or more,15% or less,No changes were made,Other,No,NA,No,NA
+Treated,Downtown Toronto,Large,Other,8-10 years,23,33,Higher,Decline of 50% or more,15% or less,No changes were made,In-house delivery service,No,NA,No,NA
+Treated,Downtown Toronto,Medium,Other,5-7 years,21,32,Higher,Decline of 50% or more,15% or less,No changes were made,Other,No,NA,No,NA
+Treated,North York,Large,Other,5-7 years,31,21,Around the Same,Decline of 10% or less,15% or less,No changes were made,In-house delivery service,No,NA,Yes,Not Applicable
+Treated,Scarborough,Large,Other,5-7 years,32,29,Around the Same,Decline of 25% to 50%,15-30%,No changes were made,SkiptheDishes,No,NA,No,NA
+Treated,Downtown Toronto,Small,Fine Dining,1-4 years,23,31,Lower,Decline of 50% or more,15% or less,No changes were made,Other,No,NA,No,NA
+Treated,West Toronto,Medium,Fast-food/quick service,8-10 years,20,25,Around the Same,Decline of 50% or more,15% or less,No changes were made,In-house delivery service,No,NA,No,NA
+Treated,Downtown Toronto,Medium,Fast-food/quick service,1-4 years,28,38,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,UberEats,No,NA,No,NA
+Treated,Etobicoke,Medium,Other,5-7 years,30,25,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,In-house delivery service,No,NA,No,NA
+Treated,West Toronto,Medium,Fast-food/quick service,5-7 years,24,37,Around the Same,Decline of 50% or more,15% or less,No changes were made,Other,No,NA,No,NA
+Treated,East Toronto,Medium,Casual Dining,1-4 years,31,39,Around the Same,Decline of 10% to 25%,15-30%,No changes were made,DoorDash,No,NA,No,NA
+Treated,Scarborough,Large,Fine Dining,10 or more years,36,24,Around the Same,Decline of 50% or more,Did not offer takeout or delivery,No changes were made,UberEats,No,NA,No,NA
+Treated,Downtown Toronto,Large,Casual Dining,1-4 years,30,27,Around the Same,Decline of 50% or more,15% or less,No changes were made,Other,No,NA,No,NA
+Treated,Downtown Toronto,Large,Fast-food/quick service,5-7 years,29,29,Around the Same,Decline of 25% to 50%,50-75%,No changes were made,UberEats,No,NA,No,NA
+Treated,West Toronto,Medium,Fast-food/quick service,10 or more years,30,28,Around the Same,Decline of 50% or more,15% or less,No changes were made,Other,No,NA,No,NA
+Treated,Downtown Toronto,Large,Fast-food/quick service,8-10 years,26,46,Around the Same,Decline of 10% to 25%,15% or less,No changes were made,UberEats,No,NA,No,NA
+Treated,Downtown Toronto,Large,Fast-food/quick service,8-10 years,37,24,Around the Same,Decline of 25% to 50%,30-50%,No changes were made,UberEats,No,NA,No,NA
+Treated,Downtown Toronto,Large,Other,1-4 years,36,30,Higher,Decline of 10% to 25%,15% or less,"Yes, prices were raised",UberEats,No,NA,No,NA
+Treated,North York,Medium,Fast-food/quick service,10 or more years,25,30,Around the Same,Decline of 10% to 25%,15% or less,No changes were made,Other,No,NA,No,NA
+Treated,Downtown Toronto,Small,Other,8-10 years,29,17,Lower,Decline of 50% or more,15% or less,No changes were made,DoorDash,No,NA,No,NA
+Treated,York,Medium,Casual Dining,1-4 years,32,40,Around the Same,Decline of 50% or more,15-30%,"Yes, prices were raised",In-house delivery service,No,NA,No,NA
+Treated,Downtown Toronto,Medium,Casual Dining,8-10 years,27,24,Around the Same,Decline of 25% to 50%,15-30%,No changes were made,Other,No,NA,No,NA
+Treated,Scarborough,Large,Fast-food/quick service,1-4 years,33,22,Around the Same,Decline of 50% or more,15% or less,No changes were made,None,No,NA,No,NA
+Treated,Central Toronto,Medium,Casual Dining,10 or more years,31,19,Around the Same,Decline of 10% to 25%,15% or less,No changes were made,DoorDash,No,NA,No,NA
+Treated,Downtown Toronto,Medium,Fast-food/quick service,1-4 years,17,30,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,Other,No,NA,No,NA
+Treated,Central Toronto,Large,Other,5-7 years,34,21,Lower,Decline of 50% or more,15% or less,No changes were made,DoorDash,No,NA,No,NA
+Treated,York,Medium,Other,1-4 years,20,37,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,UberEats,No,NA,Yes,Not Applicable
+Treated,West Toronto,Medium,Casual Dining,8-10 years,33,28,Around the Same,Decline of 50% or more,15% or less,No changes were made,In-house delivery service,No,NA,No,NA
+Treated,York,Medium,Fast-food/quick service,1-4 years,30,16,Around the Same,Decline of 50% or more,15-30%,No changes were made,In-house delivery service,No,NA,No,NA
+Treated,North York,Large,Fast-food/quick service,8-10 years,34,29,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,UberEats,No,NA,No,NA
+Treated,Downtown Toronto,Medium,Fast-food/quick service,8-10 years,21,28,Around the Same,Decline of 50% or more,15% or less,No changes were made,UberEats,No,NA,No,NA
+Treated,York,Medium,Other,8-10 years,29,35,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,DoorDash,No,NA,No,NA
+Treated,Downtown Toronto,Medium,Fast-food/quick service,1-4 years,33,37,Around the Same,Decline of 50% or more,30-50%,No changes were made,SkiptheDishes,No,NA,No,NA
+Treated,Downtown Toronto,Medium,Casual Dining,5-7 years,27,29,Around the Same,Decline of 10% or less,15% or less,No changes were made,UberEats,No,NA,Yes,Not Applicable
+Treated,North York,Small,Casual Dining,1-4 years,34,26,Lower,Decline of 50% or more,15% or less,No changes were made,In-house delivery service,No,NA,No,NA
+Treated,North York,Large,Other,5-7 years,26,22,Around the Same,Decline of 25% to 50%,15-30%,No changes were made,UberEats,Yes,15% or less,No,NA
+Treated,Etobicoke,Medium,Fast-food/quick service,5-7 years,32,25,Around the Same,Decline of 50% or more,Did not offer takeout or delivery,No changes were made,Other,No,NA,No,NA
+Treated,Downtown Toronto,Large,Fast-food/quick service,1-4 years,25,34,Around the Same,Decline of 25% to 50%,Did not offer takeout or delivery,No changes were made,DoorDash,No,NA,No,NA
+Treated,North York,Small,Other,8-10 years,34,35,Around the Same,Decline of 50% or more,15% or less,No changes were made,Other,No,NA,No,NA
+Treated,North York,Medium,Other,1-4 years,24,27,Higher,Decline of 10% to 25%,15% or less,No changes were made,None,No,NA,No,NA
+Treated,East Toronto,Medium,Fast-food/quick service,1-4 years,37,22,Around the Same,Decline of 50% or more,15-30%,No changes were made,In-house delivery service,No,NA,No,NA
+Treated,Downtown Toronto,Medium,Fast-food/quick service,1-4 years,34,27,Around the Same,Decline of 50% or more,15% or less,No changes were made,In-house delivery service,No,NA,No,NA
+Treated,West Toronto,Medium,Fast-food/quick service,1-4 years,23,30,Around the Same,Decline of 10% to 25%,15% or less,No changes were made,Other,No,NA,No,NA
+Treated,Downtown Toronto,Medium,Casual Dining,8-10 years,29,28,Around the Same,Decline of 10% or less,15-30%,No changes were made,In-house delivery service,No,NA,No,NA
+Treated,West Toronto,Large,Other,5-7 years,33,20,Around the Same,Decline of 50% or more,15% or less,No changes were made,UberEats,No,NA,No,NA
+Treated,North York,Small,Other,8-10 years,23,38,Around the Same,Decline of 10% to 25%,15% or less,No changes were made,UberEats,No,NA,No,NA
+Treated,Downtown Toronto,Medium,Fast-food/quick service,1-4 years,39,28,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,UberEats,No,NA,No,NA
+Treated,North York,Medium,Fast-food/quick service,10 or more years,28,22,Around the Same,Decline of 10% to 25%,15-30%,No changes were made,DoorDash,Yes,15% or less,Yes,Not Applicable
+Treated,North York,Large,Fast-food/quick service,1-4 years,25,34,Around the Same,Decline of 50% or more,75% or more,No changes were made,UberEats,No,NA,No,NA
+Treated,Downtown Toronto,Medium,Other,8-10 years,42,20,Around the Same,Decline of 50% or more,15-30%,No changes were made,Other,No,NA,No,NA
+Treated,East Toronto,Medium,Other,5-7 years,34,26,Around the Same,Decline of 10% or less,Did not offer takeout or delivery,No changes were made,Other,No,NA,No,NA
+Treated,East York,Medium,Other,8-10 years,34,28,Lower,Decline of 25% to 50%,30-50%,No changes were made,In-house delivery service,No,NA,No,NA
+Treated,West Toronto,Medium,Fast-food/quick service,5-7 years,36,30,Around the Same,Decline of 50% or more,Did not offer takeout or delivery,No changes were made,None,No,NA,No,NA
+Treated,York,Medium,Fast-food/quick service,1-4 years,31,34,Lower,Decline of 10% to 25%,15% or less,"Yes, prices were lowered",Other,Yes,15% or less,No,NA
+Treated,Scarborough,Large,Other,8-10 years,29,32,Around the Same,Decline of 50% or more,15% or less,No changes were made,DoorDash,No,NA,No,NA
+Treated,Downtown Toronto,Large,Fast-food/quick service,5-7 years,28,31,Higher,Decline of 25% to 50%,15-30%,No changes were made,UberEats,No,NA,No,NA
+Treated,Etobicoke,Medium,Fast-food/quick service,8-10 years,30,35,Around the Same,Decline of 50% or more,15% or less,No changes were made,In-house delivery service,No,NA,No,NA
+Treated,East York,Large,Fast-food/quick service,5-7 years,30,40,Around the Same,Decline of 25% to 50%,15% or less,No changes were made,Other,No,NA,No,NA

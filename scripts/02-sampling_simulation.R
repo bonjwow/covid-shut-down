@@ -32,7 +32,7 @@ set.seed(853)
 
 sample_size <- 200
 
-simulatingDataset <- function(dataset, param_q1, param_q2, param_q3, param_q4, param_q5, param_q6, param_q7, param_q8, param_q9, param_q10, param_q11, param_q12, param_q13, param_q14, param_q15) {   
+simulatingDataset <- function(dataset, param_q1, param_q2, param_q3, param_q4, param_q5, param_q6, param_q7, param_q8, param_q9, param_q10, param_q11, param_q12, param_q13, param_q14, param_q15, numb_resp) {   
   dataset <- 
     tibble(
       type = rep("Treated", sample_size),
@@ -167,7 +167,10 @@ simulatingDataset <- function(dataset, param_q1, param_q2, param_q3, param_q4, p
     # Remove the rows whose answer from Q14 is 'No'
     mutate(Q15 = ifelse(Q14 == "No", NA, Q15))
   
-  return(dataset)
+  # Remove non-respondents: -20(-10%, Control), -50(-25%, Intervention)
+  responses = dataset[sample(nrow(dataset), numb_resp), ]  
+  
+  return(responses)
 }
 
 ### Set parameters for treatment group
@@ -187,7 +190,8 @@ simulated_dataset_treated <- simulatingDataset(
   param_q12 = c(0.85, 0.15),
   param_q13 = c(0.15, 0.35, 0.30, 0.15, 0.05),
   param_q14 = c(0.85, 0.15),
-  param_q15 = c(0.45, 0.35, 0.10, 0.08, 0.02)
+  param_q15 = c(0.45, 0.35, 0.10, 0.08, 0.02),
+  numb_resp = 150
 )
 
 ### Set parameters for control group
@@ -207,7 +211,8 @@ simulated_dataset_control <- simulatingDataset(
   param_q12 = c(0.03, 0.97),
   param_q13 = c(0.87, 0.10, 0.03, 0, 0),
   param_q14 = c(0.05, 0.95),
-  param_q15 = c(0.04, 0.01, 0, 0, 0.95)
+  param_q15 = c(0.04, 0.01, 0, 0, 0.95),
+  numb_resp = 180
 )
 
 ### Combine the two dataset
