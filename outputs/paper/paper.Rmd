@@ -65,6 +65,12 @@ set.seed(853)
 # Q4: How many years has your restaurant been in operation?
 # Q5: Prior to (intervention start date), how many people did you employ?
 # Q6: How many people do you currently employ?
+# Q7: Between (start date of intervention) and (end date of intervention) was your total sales revenue higher, lower, or about the same as it was during the same length of time last month.
+# Q8: What was the approximate percentage decrease in total sales revenue between (start date of intervention) and (end date of intervention) compared to the same time period last year.
+# Q9: Before the (intervention start date), approximately how much of your total monthly sales revenue came from takeout or delivery?
+# Q10: Between (start date of intervention) and (end date of intervention), did you make any adjustments to your menu prices?
+# Q11: Between (start date of intervention) and (end date of intervention), which food courier service did you receive the most orders from?
+# Q12: Between (start date of intervention) and (end date of intervention) did you reduce your restaurant’s hours of operation?
 
 sample_size <- 200
 
@@ -114,7 +120,99 @@ simulated_dataset_treated <-
     ),
     Q5 = rpois(n = sample_size, lambda = 30),
     Q6 = rpois(n = sample_size, lambda = 15),
-  )
+    Q7 = sample(x = c(
+      "Higher",
+      "Lower",
+      "Around the Same"),
+      size = sample_size,
+      replace = TRUE, 
+      prob = c(0.15, 0.80, 0.05)
+    ),
+    Q8 = sample(x = c(
+      "Decline of 50% or more",
+      "Decline of 25% to 50%",
+      "Decline of 10% to 25%",
+      "Decline of 10% or less"),
+      size = sample_size,
+      replace = TRUE, 
+      prob = c(0.50, 0.25, 0.15, 0.10)
+    ),
+    Q9 = sample(x = c(
+      "Did not offer takeout or delivery",
+      "15% or less",
+      "15-30%",
+      "30-50%",
+      "50-75%",
+      "75% or more"),
+      size = sample_size,
+      replace = TRUE, 
+      prob = c(0.05, 0.60, 0.15, 0.07, 0.05, 0.03)
+    ),
+    Q10 = sample(x = c(
+      "Yes, prices were raised",
+      "Yes, prices were lowered",
+      "No changes were made"),
+      size = sample_size,
+      replace = TRUE, 
+      prob = c(0.15, 0.55, 0.30)
+    ),
+    Q11 = sample(x = c(
+      "UberEats",
+      "SkiptheDishes",
+      "DoorDash",
+      "Other",
+      "In-house delivery service",
+      "None"),
+      size = sample_size,
+      replace = TRUE, 
+      prob = c(0.30, 0.10, 0.20, 0.20, 0.15, 0.05)
+    ),
+    Q12 = sample(x = c(
+      "Yes",
+      "No"),
+      size = sample_size,
+      replace = TRUE, 
+      prob = c(0.85, 0.15)
+    ),
+    Q13 = sample(x = c(
+      "15% or less",
+      "15-30%",
+      "30-50%",
+      "50-75%",
+      "75% or more"),
+      size = sample_size,
+      replace = TRUE, 
+      prob = c(0.15, 0.35, 0.30, 0.15, 0.05)
+    ),
+    Q14 = sample(x = c(
+      "Yes",
+      "No"),
+      size = sample_size,
+      replace = TRUE, 
+      prob = c(0.85, 0.15)
+    ),
+    Q15 = sample(x = c(
+      "1-2 days",
+      "3-4 days",
+      "5-6 days",
+      "7 days",
+      "Not Applicable"),
+      size = sample_size,
+      replace = TRUE, 
+      prob = c(0.45, 0.35, 0.10, 0.08, 0.02)
+    ),
+  ) %>%
+  # Remove the rows whose answer from Q12 is 'No'
+  mutate(Q13 = ifelse(Q12 == "No", NA, Q13)) %>%
+
+  # Remove the rows whose answer from Q14 is 'No'
+  mutate(Q15 = ifelse(Q14 == "No", NA, Q15))
+
+
+  ### Count the number of 'yes' answers from Q12
+  # Q12_count_yes <- sum(simulated_dataset_treated$Q12 == "Yes")
+  # print(Q12_count_yes)
+  
 
 ```
 
