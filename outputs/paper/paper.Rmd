@@ -71,10 +71,14 @@ set.seed(853)
 # Q10: Between (start date of intervention) and (end date of intervention), did you make any adjustments to your menu prices?
 # Q11: Between (start date of intervention) and (end date of intervention), which food courier service did you receive the most orders from?
 # Q12: Between (start date of intervention) and (end date of intervention) did you reduce your restaurant’s hours of operation?
+# Q13: If yes, approximately how many hours per week did you reduce by
+# Q14: Between (start date of intervention) and (end date of intervention) did you reduce the number of days your restaurant was open to the public?
+# Q15: If yes, how many days per week did you reduce by?
 
 sample_size <- 200
 
-simulated_dataset_treated <- 
+simulatingDataset <- function(dataset, param_q1, param_q2, param_q3, param_q4, param_q5, param_q6, param_q7, param_q8, param_q9, param_q10, param_q11, param_q12, param_q13, param_q14, param_q15) {   
+dataset <- 
   tibble(
     type = rep("Treated", sample_size),
     Q1 = sample(x = c(
@@ -90,7 +94,7 @@ simulated_dataset_treated <-
       "Other"),
       size = sample_size,
       replace = TRUE, 
-      prob = c(0.28, 0.16, 0.14, 0.11, 0.09, 0.06, 0.06, 0.06, 0.04, 0)
+      prob = param_q1
     ),
     Q2 = sample(x = c(
       "Small",
@@ -98,7 +102,7 @@ simulated_dataset_treated <-
       "Large"),
       size = sample_size,
       replace = TRUE, 
-      prob = c(0.15, 0.50, 0.35)
+      prob = param_q2
     ),
     Q3 = sample(x = c(
       "Fast-food/quick service",
@@ -107,7 +111,7 @@ simulated_dataset_treated <-
       "Other"),
       size = sample_size,
       replace = TRUE, 
-      prob = c(0.45, 0.20, 0.10, 0.25)
+      prob = param_q3
     ),
     Q4 = sample(x = c(
       "1-4 years",
@@ -116,17 +120,17 @@ simulated_dataset_treated <-
       "10 or more years"),
       size = sample_size,
       replace = TRUE, 
-      prob = c(0.40, 0.25, 0.20, 0.15)
+      prob = param_q4
     ),
-    Q5 = rpois(n = sample_size, lambda = 30),
-    Q6 = rpois(n = sample_size, lambda = 15),
+    Q5 = rpois(n = sample_size, lambda = param_q5),
+    Q6 = rpois(n = sample_size, lambda = param_q6),
     Q7 = sample(x = c(
       "Higher",
       "Lower",
       "Around the Same"),
       size = sample_size,
       replace = TRUE, 
-      prob = c(0.15, 0.80, 0.05)
+      prob = param_q7
     ),
     Q8 = sample(x = c(
       "Decline of 50% or more",
@@ -135,7 +139,7 @@ simulated_dataset_treated <-
       "Decline of 10% or less"),
       size = sample_size,
       replace = TRUE, 
-      prob = c(0.50, 0.25, 0.15, 0.10)
+      prob = param_q8
     ),
     Q9 = sample(x = c(
       "Did not offer takeout or delivery",
@@ -146,7 +150,7 @@ simulated_dataset_treated <-
       "75% or more"),
       size = sample_size,
       replace = TRUE, 
-      prob = c(0.05, 0.60, 0.15, 0.07, 0.05, 0.03)
+      prob = param_q9
     ),
     Q10 = sample(x = c(
       "Yes, prices were raised",
@@ -154,7 +158,7 @@ simulated_dataset_treated <-
       "No changes were made"),
       size = sample_size,
       replace = TRUE, 
-      prob = c(0.15, 0.55, 0.30)
+      prob = param_q10
     ),
     Q11 = sample(x = c(
       "UberEats",
@@ -165,14 +169,14 @@ simulated_dataset_treated <-
       "None"),
       size = sample_size,
       replace = TRUE, 
-      prob = c(0.30, 0.10, 0.20, 0.20, 0.15, 0.05)
+      prob = param_q11
     ),
     Q12 = sample(x = c(
       "Yes",
       "No"),
       size = sample_size,
       replace = TRUE, 
-      prob = c(0.85, 0.15)
+      prob = param_q12
     ),
     Q13 = sample(x = c(
       "15% or less",
@@ -182,14 +186,14 @@ simulated_dataset_treated <-
       "75% or more"),
       size = sample_size,
       replace = TRUE, 
-      prob = c(0.15, 0.35, 0.30, 0.15, 0.05)
+      prob = param_q13
     ),
     Q14 = sample(x = c(
       "Yes",
       "No"),
       size = sample_size,
       replace = TRUE, 
-      prob = c(0.85, 0.15)
+      prob = param_q14
     ),
     Q15 = sample(x = c(
       "1-2 days",
@@ -199,7 +203,7 @@ simulated_dataset_treated <-
       "Not Applicable"),
       size = sample_size,
       replace = TRUE, 
-      prob = c(0.45, 0.35, 0.10, 0.08, 0.02)
+      prob = param_q15
     ),
   ) %>%
   # Remove the rows whose answer from Q12 is 'No'
@@ -208,11 +212,52 @@ simulated_dataset_treated <-
   # Remove the rows whose answer from Q14 is 'No'
   mutate(Q15 = ifelse(Q14 == "No", NA, Q15))
 
+  return(dataset)
+}
 
-  ### Count the number of 'yes' answers from Q12
-  # Q12_count_yes <- sum(simulated_dataset_treated$Q12 == "Yes")
-  # print(Q12_count_yes)
-  
+### Set parameters for treatment group
+simulated_dataset_treated <- simulatingDataset(
+  "simulated_dataset_treated",
+  param_q1 = c(0.28, 0.16, 0.14, 0.11, 0.09, 0.06, 0.06, 0.06, 0.04, 0),
+  param_q2 = c(0.15, 0.50, 0.35),
+  param_q3 = c(0.45, 0.20, 0.10, 0.25),
+  param_q4 = c(0.40, 0.25, 0.20, 0.15),
+  param_q5 = 30,
+  param_q6 = 20,
+  param_q7 = c(0.15, 0.80, 0.05),
+  param_q8 = c(0.50, 0.25, 0.15, 0.10),
+  param_q9 = c(0.01, 0.01, 0.01, 0.02, 0.05, 0.90),
+  param_q10 = c(0.15, 0.55, 0.30),
+  param_q11 = c(0.35, 0.10, 0.25, 0.20, 0.05, 0.05),
+  param_q12 = c(0.85, 0.15),
+  param_q13 = c(0.15, 0.35, 0.30, 0.15, 0.05),
+  param_q14 = c(0.85, 0.15),
+  param_q15 = c(0.45, 0.35, 0.10, 0.08, 0.02)
+  )
+
+### Set parameters for control group
+simulated_dataset_treated <- simulatingDataset(
+  "simulated_dataset_control",
+  param_q1 = c(0.28, 0.16, 0.14, 0.11, 0.09, 0.06, 0.06, 0.06, 0.04, 0),
+  param_q2 = c(0.15, 0.50, 0.35),
+  param_q3 = c(0.45, 0.20, 0.10, 0.25),
+  param_q4 = c(0.40, 0.25, 0.20, 0.15),
+  param_q5 = 30,
+  param_q6 = 30,
+  param_q7 = c(0.10, 0.10, 0.80),
+  param_q8 = c(0.50, 0.25, 0.15, 0.10),
+  param_q9 = c(0.05, 0.60, 0.15, 0.07, 0.05, 0.03),
+  param_q10 = c(0.01, 0.01, 0.98),
+  param_q11 = c(0.30, 0.10, 0.20, 0.20, 0.15, 0.05),
+  param_q12 = c(0.03, 0.97),
+  param_q13 = c(0.87, 0.10, 0.03, 0, 0),
+  param_q14 = c(0.85, 0.15),
+  param_q15 = c(0.45, 0.35, 0.10, 0.08, 0.02)
+  )
+
+
+
+
 
 ```
 
