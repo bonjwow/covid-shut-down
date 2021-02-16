@@ -17,9 +17,18 @@ library(tidyverse)
 library(ggplot2)
 library(kableExtra)
 library(janitor)
+
+all_simulated_dataset <- 
+  readr::read_csv("../../inputs/data/simulated_data.csv")
+control_group <-
+  readr::read_csv("../../inputs/data/simulated_data.csv") %>%
+  filter(type == "Control")
+treatment_group <-
+  readr::read_csv("../../inputs/data/simulated_data.csv") %>%
+  filter(type == "Treated")
 ```
 
-```{r, include=FALSE}
+```{r, echo = FALSE, include=FALSE, message = FALSE}
 #### Global Functions ####
 percent <- function(x, decimal = 2, format = "f") {   
   paste0(formatC(x, format = format, digits = decimal), "%")
@@ -28,7 +37,7 @@ percent <- function(x, decimal = 2, format = "f") {
 
 # Data
 
-```{r, echo = FALSE}
+```{r Q1, echo = FALSE, message = FALSE}
 #### Pie Chart ####
 ### Import cleaned business licences dataset
 dfCleanBiz <- readr::read_csv("../../inputs/data/clean_business_licences.csv")
@@ -53,10 +62,234 @@ ggplot(dfBoroughs, aes(x="", y = prop, fill = group)) +
   scale_fill_brewer(palette = "Paired")
 ```
 
-```{r, echo = FALSE}
+```{r Q2, echo = FALSE, message = FALSE}
+### "What best describes the scale of your restaurant?
+### Small (full seating capacity is under 30)
+### Medium (full seating capacity between 30 and 60)
+### Large (full seating capacity is 60+) "
+
+ggplot(data = all_simulated_dataset, mapping = aes (x = Q2)) +
+  geom_bar() +
+  scale_x_discrete(limit = c ("Small", "Medium", "Large")) +
+  labs(x = "Scale of Restaurant",
+       y = "# of Restaurants",
+       title = "Q2") +
+  theme_minimal()
+
+```
+
+```{r Q3, echo = FALSE, message = FALSE}
+### What best describes your restaurant segmentation?
+### Fast-food/quick service
+### Casual Dining
+### Fine Dining
+### Other
+
+ggplot(data = all_simulated_dataset, mapping = aes (x = Q3)) +
+  geom_bar() +
+  scale_x_discrete(limit = c ("Fine Dining", "Casual Dining", "Fast-food/quick service", "Other")) +
+  labs(x = "Type of Restaurant",
+       y = "# of Restaurants",
+       title = "Q3") +
+  theme_minimal()
 
 
 ```
+
+```{r Q4, echo = FALSE, message = FALSE}
+### How many years has your restaurant been in operation?
+### 1-4 years
+### 5-7 years
+### 8-10 years
+### 10 or more years
+
+ggplot(data = all_simulated_dataset, mapping = aes (x = Q4)) +
+  geom_bar() + coord_flip() +
+  scale_x_discrete(limit = c ("1-4 years", "5-7 years", "8-10 years", "10 or more years")) +
+  labs(x = "Years of Operation",
+       y = "# of Restaurants",
+       title = "Q4") +
+  theme_minimal()
+
+```
+
+```{r Q5, echo = FALSE, message = FALSE}
+### How many people do you currently employ?
+### Prior to (intervention start date), how many people did you employ?
+### Control
+
+
+
+
+### line graph
+
+```
+
+```{r Q6, echo = FALSE, message = FALSE}
+### How many people do you currently employ?
+### Prior to (intervention start date), how many people did you employ?
+### Treated
+
+
+### line graph
+
+```
+
+```{r Q7, echo = FALSE, message = FALSE}
+### Between (start date of intervention) and (end date of intervention) was your total sales revenue higher, lower, or about the same as it was ### during the same length of time last month.**
+### Higher
+### Lower
+### Around the Same
+
+ggplot(data = all_simulated_dataset, mapping = aes(x = Q7, fill = type)) + 
+  geom_bar(position = position_dodge(1)) +
+  labs(x = "X",
+       y = "Y",
+       title = "Q7",
+       fill = "Type") +
+  theme_minimal()
+
+```
+
+```{r Q8, echo = FALSE, message = FALSE}
+### What was the approximate percentage decrease in total sales revenue between (start date of intervention) and (end date of intervention) 
+### compared to the same time period last year. **
+### Decline of 50% or more
+### Decline of 25% to 50%
+### Decline of 10% to 25%
+### Decline of 10% or less
+
+ggplot(data = all_simulated_dataset, mapping = aes (x = Q8, fill = type)) +
+  geom_bar(position = position_dodge(1)) + coord_flip() +
+  scale_x_discrete(limit = c("Decline of 50% or more", "Decline of 25% to 50%", "Decline of 10% to 25%", "Decline of 10% or less")) + 
+  labs(x = "Aprrox. Decrease in Total Sales Revenue",
+       y = "# of Restaurants",
+       title = "Q8",
+       fill = "Type") +
+  theme_minimal()
+
+### make this a line graph
+
+```
+
+```{r Q9, echo = FALSE, message = FALSE}
+### Before the (intervention start date), approximately how much of your total monthly sales revenue came from takeout or delivery?
+### Did not offer takeout or delivery
+### 15% or less
+### 15-30%
+### 30-50%
+### 50-75%
+### 75% or more
+
+ggplot(data = all_simulated_dataset, mapping = aes (x = Q9, fill = type)) +
+  geom_bar(position = position_dodge(1)) +  coord_flip() + 
+  scale_x_discrete(limit = c("Did not offer takeout or delivery", "15% or less", "15-30%", "30-50%", "50-75%", "75% or more")) + 
+  labs(x = "Total Monthly Sales Revenue Fromt Takeout or Delivery",
+       y = "# of Restaurants",
+       title = "Q9",
+       fill = "Legend") +
+  theme_minimal()
+
+### make this a line graph instead
+```
+
+```{r Q10, echo = FALSE, message = FALSE}
+### Between (start date of intervention) and (end date of intervention), did you make any adjustments to your menu prices?
+### Yes, prices were raised
+### Yes, prices were lowered
+### No changes were made
+
+ggplot(data = all_simulated_dataset, mapping = aes (x = Q10, fill = type)) +
+  geom_bar(position = position_dodge(1)) +  coord_flip() + 
+  scale_x_discrete(limit = c("Yes, prices were raised", "Yes, prices were lowered", "No changes were made")) + 
+  labs(x = "Adjustments to Menu Prices",
+       y = "# of Restaurants",
+       title = "Q10",
+       fill = "Legend") +
+  theme_minimal()
+
+```
+
+
+```{r Q11, echo = FALSE, message = FALSE}
+### Between (start date of intervention) and (end date of intervention), which food courier service did you receive the most orders from?
+### UberEats
+### SkiptheDishes 
+### DoorDash
+### Other
+### In-house delivery service
+### None
+
+```
+
+
+```{r Q12, echo = FALSE, message = FALSE}
+### Between (start date of intervention) and (end date of intervention) did you reduce your ### restaurant’s hours of operation?
+### Yes
+### No
+
+ggplot(data = all_simulated_dataset, mapping = aes(x = Q12, fill = type)) +
+  geom_bar(position = position_dodge(1)) +
+  labs(x = "X",
+       y = "Y",
+       title = "Q12",
+       fill = "Legend") +
+  theme_minimal()
+  
+
+```
+
+```{r Q13, echo = FALSE, message = FALSE}
+### If yes, approximately how many hours per week did you reduce by
+### 15% or less
+### 15-30%
+### 30-50%
+### 50-75%
+### 75% or more
+
+
+### line graph
+
+```
+
+
+```{r Q14, echo = FALSE, message = FALSE}
+### Between (start date of intervention) and (end date of intervention) did you reduce the 
+### number of days your restaurant was open to the public?
+### Yes
+### No 
+
+ggplot(data = all_simulated_dataset, mapping = aes(x = Q14, fill = type)) +
+  geom_bar(position = position_dodge(1)) +
+  labs(x = "Did you reduce the # of days you were open to the public between (start date) and (end date)?",
+       y = "Y",
+       title = "Q14",
+       fill = "Legend") +
+  theme_minimal()
+
+```
+
+
+```{r Q15, echo = FALSE, message = FALSE}
+### If yes, how many days per week did you reduce by?
+### 1-2 days
+### 3-4 days
+### 5-6 days
+### 7 days
+### Not Applicable
+
+### bar graph/pie chart/line
+
+ggplot(data = all_simulated_dataset, mapping = aes(x = Q15, fill = type)) +
+  geom_bar(position = position_dodge(1)) +
+  labs(x = "How many days per week did you reduce by?",
+       y = "# of restaurants",
+       title = "Q15",
+       fill = "Legend") +
+  theme_minimal()
+
+```
+
 
 \newpage
 
