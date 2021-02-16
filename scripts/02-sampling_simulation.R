@@ -1,7 +1,7 @@
 #### Preamble ####
 # Purpose: Create simulated sample
 # Authors: Bongju, Morgaine, Najma, and Rachit 
-# Contacts: bongju.yoo@mail.utoronto.ca, morgaine.westin@mail.utoronto.ca, najma.osman@mail.utoronto.ca, and rachit.srivastava@mail.utoronto.ca 
+# Contacts: bongju.yoo@mail.utoronto.ca, morgaine.westin@mail.utoronto.ca, naj.osman@mail.utoronto.ca, and rachit.srivastava@mail.utoronto.ca 
 # Date: 9 February 2021
 # Pre-requisites: Run 01-data_cleaning_business_licences.R
 
@@ -214,6 +214,7 @@ simulated_dataset_control <- simulatingDataset(
   param_q15 = c(0.04, 0.01, 0, 0, 0.95),
   numb_resp = 180
 )
+simulated_dataset_control$type[simulated_dataset_control$type == "Treated"] <- "Control"
 
 ### Combine the two dataset
 all_simulated_dataset <- 

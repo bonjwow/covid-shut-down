@@ -1,7 +1,7 @@
 #### Preamble ####
 # Purpose: Get the most updated Municipal Licensing and Standards data from Open Data Portal
 # Authors: Bongju, Morgaine, Najma, and Rachit 
-# Contacts: bongju.yoo@mail.utoronto.ca, morgaine.westin@mail.utoronto.ca, najma.osman@mail.utoronto.ca, and rachit.srivastava@mail.utoronto.ca 
+# Contacts: bongju.yoo@mail.utoronto.ca, morgaine.westin@mail.utoronto.ca, naj.osman@mail.utoronto.ca, and rachit.srivastava@mail.utoronto.ca 
 # Date: 9 February 2021
 # Pre-requisites: None
 

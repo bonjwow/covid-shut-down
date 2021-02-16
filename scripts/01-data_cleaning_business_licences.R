@@ -1,7 +1,7 @@
 #### Preamble ####
 # Purpose: Clean the Municipal Licensing and Standards data set
 # Authors: Bongju, Morgaine, Najma, and Rachit 
-# Contacts: bongju.yoo@mail.utoronto.ca, morgaine.westin@mail.utoronto.ca, najma.osman@mail.utoronto.ca, and rachit.srivastava@mail.utoronto.ca 
+# Contacts: bongju.yoo@mail.utoronto.ca, morgaine.westin@mail.utoronto.ca, naj.osman@mail.utoronto.ca, and rachit.srivastava@mail.utoronto.ca 
 # Date: 9 February 2021
 # Pre-requisites: Run 00-import_business_licences.R
 
