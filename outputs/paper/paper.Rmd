@@ -143,8 +143,8 @@ ggplot(data = all_simulated_dataset, mapping = aes (x = Q4)) +
 
 ggplot(data = all_simulated_dataset, mapping = aes(x = Q7, fill = type)) + 
   geom_bar(position = position_dodge(1)) +
-  labs(x = "X",
-       y = "Y",
+  labs(x = "Did revenue increase, decrease, or remain the same compared to last month?",
+       y = "# of restaurants",
        title = "Q7",
        fill = "Type") +
   theme_minimal()
@@ -230,8 +230,8 @@ ggplot(data = all_simulated_dataset, mapping = aes (x = Q10, fill = type)) +
 
 ggplot(data = all_simulated_dataset, mapping = aes(x = Q12, fill = type)) +
   geom_bar(position = position_dodge(1)) +
-  labs(x = "X",
-       y = "Y",
+  labs(x = "Was there a reduction in restaurant hours?",
+       y = "# of restaurants",
        title = "Q12",
        fill = "Legend") +
   theme_minimal()

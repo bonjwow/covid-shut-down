@@ -39,3 +39,5 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+outputs/paper/paper.log
+outputs/paper/paper.tex
