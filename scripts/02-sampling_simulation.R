@@ -1,7 +1,7 @@
 #### Preamble ####
 # Purpose: Create simulated sample
 # Authors: Bongju, Morgaine, Najma, and Rachit 
-# Contacts: bongju.yoo@mail.utoronto.ca, morgaine.westin@mail.utoronto.ca, naj.osman@mail.utoronto.ca, and rachit.srivastava@mail.utoronto.ca 
+# Contacts: bongju.yoo@mail.utoronto.ca, morgaine.westin@mail.utoronto.ca, najma.osman@mail.utoronto.ca, and rachit.srivastava@mail.utoronto.ca 
 # Date: 9 February 2021
 # Pre-requisites: Run 01-data_cleaning_business_licences.R
 
@@ -32,10 +32,10 @@ set.seed(853)
 
 sample_size <- 200
 
-simulatingDataset <- function(dataset, param_q1, param_q2, param_q3, param_q4, param_q5, param_q6, param_q7, param_q8, param_q9, param_q10, param_q11, param_q12, param_q13, param_q14, param_q15, numb_resp) {   
+simulatingDataset <- function(dataset, group_type, param_q1, param_q2, param_q3, param_q4, param_q5, param_q6, param_q7, param_q8, param_q9, param_q10, param_q11, param_q12, param_q13, param_q14, param_q15, numb_resp) {   
   dataset <- 
     tibble(
-      type = rep("Treated", sample_size),
+      type = rep(group_type, sample_size),
       Q1 = sample(x = c(
         "Downtown Toronto",
         "North York",
@@ -176,6 +176,7 @@ simulatingDataset <- function(dataset, param_q1, param_q2, param_q3, param_q4, p
 ### Set parameters for treatment group
 simulated_dataset_treated <- simulatingDataset(
   "simulated_dataset_treated",
+  group_type = "Treated",
   param_q1 = c(0.28, 0.16, 0.14, 0.11, 0.09, 0.06, 0.06, 0.06, 0.04, 0),
   param_q2 = c(0.15, 0.50, 0.35),
   param_q3 = c(0.45, 0.20, 0.10, 0.25),
@@ -197,6 +198,7 @@ simulated_dataset_treated <- simulatingDataset(
 ### Set parameters for control group
 simulated_dataset_control <- simulatingDataset(
   "simulated_dataset_control",
+  group_type = "Control",
   param_q1 = c(0.28, 0.16, 0.14, 0.11, 0.09, 0.06, 0.06, 0.06, 0.04, 0),
   param_q2 = c(0.15, 0.50, 0.35),
   param_q3 = c(0.45, 0.20, 0.10, 0.25),
@@ -214,7 +216,6 @@ simulated_dataset_control <- simulatingDataset(
   param_q15 = c(0.04, 0.01, 0, 0, 0.95),
   numb_resp = 180
 )
-simulated_dataset_control$type[simulated_dataset_control$type == "Treated"] <- "Control"
 
 ### Combine the two dataset
 all_simulated_dataset <- 
