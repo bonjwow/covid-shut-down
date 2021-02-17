@@ -155,7 +155,7 @@ simulatingDataset <- function(dataset, group_type, param_q1, param_q2, param_q3,
         "3-4 days",
         "5-6 days",
         "7 days",
-        "Not Applicable"),
+        NA),
         size = sample_size,
         replace = TRUE, 
         prob = param_q15
