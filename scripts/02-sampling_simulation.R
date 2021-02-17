@@ -20,7 +20,7 @@ set.seed(853)
 # Q4: How many years has your restaurant been in operation?
 # Q5: Prior to (intervention start date), how many people did you employ?
 # Q6: How many people do you currently employ?
-# Q7: Between (start date of intervention) and (end date of intervention) was your total sales revenue higher, lower, or about the same as it was during the same length of time last month.
+# Q7: Between (start date of intervention) and (end date of intervention) was your total sales revenue higher, lower, or about the same as it was during the same length of time last quarter.
 # Q8: What was the approximate percentage decrease in total sales revenue between (start date of intervention) and (end date of intervention) compared to the same time period last year.
 # Q9: Before the (intervention start date), approximately how much of your total monthly sales revenue came from takeout or delivery?
 # Q10: Between (start date of intervention) and (end date of intervention), did you make any adjustments to your menu prices?
@@ -98,9 +98,8 @@ simulatingDataset <- function(dataset, group_type, param_q1, param_q2, param_q3,
       ),
       Q9 = sample(x = c(
         "Did not offer takeout or delivery",
-        "15% or less",
-        "15-30%",
-        "30-50%",
+        "25% or less",
+        "25-50%",
         "50-75%",
         "75% or more"),
         size = sample_size,
@@ -185,7 +184,7 @@ simulated_dataset_treated <- simulatingDataset(
   param_q6 = 20,
   param_q7 = c(0.15, 0.80, 0.05),
   param_q8 = c(0.50, 0.25, 0.15, 0.10),
-  param_q9 = c(0.01, 0.01, 0.01, 0.02, 0.05, 0.90),
+  param_q9 = c(0.01, 0.02, 0.02, 0.05, 0.90),
   param_q10 = c(0.15, 0.55, 0.30),
   param_q11 = c(0.35, 0.10, 0.25, 0.20, 0.05, 0.05),
   param_q12 = c(0.85, 0.15),
@@ -206,8 +205,8 @@ simulated_dataset_control <- simulatingDataset(
   param_q5 = 30,
   param_q6 = 30,
   param_q7 = c(0.10, 0.10, 0.80),
-  param_q8 = c(0.50, 0.25, 0.15, 0.10),
-  param_q9 = c(0.05, 0.60, 0.15, 0.07, 0.05, 0.03),
+  param_q8 = c(0.02, 0.05, 0.18, 0.75),
+  param_q9 = c(0.05, 0.75, 0.07, 0.05, 0.03),
   param_q10 = c(0.01, 0.01, 0.98),
   param_q11 = c(0.30, 0.10, 0.20, 0.20, 0.15, 0.05),
   param_q12 = c(0.03, 0.97),

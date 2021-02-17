@@ -183,7 +183,7 @@ ggplot(data = all_simulated_dataset, mapping = aes (x = Q8, fill = type)) +
 
 ggplot(data = all_simulated_dataset, mapping = aes (x = Q9, fill = type)) +
   geom_bar(position = position_dodge(1)) +  coord_flip() + 
-  scale_x_discrete(limit = c("Did not offer takeout or delivery", "15% or less", "15-30%", "30-50%", "50-75%", "75% or more")) + 
+  scale_x_discrete(limit = c("Did not offer takeout or delivery", "25% or less", "25-50%", "50-75%", "75% or more")) + 
   labs(x = "Total Monthly Sales Revenue Fromt Takeout or Delivery",
        y = "# of Restaurants",
        title = "Q9",
