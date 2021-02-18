@@ -20,12 +20,12 @@ library(janitor)
 
 all_simulated_dataset <- 
   readr::read_csv("../../inputs/data/simulated_data.csv")
-control_group <-
-  readr::read_csv("../../inputs/data/simulated_data.csv") %>%
-  filter(type == "Control")
-treatment_group <-
-  readr::read_csv("../../inputs/data/simulated_data.csv") %>%
-  filter(type == "Treated")
+#control_group <-
+ # readr::read_csv("../../inputs/data/simulated_data.csv") %>%
+  #filter(type == "Control")
+#treatment_group <-
+ # readr::read_csv("../../inputs/data/simulated_data.csv") %>%
+  #filter(type == "Treated")
 ```
 
 ```{r, echo = FALSE, include=FALSE, message = FALSE}
@@ -75,7 +75,6 @@ ggplot(data = all_simulated_dataset, mapping = aes (x = Q2)) +
        y = "# of Restaurants",
        title = "Q2") +
   theme_minimal()
-
 ```
 
 ```{r Q3, echo = FALSE, message = FALSE}
@@ -92,8 +91,6 @@ ggplot(data = all_simulated_dataset, mapping = aes (x = Q3)) +
        y = "# of Restaurants",
        title = "Q3") +
   theme_minimal()
-
-
 ```
 
 ```{r Q4, echo = FALSE, message = FALSE}
@@ -110,28 +107,68 @@ ggplot(data = all_simulated_dataset, mapping = aes (x = Q4)) +
        y = "# of Restaurants",
        title = "Q4") +
   theme_minimal()
+```
+
+```{r Q5 + Q6 Table, echo = FALSE, message = FALSE}
+### Prior to (intervention start date), how many people did you employ?
+### How many people do you currently employ?
+
+t1 <-
+all_simulated_dataset %>%
+  group_by(type) %>%
+  summarise(prior_employees = mean(Q5, na.rm = TRUE, .groups = NULL))
+
+t2 <-
+all_simulated_dataset %>%
+  group_by(type) %>%
+  summarise(curr_employees = mean(Q6, na.rm = TRUE), .groups = NULL)
+
+total <- merge(t1, t2, by = c("type"))
+
+
+kable(total,
+      col.names = c("Intervention Group",
+                  "# of Employees Prior to Intervention",
+                  "Current # of Employees")) %>%
+      footnote(general = "Change in # of employees before and after intervention period (Q5 + Q6)") %>%
+  kable_paper(c("striped", "hover"))
+             
 
 ```
 
-```{r Q5, echo = FALSE, message = FALSE}
-### How many people do you currently employ?
+```{r Q5 + Q6 Bar Graphs, echo = FALSE, message = FALSE}
 ### Prior to (intervention start date), how many people did you employ?
-### Control
-
-
-
-
-### line graph
-
-```
-
-```{r Q6, echo = FALSE, message = FALSE}
 ### How many people do you currently employ?
-### Prior to (intervention start date), how many people did you employ?
-### Treated
+
+#ggplot(data = treatment_group, mapping = aes(x = Q5)) +
+ #  geom_bar() +
+  # labs(x = "# of employees",
+   #     y = "# of restaurants",
+    #    title = "# of employees prior to (date) for treatment group") +
+  #theme_minimal()
+
+#ggplot(data = control_group, mapping = aes(x = Q5)) +
+ #  geom_bar() +
+  # labs(x = "# of employees",
+   #     y = "# of restaurants",
+    #    title = "# of employees prior to (date) for control group",
+     #   group = "Legend") +
+  #theme_minimal()
 
 
-### line graph
+#ggplot(data = treatment_group, mapping = aes(x = Q6)) +
+ #  geom_bar() +
+  # labs(x = "# of employees",
+   #     y = "# of restaurants",
+    #    title = "Current # of employees for treatment group") +
+  #theme_minimal()
+
+#ggplot(data = control_group, mapping = aes(x = Q6)) +
+ #  geom_bar() +
+  # labs(x = "# of employees",
+   #     y = "# of restaurants",
+    #    title = "Current # of employees for control gruop") +
+  # theme_minimal() 
 
 ```
 
@@ -148,7 +185,6 @@ ggplot(data = all_simulated_dataset, mapping = aes(x = Q7, fill = type)) +
        title = "Q7",
        fill = "Type") +
   theme_minimal()
-
 ```
 
 ```{r Q8, echo = FALSE, message = FALSE}
@@ -167,9 +203,6 @@ ggplot(data = all_simulated_dataset, mapping = aes (x = Q8, fill = type)) +
        title = "Q8",
        fill = "Type") +
   theme_minimal()
-
-### make this a line graph
-
 ```
 
 ```{r Q9, echo = FALSE, message = FALSE}
@@ -189,8 +222,6 @@ ggplot(data = all_simulated_dataset, mapping = aes (x = Q9, fill = type)) +
        title = "Q9",
        fill = "Legend") +
   theme_minimal()
-
-### make this a line graph instead
 ```
 
 ```{r Q10, echo = FALSE, message = FALSE}
@@ -207,7 +238,6 @@ ggplot(data = all_simulated_dataset, mapping = aes (x = Q10, fill = type)) +
        title = "Q10",
        fill = "Legend") +
   theme_minimal()
-
 ```
 
 
@@ -228,7 +258,6 @@ ggplot(data = all_simulated_dataset, mapping = aes(x = Q11, fill = type)) +
        title = "Q11",
        fill = "Legend") +
   theme_minimal()
-
 ```
 
 
@@ -244,8 +273,6 @@ ggplot(data = all_simulated_dataset, mapping = aes(x = Q12, fill = type)) +
        title = "Q12",
        fill = "Legend") +
   theme_minimal()
-  
-
 ```
 
 ```{r Q13, echo = FALSE, message = FALSE}
@@ -256,9 +283,13 @@ ggplot(data = all_simulated_dataset, mapping = aes(x = Q12, fill = type)) +
 ### 50-75%
 ### 75% or more
 
-
-### line graph
-
+ggplot(data = all_simulated_dataset, mapping = aes(x = Q13, fill = type)) +
+  geom_bar(position = "stack") +
+  labs(x = "Hours Reduced per Week",
+       y = "# of Restaurants",
+       title = "Q13",
+       fill = "Legend") +
+  theme_minimal()
 ```
 
 
@@ -275,7 +306,6 @@ ggplot(data = all_simulated_dataset, mapping = aes(x = Q14, fill = type)) +
        title = "Q14",
        fill = "Legend") +
   theme_minimal()
-
 ```
 
 
@@ -296,7 +326,6 @@ ggplot(data = all_simulated_dataset, mapping = aes(x = Q15, fill = type)) +
        title = "Q15",
        fill = "Legend") +
   theme_minimal()
-
 ```
 
 
