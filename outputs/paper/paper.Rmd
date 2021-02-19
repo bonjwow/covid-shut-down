@@ -24,6 +24,7 @@ library(RColorBrewer)
 library(ggthemes)
 library(scales)
 library(broom)
+library(purrr)
 
 all_simulated_dataset <- 
   readr::read_csv("../../inputs/data/simulated_data.csv")
@@ -154,7 +155,7 @@ kable(total,
 
 ### T-Tests (Welch's)
 
-# Q5
+#Q5
 control_q5 <-
   all_simulated_dataset %>%
   filter(type == "Control") %>%
@@ -163,9 +164,7 @@ treatment_q5 <-
   all_simulated_dataset %>%
   filter(type == "Treated") %>%
   select(Q5)
-t.test(control_q5, treatment_q5)
-
-
+t3 <- t.test(control_q5, treatment_q5)
 
 #Q6
 control_q6 <-
@@ -176,8 +175,26 @@ treatment_q6 <-
   all_simulated_dataset %>%
   filter(type == "Treated") %>%
   select(Q6)
-t.test(control_q6, treatment_q6)
+t4 <- t.test(control_q6, treatment_q6)
 
+#Q5 + Q6 compiled t-test table
+t_tests <- map_df(list(t3, t4), tidy)
+t_tests = subset(t_tests, select = -c(alternative, method))
+t_tests %>%  
+  kable(
+    col.names = c("Mean Difference",
+                  "Mean (Employees Before Intervention)",
+                  "Mean (Employees Post-Intervention)",
+                  "t",
+                  "p",
+                  "df",
+                  "Low",
+                  "High")
+    
+  ) %>%
+  add_header_above(c(" ", "Control" = 1, "Treated" = 1, " ", " ", " ", "Confidence" = 2)) %>%
+  kable_paper(c("striped", "hover")) %>%
+  landscape()
 
 ```
 
@@ -200,6 +217,8 @@ ggplot(data = all_simulated_dataset, mapping = aes(x = Q7, fill = type)) +
 
 q7_chi <- table(all_simulated_dataset$Q7, all_simulated_dataset$type)
 chisq.test(q7_chi)
+
+
 
 ```
 
