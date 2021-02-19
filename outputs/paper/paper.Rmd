@@ -17,6 +17,12 @@ library(tidyverse)
 library(ggplot2)
 library(kableExtra)
 library(janitor)
+library(dplyr)
+library(palettetown)
+library(wesanderson)
+library(RColorBrewer)
+library(ggthemes)
+library(scales)
 
 all_simulated_dataset <- 
   readr::read_csv("../../inputs/data/simulated_data.csv")
@@ -37,7 +43,7 @@ percent <- function(x, decimal = 2, format = "f") {
 
 # Data
 
-```{r Q1, echo = FALSE, message = FALSE}
+```{r regions, echo = FALSE, message = FALSE}
 #### Pie Chart ####
 ### Import cleaned business licences dataset
 dfCleanBiz <- readr::read_csv("../../inputs/data/clean_business_licences.csv")
@@ -52,29 +58,43 @@ dfBoroughs <- dfBoroughs %>%
   mutate(prop = value / sum(dfBoroughs$value) *100) %>%
   mutate(ypos = cumsum(prop)- 0.5*prop ) %>%
   arrange(desc(prop))
+dfBoroughs <- dfBoroughs[-c(10),]
 # print(dfBoroughs)
+
 ### Create pie chart
 ggplot(dfBoroughs, aes(x="", y = prop, fill = group)) +
-  geom_bar(stat = "identity", width = 1, color = "white") +
+  geom_bar(stat = "identity", width = 1, color = "black") +
   coord_polar("y", start = 0) +
-  theme_void() + 
-  geom_text(aes(y = ypos, label = percent(prop)), color = "white", size=3) +
-  scale_fill_brewer(palette = "Paired")
+  theme_void() +
+  geom_text(aes(x=1.65, y = ypos, label = percent(prop)), color = "black", size=2.8) +
+  scale_fill_brewer(palette = "Set3") + 
+  labs(fill = "Region", title = "Proportion of Restaurants in Toronto by Borough") +
+  theme(plot.title = element_text(face = "bold"))
 ```
+
+```{r Q1, echo = FALSE, message=FALSE}
+ggplot(data = all_simulated_dataset, mapping = aes (x = Q1, fill = type)) +
+  geom_bar() + coord_flip() +
+  theme_fivethirtyeight() +
+  scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE)) +
+  labs(fill = "Condition", title = "Q1")
+```
+
 
 ```{r Q2, echo = FALSE, message = FALSE}
 ### "What best describes the scale of your restaurant?
 ### Small (full seating capacity is under 30)
 ### Medium (full seating capacity between 30 and 60)
 ### Large (full seating capacity is 60+) "
-
-ggplot(data = all_simulated_dataset, mapping = aes (x = Q2)) +
-  geom_bar() +
+ggplot(data = all_simulated_dataset, mapping = aes (x = Q2, fill = type)) +
+    geom_bar() +
   scale_x_discrete(limit = c ("Small", "Medium", "Large")) +
   labs(x = "Scale of Restaurant",
        y = "# of Restaurants",
        title = "Q2") +
-  theme_minimal()
+  labs(fill = "Condition", title = "Q2") +
+  theme_fivethirtyeight() +
+  scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE))
 ```
 
 ```{r Q3, echo = FALSE, message = FALSE}
@@ -83,14 +103,14 @@ ggplot(data = all_simulated_dataset, mapping = aes (x = Q2)) +
 ### Casual Dining
 ### Fine Dining
 ### Other
-
-ggplot(data = all_simulated_dataset, mapping = aes (x = Q3)) +
+ggplot(data = all_simulated_dataset, mapping = aes (x = Q3, fill = type)) +
   geom_bar() +
   scale_x_discrete(limit = c ("Fine Dining", "Casual Dining", "Fast-food/quick service", "Other")) +
   labs(x = "Type of Restaurant",
        y = "# of Restaurants",
        title = "Q3") +
-  theme_minimal()
+  theme_fivethirtyeight() +
+  scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE))
 ```
 
 ```{r Q4, echo = FALSE, message = FALSE}
@@ -99,14 +119,14 @@ ggplot(data = all_simulated_dataset, mapping = aes (x = Q3)) +
 ### 5-7 years
 ### 8-10 years
 ### 10 or more years
-
-ggplot(data = all_simulated_dataset, mapping = aes (x = Q4)) +
+ggplot(data = all_simulated_dataset, mapping = aes (x = Q4, fill = type)) +
   geom_bar() + coord_flip() +
   scale_x_discrete(limit = c ("1-4 years", "5-7 years", "8-10 years", "10 or more years")) +
   labs(x = "Years of Operation",
        y = "# of Restaurants",
        title = "Q4") +
-  theme_minimal()
+  theme_fivethirtyeight() +
+  scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE))
 ```
 
 ```{r Q5 + Q6 Table, echo = FALSE, message = FALSE}
@@ -179,12 +199,13 @@ kable(total,
 ### Around the Same
 
 ggplot(data = all_simulated_dataset, mapping = aes(x = Q7, fill = type)) + 
-  geom_bar(position = position_dodge(1)) +
+  geom_bar() +
   labs(x = "Did revenue increase, decrease, or remain the same compared to last month?",
        y = "# of restaurants",
        title = "Q7",
        fill = "Type") +
-  theme_minimal()
+  theme_fivethirtyeight() + 
+  scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE))
 ```
 
 ```{r Q8, echo = FALSE, message = FALSE}
@@ -202,7 +223,8 @@ ggplot(data = all_simulated_dataset, mapping = aes (x = Q8, fill = type)) +
        y = "# of Restaurants",
        title = "Q8",
        fill = "Type") +
-  theme_minimal()
+  theme_fivethirtyeight() + 
+  scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE))
 ```
 
 ```{r Q9, echo = FALSE, message = FALSE}
@@ -220,7 +242,8 @@ ggplot(data = all_simulated_dataset, mapping = aes (x = Q9, fill = type)) +
        y = "# of Restaurants",
        title = "Q9",
        fill = "Legend") +
-  theme_minimal()
+  theme_fivethirtyeight() + 
+  scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE))
 ```
 
 ```{r Q10, echo = FALSE, message = FALSE}
@@ -230,13 +253,15 @@ ggplot(data = all_simulated_dataset, mapping = aes (x = Q9, fill = type)) +
 ### No changes were made
 
 ggplot(data = all_simulated_dataset, mapping = aes (x = Q10, fill = type)) +
-  geom_bar(position = position_dodge(1)) +  coord_flip() + 
+  geom_bar() +  
+  coord_flip() + 
   scale_x_discrete(limit = c("Yes, prices were raised", "Yes, prices were lowered", "No changes were made")) + 
   labs(x = "Adjustments to Menu Prices",
        y = "# of Restaurants",
        title = "Q10",
        fill = "Legend") +
-  theme_minimal()
+  scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE)) +
+  theme_fivethirtyeight()
 ```
 
 
@@ -256,7 +281,8 @@ ggplot(data = all_simulated_dataset, mapping = aes(x = Q11, fill = type)) +
        y = "# of Restaurants",
        title = "Q11",
        fill = "Legend") +
-  theme_minimal()
+  scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE)) + 
+  theme_fivethirtyeight()
 ```
 
 
@@ -271,7 +297,8 @@ ggplot(data = all_simulated_dataset, mapping = aes(x = Q12, fill = type)) +
        y = "# of restaurants",
        title = "Q12",
        fill = "Legend") +
-  theme_minimal()
+  theme_fivethirtyeight() +
+  scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE))
 ```
 
 ```{r Q13, echo = FALSE, message = FALSE}
@@ -288,7 +315,8 @@ ggplot(data = all_simulated_dataset, mapping = aes(x = Q13, fill = type)) +
        y = "# of Restaurants",
        title = "Q13",
        fill = "Legend") +
-  theme_minimal()
+  scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE)) +
+  theme_fivethirtyeight()
 ```
 
 
@@ -304,7 +332,8 @@ ggplot(data = all_simulated_dataset, mapping = aes(x = Q14, fill = type)) +
        y = "Y",
        title = "Q14",
        fill = "Legend") +
-  theme_minimal()
+  scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE)) +
+  theme_fivethirtyeight()
 ```
 
 
@@ -324,7 +353,8 @@ ggplot(data = all_simulated_dataset, mapping = aes(x = Q15, fill = type)) +
        y = "# of restaurants",
        title = "Q15",
        fill = "Legend") +
-  theme_minimal()
+    scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE)) +
+  theme_fivethirtyeight() 
 ```
 
 
