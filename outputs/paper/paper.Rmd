@@ -23,15 +23,10 @@ library(wesanderson)
 library(RColorBrewer)
 library(ggthemes)
 library(scales)
+library(broom)
 
 all_simulated_dataset <- 
   readr::read_csv("../../inputs/data/simulated_data.csv")
-#control_group <-
- # readr::read_csv("../../inputs/data/simulated_data.csv") %>%
-  #filter(type == "Control")
-#treatment_group <-
- # readr::read_csv("../../inputs/data/simulated_data.csv") %>%
-  #filter(type == "Treated")
 ```
 
 ```{r, echo = FALSE, include=FALSE, message = FALSE}
@@ -152,44 +147,6 @@ kable(total,
                   "Current # of Employees")) %>%
       footnote(general = "Change in # of employees before and after intervention period (Q5 + Q6)") %>%
   kable_paper(c("striped", "hover"))
-             
-
-```
-
-```{r Q5 + Q6 Bar Graphs, echo = FALSE, message = FALSE}
-### Prior to (intervention start date), how many people did you employ?
-### How many people do you currently employ?
-
-#ggplot(data = treatment_group, mapping = aes(x = Q5)) +
- #  geom_bar() +
-  # labs(x = "# of employees",
-   #     y = "# of restaurants",
-    #    title = "# of employees prior to (date) for treatment group") +
-  #theme_minimal()
-
-#ggplot(data = control_group, mapping = aes(x = Q5)) +
- #  geom_bar() +
-  # labs(x = "# of employees",
-   #     y = "# of restaurants",
-    #    title = "# of employees prior to (date) for control group",
-     #   group = "Legend") +
-  #theme_minimal()
-
-
-#ggplot(data = treatment_group, mapping = aes(x = Q6)) +
- #  geom_bar() +
-  # labs(x = "# of employees",
-   #     y = "# of restaurants",
-    #    title = "Current # of employees for treatment group") +
-  #theme_minimal()
-
-#ggplot(data = control_group, mapping = aes(x = Q6)) +
- #  geom_bar() +
-  # labs(x = "# of employees",
-   #     y = "# of restaurants",
-    #    title = "Current # of employees for control gruop") +
-  # theme_minimal() 
-
 ```
 
 ```{r Q7, echo = FALSE, message = FALSE}
@@ -357,6 +314,69 @@ ggplot(data = all_simulated_dataset, mapping = aes(x = Q15, fill = type)) +
   theme_fivethirtyeight() 
 ```
 
+## Statistical Tests
+
+```{r statistical tests, echo = FALSE, message = FALSE}
+### Welch's T-Test
+
+# Q5
+control_q5 <-
+  all_simulated_dataset %>%
+  filter(type == "Control") %>%
+  select(Q5)
+treatment_q5 <-
+  all_simulated_dataset %>%
+  filter(type == "Treated") %>%
+  select(Q5)
+tidy(t.test(control_q5, treatment_q5))
+
+
+
+#Q6
+control_q6 <-
+  all_simulated_dataset %>%
+  filter(type == "Control") %>%
+  select(Q6)
+treatment_q6 <-
+  all_simulated_dataset %>%
+  filter(type == "Treated") %>%
+  select(Q6)
+tidy(t.test(control_q6, treatment_q6))
+
+### Paired T-Test
+
+tidy(t.test(all_simulated_dataset$Q5,
+       all_simulated_dataset$Q6,
+       paired=TRUE,
+       conf.level = 0.95))
+
+# Chi-Square
+
+#Q7
+
+q7_chi <- table(all_simulated_dataset$Q7, all_simulated_dataset$type)
+tidy(chisq.test((q7_chi)))
+
+#Q8
+
+q8_chi <- table(all_simulated_dataset$Q8, all_simulated_dataset$type)
+tidy(chisq.test((q8_chi)))
+
+#Q10
+
+q10_chi <- table(all_simulated_dataset$Q10, all_simulated_dataset$type)
+tidy(chisq.test((q10_chi)))
+
+#Q12
+
+q12_chi <- table(all_simulated_dataset$Q12, all_simulated_dataset$type)
+tidy(chisq.test((q12_chi)))
+
+#Q14
+
+q14_chi <- table(all_simulated_dataset$Q14, all_simulated_dataset$type)
+tidy(chisq.test((q14_chi)))
+```
 
 \newpage
 
