@@ -405,6 +405,22 @@ ggplot(data = all_simulated_dataset, mapping = aes(x = Q15, fill = type)) +
   theme_fivethirtyeight()
 ```
 
+```{r Q16, echo = FALSE, message = FALSE}
+### Have you applied for and received any external funding or grants for your restaurant since (intervention start date)?
+### Yes
+### No
+
+ggplot(data = all_simulated_dataset, mapping = aes(x = Q16, fill = type)) +
+  geom_bar(position = position_dodge(1)) +
+  labs(x = "Application status",
+       y = "# of restaurants",
+       title = str_wrap("Funding Applications between Oct 1 and Dec 31", 30),
+       fill = "Condition") +
+  theme_fivethirtyeight() +
+  scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE))
+```
+
+
 
 \newpage
 
