@@ -54,6 +54,13 @@ Tables 1 and 2 speak to changes in numbers of employees for restaurants prior to
 
 In terms of effects on revenue and/or overall sales for restaurants during the intervention period, Figure 5 shows us that more restaurants within the treatment group saw decreases in revenue compared to the prior quarter (July 1 - Sep 30), while the control group's revenue largely remained the same. In addition to this, Figure 6 shows that of those restaurants that saw a decrease in revenue, the treatment group saw the harshest declines in revenue during the intervention period. A Chi-Square test for whether the restaurant saw a decrease in revenue showed that restaurants in the treatment group were more likely to report a decrease in revenue *X*^1 (2, *N* = 330) = 220.73, *p* < 2.2e-16. The percentage decrease in revenues also showed a significant relationship, where restaurants in the treatment group are most likely to report higher loss of revenue during the intervention period *X*^2 (3, *N* = 330) = 178.33, *p* < 2.2e-16. Prior to the intervention period, it appears as though both groups had similar breakdowns of revenue coming from take-out and/or delivery (Figure 7).
 
+Questions related to the adjustments of the restaurants during the intervention, such as a menu price, and hours and days of operation (Figures 8-12) show us that:
+* most of the restaurants in the control group did not change the menu price, while most of the ones in the treatment group either lowered or raised the menu price;
+* and most of the restaurants in the control group did not adjust their hours and days of operation, while most of the ones in the intervention group reduced their operating schedule.
+
+Pearson’s Chi-squared test is used to see if there is a statistically significant difference between the intervention and the adjustments of the restaurants. The test results show that the p-value of each of those adjustments is close to 0 (*p* < 2.2e-16), meaning that there is a high correlation between those two variables. Consequently, it is expected that restaurants will adjust the menu price and reduce their operating schedule if they operate on a delivery and take-out only basis.
+
+
 ## Figures
 
 ### Sample Characteristics
