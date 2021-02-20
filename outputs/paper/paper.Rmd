@@ -52,7 +52,7 @@ Questions pertaining to the characteristics of the restaurants, such as location
 
 Tables 1 and 2 speak to changes in numbers of employees for restaurants prior to the intervention period (Oct 1) and following the intervention period (Dec 31). This shows us that initially, both the control and treatment group had a very similar number of employees on average. Following the intervention period, however, the treatment group appears to have 10.26 fewer employees on average. Two-tailed Welch's t-tests comparing the two groups' mean employees shows that the difference prior to the intervention period is not a significant finding ( *t*(330) = -8.56, *p* > .05)., but the difference in employee numbers between the two groups post-intervention is significant( *t*(330) = 19.46, *p* < .05).
 
-In terms of effects on revenue and/or overall sales for restaurants during the intervention period, Figure 5 shows us that more restaurants within the treatment group saw decreases in revenue compared to the prior quarter (July 1 - Sep 30), while the control group's revenue largely remained the same. In addition to this, Figure 6 shows that of those restaurants that saw a decrease in revenue, the treatment group saw the harshest declines in revenue during the intervention period. A Chi-Square test for whether the restaurant saw a decrease in revenue showed that restaurants in the treatment group were more likely to report a decrease in revenue *X*^1 (2, *N* = 330) = 220.73, *p* < 2.2e-16. The percentage decrease in revenues also showed a significant relationship, where restaurants in the treatment group are most likely to report higher loss of revenue during the intervention period *X*^2 (3, *N* = 330) = 178.33, *p* < 2.2e-16. Prior to the intervention period, it appears as though both groups had similar breakdowns of revenue coming from take-out and/or delivery (Figure 7).
+In terms of effects on revenue and/or overall sales for restaurants during the intervention period, Figure 5 shows us that more restaurants within the treatment group saw decreases in revenue compared to the prior quarter (July 1 - Sep 30), while the control group's revenue largely remained the same. In addition to this, Figure 6 shows that of those restaurants that saw a decrease in revenue, the treatment group saw the harshest declines in revenue during the intervention period. A Chi-Square test for whether the restaurant saw a decrease in revenue showed that restaurants in the treatment group were more likely to report a decrease in revenue *X*^2 (2, *N* = 330) = 220.73, *p* < 2.2e-16. The percentage decrease in revenues also showed a significant relationship, where restaurants in the treatment group are most likely to report higher loss of revenue during the intervention period *X*^2 (3, *N* = 330) = 178.33, *p* < 2.2e-16. Prior to the intervention period, it appears as though both groups had similar breakdowns of revenue coming from take-out and/or delivery (Figure 7).
 
 Questions related to the adjustments of the restaurants during the intervention, such as a menu price, and hours and days of operation (Figures 8-12) show us that:
 
@@ -226,7 +226,7 @@ t4 <- t.test(control_q6, treatment_q6, paired = FALSE)
 
 #Q5 + Q6 compiled t-test table
 t_tests <- map_df(list(t3, t4), tidy)
-t_tests = subset(t_tests, select = -c(alternative, method))
+t_tests = subset(t_tests, select = -c(alternative, method, conf.low, conf.high))
 t_tests %>%  
   kable(
     col.names = c("Mean of the Differences",
@@ -234,12 +234,10 @@ t_tests %>%
                   "Mean (Employees Post-Intervention)",
                   "t",
                   "p",
-                  "df",
-                  "Low",
-                  "High")
+                  "df")
     
   ) %>%
-  add_header_above(c(" ", "Control" = 1, "Treated" = 1, " ", " ", " ", "Confidence" = 2)) %>%
+  add_header_above(c(" ", "Control" = 1, "Treated" = 1, " ", " ", " ")) %>%
   kable_paper(c("striped", "hover")) %>%
   landscape()
 
