@@ -19,12 +19,13 @@ library(kableExtra)
 library(janitor)
 library(dplyr)
 library(palettetown)
-library(wesanderson)
 library(RColorBrewer)
 library(ggthemes)
 library(scales)
 library(broom)
 library(purrr)
+devtools::install_github("johannesbjork/LaCroixColoR")
+library(LaCroixColoR)
 
 all_simulated_dataset <- 
   readr::read_csv("../../inputs/data/simulated_data.csv")
@@ -63,10 +64,11 @@ dfBoroughs <- dfBoroughs[-c(10),]
 ggplot(dfBoroughs, aes(x="", y = prop, fill = group)) +
   geom_bar(stat = "identity", width = 1, color = "black") +
   coord_polar("y", start = 0) +
-  theme_void() +
   geom_text(aes(x=1.65, y = ypos, label = percent(prop)), color = "black", size=2.8) +
-  scale_fill_brewer(palette = "Set3") + 
+  scale_fill_manual(values=lacroix_palette("PeachPear", n = 9)) + 
   labs(fill = "Region", title = "Proportion of Restaurants in Toronto by Borough") +
+  theme(plot.title = element_text(face = "bold")) +
+  theme_void() +
   theme(plot.title = element_text(face = "bold"))
 ```
 
