@@ -29,10 +29,11 @@ set.seed(853)
 # Q13: If yes, approximately how many hours per week did you reduce by
 # Q14: Between (start date of intervention) and (end date of intervention) did you reduce the number of days your restaurant was open to the public?
 # Q15: If yes, how many days per week did you reduce by?
+# Q16: Have you applied for and received any external funding or grants for your restaurant since (intervention start date)?
 
 sample_size <- 200
 
-simulatingDataset <- function(dataset, group_type, param_q1, param_q2, param_q3, param_q4, param_q5, param_q6, param_q7, param_q8, param_q9, param_q10, param_q11, param_q12, param_q13, param_q14, param_q15, numb_resp) {   
+simulatingDataset <- function(dataset, group_type, param_q1, param_q2, param_q3, param_q4, param_q5, param_q6, param_q7, param_q8, param_q9, param_q10, param_q11, param_q12, param_q13, param_q14, param_q15, param_q16, numb_resp) {   
   dataset <- 
     tibble(
       type = rep(group_type, sample_size),
@@ -159,6 +160,13 @@ simulatingDataset <- function(dataset, group_type, param_q1, param_q2, param_q3,
         replace = TRUE, 
         prob = param_q15
       ),
+      Q16 = sample(x = c(
+        "Yes",
+        "No"),
+        size = sample_size,
+        replace = TRUE, 
+        prob = param_q16
+      ),      
     ) %>%
     # Remove the rows whose answer from Q12 is 'No'
     mutate(Q13 = ifelse(Q12 == "No", NA, Q13)) %>%
@@ -191,6 +199,7 @@ simulated_dataset_treated <- simulatingDataset(
   param_q13 = c(0.15, 0.35, 0.30, 0.15, 0.05),
   param_q14 = c(0.85, 0.15),
   param_q15 = c(0.45, 0.35, 0.10, 0.08, 0.02),
+  param_q16 = c(0.65, 0.35),
   numb_resp = 150
 )
 
@@ -213,6 +222,7 @@ simulated_dataset_control <- simulatingDataset(
   param_q13 = c(0.87, 0.10, 0.03, 0, 0),
   param_q14 = c(0.05, 0.95),
   param_q15 = c(0.04, 0.01, 0, 0, 0.95),
+  param_q16 = c(0.15, 0.85),
   numb_resp = 180
 )
 
