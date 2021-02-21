@@ -7,6 +7,8 @@ date: "`r format(Sys.time(), '%d %B %Y')`"
 abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
 output:
   bookdown::pdf_document2:
+header-includes:
+    - \usepackage[labelformat=empty]{caption}
 toc: FALSE
 bibliography: references.bib
 ---
@@ -23,17 +25,34 @@ library(RColorBrewer)
 library(ggthemes)
 library(scales)
 library(broom)
+library(purrr)
 #devtools::install_github("johannesbjork/LaCroixColoR")
 library(LaCroixColoR)
-
 all_simulated_dataset <- 
   readr::read_csv("../../inputs/data/simulated_data.csv")
 ```
 
 ```{r, echo = FALSE, include=FALSE, message = FALSE}
 #### Global Functions ####
+### Format percent
 percent <- function(x, decimal = 2, format = "f") {   
   paste0(formatC(x, format = format, digits = decimal), "%")
+}
+### Format table for Chi-squared test
+tableChisq <- function(capt, stat, df, p) {   
+  chi_stat <- c(stat)
+  chi_param <- c(df)
+  chi_p <- c(p)
+  chi_df <- data.frame(chi_stat, chi_param, paste(chi_p,"*"))
+  
+  kable(chi_df,
+        digits = 2,
+        caption = capt,
+        col.names = c("X-squared",
+                      "df",
+                      "p-value")) %>%
+    footnote(symbol = "The Chi-squared statistic is significant at the 0.05 level") %>%
+    kable_paper(c("striped", "hover"))
 }
 ```
 
@@ -58,7 +77,8 @@ Questions related to the adjustments of the restaurants during the intervention,
 * most of the restaurants in the control group did not change the menu price, while most of the ones in the treatment group either lowered or raised the menu price;
 * and most of the restaurants in the control group did not adjust their hours and days of operation, while most of the ones in the intervention group reduced their operating schedule.
 
-Pearson’s Chi-squared (*X*^2^) test is used to see if there is a statistically significant difference between the intervention and the adjustments of the restaurants. The test results show that the p-values of all adjustments are extremely close to 0, meaning that there is a high correlation between those variables. Consequently, it is expected that restaurants will adjust the menu price and reduce their operating schedule if they operate on a delivery and take-out only basis.
+Pearson’s Chi-squared (*X*^2^) test is used to see if there is a statistically significant difference between the intervention and the adjustments of the restaurants. The test results show that the p-value of each of those adjustments is close to 0 (*p* < 2.2e-16), meaning that there is a high correlation between those two variables. Consequently, it is expected that restaurants will adjust the menu price and reduce their operating schedule if they operate on a delivery and take-out only basis.
+
 
 ## Figures
 
@@ -81,7 +101,6 @@ dfBoroughs <- dfBoroughs %>%
   arrange(desc(prop))
 dfBoroughs <- dfBoroughs[-c(10),]
 # print(dfBoroughs)
-
 ### Create pie chart
 ggplot(dfBoroughs, aes(x="", y = prop, fill = group)) +
   geom_bar(stat = "identity", width = 1, color = "black") +
@@ -160,7 +179,6 @@ ggplot(data = all_simulated_dataset, mapping = aes (x = Q4, fill = type)) +
 ### Other
 ### In-house delivery service
 ### None
-
 ggplot(data = all_simulated_dataset, mapping = aes(x = Q11, fill = type)) +
   geom_bar(position = "stack") + coord_flip() +
   scale_x_discrete(limit = c("UberEats", "SkiptheDishes", "DoorDash", "In-house delivery service", "Other", "None")) +
@@ -177,29 +195,22 @@ ggplot(data = all_simulated_dataset, mapping = aes(x = Q11, fill = type)) +
 ```{r Q5 + Q6 Table, echo = FALSE, message = FALSE}
 ### Prior to (intervention start date), how many people did you employ?
 ### How many people do you currently employ?
-
 t1 <-
 all_simulated_dataset %>%
   group_by(type) %>%
   summarise(prior_employees = mean(Q5, na.rm = TRUE, .groups = NULL))
-
 t2 <-
 all_simulated_dataset %>%
   group_by(type) %>%
   summarise(curr_employees = mean(Q6, na.rm = TRUE), .groups = NULL)
-
 total <- merge(t1, t2, by = c("type"))
-
-
 kable(total,
       col.names = c("Intervention Group",
                   "# of Employees Prior to Intervention",
                   "Current # of Employees")) %>%
       footnote(general = "Change in # of employees before and after intervention period (Q5 + Q6)") %>%
   kable_paper(c("striped", "hover"))
-
 ### T-Tests (Welch's)
-
 #Q5
 control_q5 <-
   all_simulated_dataset %>%
@@ -210,7 +221,6 @@ treatment_q5 <-
   filter(type == "Treated") %>%
   select(Q5)
 t3 <- t.test(control_q5, treatment_q5, paired = FALSE)
-
 #Q6
 control_q6 <-
   all_simulated_dataset %>%
@@ -221,7 +231,6 @@ treatment_q6 <-
   filter(type == "Treated") %>%
   select(Q6)
 t4 <- t.test(control_q6, treatment_q6, paired = FALSE)
-
 #Q5 + Q6 compiled t-test table
 t_tests <- map_df(list(t3, t4), tidy)
 t_tests = subset(t_tests, select = -c(alternative, method, conf.low, conf.high))
@@ -238,7 +247,6 @@ t_tests %>%
   add_header_above(c(" ", "Control" = 1, "Treated" = 1, " ", " ", " ")) %>%
   kable_paper(c("striped", "hover")) %>%
   landscape()
-
 ```
 
 ### Effects of Intervention on Revenue
@@ -248,7 +256,6 @@ t_tests %>%
 ### Higher
 ### Lower
 ### Around the Same
-
 ggplot(data = all_simulated_dataset, mapping = aes(x = Q7, fill = type)) + 
   geom_bar() +
   labs(x = "Revenue Change",
@@ -258,8 +265,10 @@ ggplot(data = all_simulated_dataset, mapping = aes(x = Q7, fill = type)) +
   theme_fivethirtyeight() + 
   scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE))
 
-q7_chi <- table(all_simulated_dataset$Q7, all_simulated_dataset$type)
-chisq.test(q7_chi)
+### Chi-squared test
+q7_chi <- table(all_simulated_dataset$Q7, all_simulated_dataset$type) %>%
+  chisq.test()
+tableChisq("Pearson's Chi-squared Test for Q7", q7_chi$statistic, q7_chi$parameter, q7_chi$p.value)
 ```
 
 ```{r Q8, echo = FALSE, message = FALSE}
@@ -268,7 +277,6 @@ chisq.test(q7_chi)
 ### Decline of 25% to 50%
 ### Decline of 10% to 25%
 ### Decline of 10% or less
-
 ggplot(data = all_simulated_dataset, mapping = aes (x = Q8, fill = type)) +
   geom_bar(position = "stack") + coord_flip() +
   scale_x_discrete(limit = c("Decline of 50% or more", "Decline of 25% to 50%", "Decline of 10% to 25%", "Decline of 10% or less")) + 
@@ -279,8 +287,10 @@ ggplot(data = all_simulated_dataset, mapping = aes (x = Q8, fill = type)) +
   theme_fivethirtyeight() + 
   scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE))
 
-q8_chi <- table(all_simulated_dataset$Q8, all_simulated_dataset$type)
-chisq.test(q8_chi)
+### Chi-squared test
+q8_chi <- table(all_simulated_dataset$Q8, all_simulated_dataset$type) %>%
+  chisq.test()
+tableChisq("Pearson's Chi-squared Test for Q8", q8_chi$statistic, q8_chi$parameter, q8_chi$p.value)
 ```
 
 ```{r Q9, echo = FALSE, message = FALSE}
@@ -310,7 +320,6 @@ ggplot(data = all_simulated_dataset, mapping = aes (x = Q9, fill = type)) +
 ### Yes, prices were raised
 ### Yes, prices were lowered
 ### No changes were made
-
 ggplot(data = all_simulated_dataset, mapping = aes (x = Q10, fill = type)) +
   geom_bar() +  
   coord_flip() + 
@@ -322,8 +331,10 @@ ggplot(data = all_simulated_dataset, mapping = aes (x = Q10, fill = type)) +
   scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE)) +
   theme_fivethirtyeight()
 
-q10_chi <- table(all_simulated_dataset$Q10, all_simulated_dataset$type)
-chisq.test(q10_chi)
+### Chi-squared test
+q10_chi <- table(all_simulated_dataset$Q10, all_simulated_dataset$type) %>%
+  chisq.test()
+tableChisq("Pearson's Chi-squared Test for Q10", q10_chi$statistic, q10_chi$parameter, q10_chi$p.value)
 ```
 
 ## Effects of Intervention on Hours/Days of Operation
@@ -332,7 +343,6 @@ chisq.test(q10_chi)
 ### Between (start date of intervention) and (end date of intervention) did you reduce your ### restaurant’s hours of operation?
 ### Yes
 ### No
-
 ggplot(data = all_simulated_dataset, mapping = aes(x = Q12, fill = type)) +
   geom_bar(position = position_dodge(1)) +
   labs(x = "Reduction in hours of operation",
@@ -342,8 +352,10 @@ ggplot(data = all_simulated_dataset, mapping = aes(x = Q12, fill = type)) +
   theme_fivethirtyeight() +
   scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE))
 
-q12_chi <- table(all_simulated_dataset$Q12, all_simulated_dataset$type)
-chisq.test(q12_chi)
+### Chi-squared test
+q12_chi <- table(all_simulated_dataset$Q12, all_simulated_dataset$type) %>%
+  chisq.test()
+tableChisq("Pearson's Chi-squared Test for Q12", q12_chi$statistic, q12_chi$parameter, q12_chi$p.value)
 ```
 
 ```{r Q13, echo = FALSE, message = FALSE}
@@ -353,7 +365,6 @@ chisq.test(q12_chi)
 ### 30-50%
 ### 50-75%
 ### 75% or more
-
 ggplot(data = all_simulated_dataset, mapping = aes(x = Q13, fill = type)) +
   geom_bar(position = "stack") +
   labs(x = "Hours Reduced per Week",
@@ -369,7 +380,6 @@ ggplot(data = all_simulated_dataset, mapping = aes(x = Q13, fill = type)) +
 ### number of days your restaurant was open to the public?
 ### Yes
 ### No 
-
 ggplot(data = all_simulated_dataset, mapping = aes(x = Q14, fill = type)) +
   geom_bar(position = position_dodge(1)) +
   labs(x = "Reduction in Days of Operation",
@@ -379,8 +389,10 @@ ggplot(data = all_simulated_dataset, mapping = aes(x = Q14, fill = type)) +
   scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE)) +
   theme_fivethirtyeight()
 
-q14_chi <- table(all_simulated_dataset$Q14, all_simulated_dataset$type)
-chisq.test(q14_chi)
+### Chi-squared test
+q14_chi <- table(all_simulated_dataset$Q14, all_simulated_dataset$type) %>%
+  chisq.test()
+tableChisq("Pearson's Chi-squared Test for Q14", q14_chi$statistic, q14_chi$parameter, q14_chi$p.value)
 ```
 
 ```{r Q15, echo = FALSE, message = FALSE}
@@ -390,9 +402,7 @@ chisq.test(q14_chi)
 ### 5-6 days
 ### 7 days
 ### Not Applicable
-
 ### bar graph/pie chart/line
-
 ggplot(data = all_simulated_dataset, mapping = aes(x = Q15, fill = type)) +
   geom_bar(position = "stack") +
   labs(x = "Days Reduced",
@@ -402,6 +412,21 @@ ggplot(data = all_simulated_dataset, mapping = aes(x = Q15, fill = type)) +
     scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE)) +
   theme_fivethirtyeight()
 ```
+
+```{r Q16, echo = FALSE, message = FALSE}
+### Have you applied for and received any external funding or grants for your restaurant since (intervention start date)?
+### Yes
+### No
+ggplot(data = all_simulated_dataset, mapping = aes(x = Q16, fill = type)) +
+  geom_bar(position = position_dodge(1)) +
+  labs(x = "Application status",
+       y = "# of restaurants",
+       title = str_wrap("Funding Applications between Oct 1 and Dec 31", 30),
+       fill = "Condition") +
+  theme_fivethirtyeight() +
+  scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE))
+```
+
 
 
 \newpage
