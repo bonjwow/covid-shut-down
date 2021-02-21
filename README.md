@@ -1,5 +1,5 @@
 ## About The Project
-This project is one of course assignments of [INF2178: Experimental Design for Data Science](https://rohanalexander.com/inf2178.html) instructed by Professor Rohan Alexander. 
+The purpose of this project was to examine the effects of switching restaurants to a take-out/delivery only based business model in light of COVID-19 restrictions of Toronto. Results were written up based on survey data simulated in R. 
 
 ## Requirments
 * R
@@ -7,6 +7,10 @@ This project is one of course assignments of [INF2178: Experimental Design for D
 * ggplot2
 * kableExtra
 * opendatatoronto
+* ggthemes
+* broom
+* purr
+* janitor
 
 ## Getting Started
 1. Clone this repository
