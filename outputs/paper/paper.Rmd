@@ -40,13 +40,15 @@ percent <- function(x, decimal = 2, format = "f") {
 }
 
 ### Format table for Chi-squared test
-tableChisq <- function(stat, df, p) {   
+tableChisq <- function(capt, stat, df, p) {   
   chi_stat <- c(stat)
   chi_param <- c(df)
   chi_p <- c(p)
   chi_df <- data.frame(chi_stat, chi_param, chi_p)
   
   kable(chi_df,
+        digits = 2,
+        caption = capt,
         col.names = c("X-squared",
                       "df",
                       "p-value")) %>%
@@ -398,12 +400,12 @@ ggplot(data = all_simulated_dataset, mapping = aes(x = Q14, fill = type)) +
   scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE)) +
   theme_fivethirtyeight()
 
-
 ### Chi-squared test
 q14_chi <- table(all_simulated_dataset$Q14, all_simulated_dataset$type) %>%
   chisq.test()
 
-tableChisq(q14_chi$statistic, q14_chi$parameter, q14_chi$p.value)
+tableChisq(q14_chi$method, q14_chi$statistic, q14_chi$parameter, q14_chi$p.value)
+
 ```
 
 ```{r Q15, echo = FALSE, message = FALSE}
