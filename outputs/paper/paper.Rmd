@@ -44,7 +44,7 @@ tableChisq <- function(capt, stat, df, p) {
   chi_stat <- c(stat)
   chi_param <- c(df)
   chi_p <- c(p)
-  chi_df <- data.frame(chi_stat, chi_param, chi_p)
+  chi_df <- data.frame(chi_stat, chi_param, paste(chi_p,"*"))
   
   kable(chi_df,
         digits = 2,
@@ -52,6 +52,7 @@ tableChisq <- function(capt, stat, df, p) {
         col.names = c("X-squared",
                       "df",
                       "p-value")) %>%
+    footnote(symbol = "The Chi-squared statistic is significant at the 0.05 level") %>%
     kable_paper(c("striped", "hover"))
 }
 
@@ -404,7 +405,7 @@ ggplot(data = all_simulated_dataset, mapping = aes(x = Q14, fill = type)) +
 q14_chi <- table(all_simulated_dataset$Q14, all_simulated_dataset$type) %>%
   chisq.test()
 
-tableChisq(q14_chi$method, q14_chi$statistic, q14_chi$parameter, q14_chi$p.value)
+tableChisq("Pearson's Chi-squared Test for Q14", q14_chi$statistic, q14_chi$parameter, q14_chi$p.value)
 
 ```
 
