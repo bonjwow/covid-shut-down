@@ -77,7 +77,7 @@ Questions related to the adjustments of the restaurants during the intervention,
 * most of the restaurants in the control group did not change the menu price, while most of the ones in the treatment group either lowered or raised the menu price;
 * and most of the restaurants in the control group did not adjust their hours and days of operation, while most of the ones in the intervention group reduced their operating schedule.
 
-Pearson’s Chi-squared (*X*^2^) test is used to see if there is a statistically significant difference between the intervention and the adjustments of the restaurants. The test results show that the p-value of each of those adjustments is close to 0 (*p* < 2.2e-16), meaning that there is a high correlation between those two variables. Consequently, it is expected that restaurants will adjust the menu price and reduce their operating schedule if they operate on a delivery and take-out only basis.
+Pearson’s Chi-squared (*X*^2^) test is used to see if there is a statistically significant difference between the intervention and the adjustments of the restaurants. The test results show that the p-value of each of those adjustments is close to 0, meaning that there is a high correlation between those variables. Consequently, it is expected that restaurants will most likely adjust the menu price and reduce their operating schedule if they operate on a delivery and take-out only basis.
 
 
 ## Figures
