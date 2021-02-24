@@ -48,6 +48,7 @@ tableChisq <- function(capt, stat, df, p) {
   kable(chi_df,
         digits = 2,
         caption = capt,
+        booktabs = T,
         col.names = c("X-squared",
                       "df",
                       "p-value")) %>%
@@ -132,7 +133,7 @@ ggplot(data = all_simulated_dataset, mapping = aes (x = Q2, fill = type)) +
   labs(x = "Seating Capacity",
        y = "# of Restaurants",
        fill = "Condition",
-       title = "Scale of restaurant (space/seating capacity)") +
+       title = "Scale of restaurant (space/[eseating capacity)") +
   theme_fivethirtyeight() +
   scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE))
 ```
