@@ -39,7 +39,7 @@ percent <- function(x, decimal = 2, format = "f") {
   paste0(formatC(x, format = format, digits = decimal), "%")
 }
 ### Format table for Chi-squared test
-tableChisq <- function(capt, stat, df, p) {   
+tableChisq <- function(capt, stat, df, p) {  
   chi_stat <- c(stat)
   chi_param <- c(df)
   chi_p <- c(p)
@@ -52,8 +52,7 @@ tableChisq <- function(capt, stat, df, p) {
         col.names = c("X-squared",
                       "df",
                       "p-value")) %>%
-    footnote(symbol = "The Chi-squared statistic is significant at the 0.05 level") %>%
-    kable_paper(c("striped", "hover"))
+    footnote(symbol = "The Chi-squared statistic is significant at the 0.05 level")
 }
 ```
 
@@ -232,22 +231,27 @@ treatment_q6 <-
   filter(type == "Treated") %>%
   select(Q6)
 t4 <- t.test(control_q6, treatment_q6, paired = FALSE)
-#Q5 + Q6 compiled t-test table
-t_tests <- map_df(list(t3, t4), tidy)
-t_tests = subset(t_tests, select = -c(alternative, method, conf.low, conf.high))
-t_tests %>%  
+
+### Q5 + Q6 compiled t-test table
+t_tests <- map_df(list(t3, t4), tidy) %>%
+  subset(select = -c(alternative, method, conf.low, conf.high))
+
+# Round values
+t_tests[] <- lapply(t_tests, round, 2)
+
+# Output data table
+t_tests %>%
   kable(
-    col.names = c("Mean of the Differences",
-                  "Mean (Employees Before Intervention)",
-                  "Mean (Employees Post-Intervention)",
+    booktabs = T,
+    col.names = c("Mean Difference",
+                  "Mean (Pre-Intervention)",
+                  "Mean (Post-Intervention)",
                   "t",
                   "p",
                   "df")
-    
+
   ) %>%
-  add_header_above(c(" ", "Control" = 1, "Treated" = 1, " ", " ", " ")) %>%
-  kable_paper(c("striped", "hover")) %>%
-  landscape()
+  add_header_above(c(" ", "Control" = 1, "Treated" = 1, " ", " ", " "))
 ```
 
 ### Effects of Intervention on Revenue
