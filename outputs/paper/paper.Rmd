@@ -42,8 +42,20 @@ percent <- function(x, decimal = 2, format = "f") {
 tableChisq <- function(capt, stat, df, p) {  
   chi_stat <- c(stat)
   chi_param <- c(df)
-  chi_p <- c(p)
-  chi_df <- data.frame(chi_stat, chi_param, paste(chi_p,"*"))
+  chi_p <- c(p) %>%
+    format(scientific=FALSE)
+  
+  if (chi_p < 0.05 & chi_p >= 0.01) {
+    astr <- "*"
+  } else if (chi_p < 0.01 & chi_p >= 0.001) {
+    astr <- "**"
+  } else if (chi_p < 0.001) {
+    astr <- "***"
+  } else {
+    astr <- ""
+  }
+    
+  chi_df <- data.frame(chi_stat, chi_param, paste(sprintf("%1.3f", as.numeric(chi_p)), astr))
   
   kable(chi_df,
         digits = 2,
@@ -52,7 +64,7 @@ tableChisq <- function(capt, stat, df, p) {
         col.names = c("X-squared",
                       "df",
                       "p-value")) %>%
-    footnote(symbol = "The Chi-squared statistic is significant at the 0.05 level")
+    footnote(general = "* p < 0.05, ** p < 0.01, *** p < 0.001")
 }
 ```
 
@@ -205,6 +217,7 @@ all_simulated_dataset %>%
   summarise(curr_employees = mean(Q6, na.rm = TRUE), .groups = NULL)
 total <- merge(t1, t2, by = c("type"))
 kable(total,
+      booktabs = T,
       col.names = c("Intervention Group",
                   "# of Employees Prior to Intervention",
                   "Current # of Employees")) %>%
