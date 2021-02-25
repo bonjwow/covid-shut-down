@@ -1,8 +1,8 @@
 ---
 title: "TBD"
 subtitle: "TBD"
-author: "TBD"
-thanks: "Code and data are available at: LINK."
+author: "Najma Osman, Rachit Srivastava, Morgaine Westin, and Bongju Yoo"
+thanks: "Code and data are available at: https://github.com/bonjwow/covid-shut-down"
 date: "`r format(Sys.time(), '%d %B %Y')`"
 abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
 output:
@@ -74,6 +74,9 @@ tableChisq <- function(capt, stat, df, p) {
     column_spec(4, width = "6em")
 }
 ```
+# Introduction
+
+
 
 # Data
 
@@ -150,7 +153,7 @@ Questions pertaining to the characteristics of the restaurants, such as location
 
 * the largest concentration (nearly 60%) of restaurants in the Greater Toronto Area are centralized in downtown Toronto (28.26%), North York (15.78%), and Scarborough (13.74%);
 * most restaurants are of medium or larger scale, with seating areas of at least 30; 
-* a majority of the restaurants are relatively new (1-4 years old); 
+* a majority of the restaurants are relatively new (3 years or less); 
 * fast-food/quick service restaurants are most common, followed by casual dining, and then fine dining;
 * and UberEats is the most popular food courier service in the city.
 
@@ -499,12 +502,34 @@ ggplot(data = all_simulated_dataset, mapping = aes(x = Q16, fill = type)) +
   scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE))
 ```
 
+\newpage
 
+# Discussion
+
+## Overview of Findings
+
+## Limitations and Future Directions
 
 \newpage
 
-
 # Appendix {-}
+
+## Survey
+
+```{r survey1, echo = FALSE, message = FALSE, fig.cap = "Screenshot of Google Forms Survey Questions 1-8", out.width="90%"}
+knitr::include_graphics("survey/01.png")
+```
+
+```{r survey2, echo = FALSE, message = FALSE, fig.cap="Screenshot of Google Forms Survey Questions 9-16", out.width="90%"}
+knitr::include_graphics("survey/02.png")
+```
+
+\newpage
+
+## Funding Acknowledgement
+
+We would like to thank the Ontario Government for generously providing Petit Poll with $240,000 CAD in funding to carry out this study. The funding was used to provide compensation to restaurants for participating in the intervention. A sample size of 200 for the intervention condition was selected based on this amount, in which each restaurant who participated in the intervention received $1200. A total of 150 restaurants participated in the intervention and received payment, making the total amount of funding spent during the study $180,000 CAD. 
+
 
 \newpage
 
