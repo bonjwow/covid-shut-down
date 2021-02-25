@@ -8,8 +8,11 @@ abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
 output:
   bookdown::pdf_document2:
     fig_caption: yes
+geometry: margin=0.75in
 header-includes:
-    #- \usepackage[labelformat=empty]{caption}
+- \usepackage{float} #use the 'float' package
+- \floatplacement{figure}{H} #make every figure with caption = h
+- \usepackage{longtable}
 toc: FALSE
 bibliography: references.bib
 ---
@@ -25,6 +28,7 @@ library(dplyr)
 library(ggthemes)
 library(broom)
 library(purrr)
+library(gridExtra)
 #devtools::install_github("johannesbjork/LaCroixColoR")
 library(LaCroixColoR)
 all_simulated_dataset <- 
@@ -101,9 +105,9 @@ Restaurants in the intervention condition received $1200.00 CAD for participatin
 
 ## Survey Details
 
-A short survey hosted on Google Forms was created to assess the effects of the intervention. A link to the survey and screenshots of the questions can be found in the Appendix. The survey contained 16 questions, the majority of which were in categorical multiple choice format. Questions 1-4 in the survey were designed to gather basic demographic questions about the restaurants to characterize the sample, such as the restaurant’s location, scale, segmentation (e.g. fine dining, casual diving, or quick service), and the number of years the restaurant has been in operation. The rest of the questions were related to the intervention, and intended to measure a range of potential effects of the intervention on the restaurant. These included questions about the number of employees working at the restaurant before and after the intervention period, questions about whether or not any changes were made to menu prices, changes to hours or days of operation, and questions about the restaurants’ performance in terms of revenue. To avoid situations where respondents may be uncomfortable or not willing to share their exact revenue, questions were asked in relative terms to the last quarter. For example, question 7 asked restaurants to indicate whether their quarterly revenue was higher, lower, or around the same compared to the last quarter. Similarly, question 8 asked respondents’ to report how much their revenue declined compared to the last quarter in terms of percentages. These questions were both adapted from a survey conducted by Restaurants Canada on impacts of COVID-19 on businesses [@restcan]. 
+A short survey^[Survey available here: https://forms.gle/hLPNhyjBCXxGiDPz5] hosted on Google Forms was created to assess the effects of the intervention. Screenshots of the questions can be found in the Appendix. The survey contained 16 questions, the majority of which were in categorical multiple choice format. Questions 1-4 in the survey were designed to gather basic demographic questions about the restaurants to characterize the sample, such as the restaurant’s location, scale, segmentation (e.g. fine dining, casual diving, or quick service), and the number of years the restaurant has been in operation. The rest of the questions were related to the intervention, and intended to measure a range of potential effects of the intervention on the restaurant. These included questions about the number of employees working at the restaurant before and after the intervention period, questions about whether or not any changes were made to menu prices, changes to hours or days of operation, and questions about the restaurants’ performance in terms of revenue. To avoid situations where respondents may be uncomfortable or not willing to share their exact revenue, questions were asked in relative terms to the last quarter. For example, question 7 asked restaurants to indicate whether their quarterly revenue was higher, lower, or around the same compared to the last quarter. Similarly, question 8 asked respondents’ to report how much their revenue declined compared to the last quarter in terms of percentages. These questions were both adapted from a survey conducted by Restaurants Canada on impacts of COVID-19 on businesses [@restcan]. 
 
-Restaurants in the intervention and control groups received the exact same questions to ensure a fair comparison between groups. Two identical copies of the survey with separate links were created on Google Forms to differentiate between restaurants in the intervention group who completed the survey and those in the control group. To respect respondents’ privacy, restaurant owners within each group all received the same URL. Respondents were required to sign in with a google account to complete the survey to ensure only one response per restaurant, however their addresses were not saved or connected to their responses in any way to ensure complete anonymity. Only general demographic characteristics about the restaurant such as location and restaurant type were asked. 
+Restaurants in the intervention and control groups received the exact same questions to ensure a fair comparison between groups. Two identical copies of the survey with separate links were created on Google Forms to differentiate between restaurants in the intervention group who completed the survey and those in the control group. To respect respondents’ privacy, restaurant owners within each group all received the same URL. Respondents were required to sign in with a Google account to complete the survey to ensure only one response per restaurant, however their addresses were not saved or connected to their responses in any way to ensure complete anonymity. Only general demographic characteristics about the restaurant such as location and restaurant type were asked. 
 
 
 ## Sampling Methodology
@@ -149,36 +153,21 @@ Finally, to make a valid comparison between the intervention and control groups,
 
 ## Results
 
-Questions pertaining to the characteristics of the restaurants, such as location, size, type, and age of restaurants (Figures 1-5) show us that:
+Survey questions pertaining to the characteristics of the restaurants, such as location, size, type, and age of restaurants Figure \@ref(fig:samplechar) show us that:
 
-* the largest concentration (nearly 60%) of restaurants in the Greater Toronto Area are centralized in downtown Toronto (28.26%), North York (15.78%), and Scarborough (13.74%);
-* most restaurants are of medium or larger scale, with seating areas of at least 30; 
-* a majority of the restaurants are relatively new (3 years or less); 
-* fast-food/quick service restaurants are most common, followed by casual dining, and then fine dining;
-* and UberEats is the most popular food courier service in the city.
+* The largest concentration (nearly 60%) of restaurants in the Greater Toronto Area are centralized in downtown Toronto (28.26%), North York (15.78%), and Scarborough (13.74%); 
+* Most restaurants are of medium or large scale^[The survey asked respondents to consider their restaurant scale in terms of space and seating capacity, however the perceptions of scale may be subjective]; 
+* The majority of restaurants who responded are relatively new (Have been operating for 3 years or less); 
+* Fast-food/quick service restaurants were the most common types, followed by casual dining, and then fine dining;
+* UberEats was the most popular food courier service that restaurants received orders from. (MOVE)
 
-Tables 1 and 2 speak to changes in numbers of employees for restaurants prior to the intervention period (Oct 1) and following the intervention period (Dec 31). This shows us that initially, both the control and treatment group had a very similar number of employees on average. Following the intervention period, however, the treatment group appears to have 10.26 fewer employees on average. Two-tailed Welch's t-tests comparing the two groups' mean employees shows that the difference prior to the intervention period is not a significant finding ( *t*(330) = -8.56, *p* > .05)., but the difference in employee numbers between the two groups post-intervention is significant( *t*(330) = 19.46, *p* < .05).
-
-In terms of effects on revenue and/or overall sales for restaurants during the intervention period, Figure 5 shows us that more restaurants within the treatment group saw decreases in revenue compared to the prior quarter (July 1 - Sep 30), while the control group's revenue largely remained the same. In addition to this, Figure 6 shows that of those restaurants that saw a decrease in revenue, the treatment group saw the harshest declines in revenue during the intervention period. A Chi-Square test for whether the restaurant saw a decrease in revenue showed that restaurants in the treatment group were more likely to report a decrease in revenue *X*^2^ (2, *N* = 330) = 220.73, *p* < 2.2e-16. The percentage decrease in revenues also showed a significant relationship, where restaurants in the treatment group are most likely to report higher loss of revenue during the intervention period *X*^2^ (3, *N* = 330) = 178.33, *p* < 2.2e-16. Prior to the intervention period, it appears as though both groups had similar breakdowns of revenue coming from take-out and/or delivery (Figure 7).
-
-Questions related to the adjustments of the restaurants during the intervention, such as a menu price, and hours and days of operation (Figures 8-12) show us that:
-
-* most of the restaurants in the control group did not change the menu price, while most of the ones in the treatment group either lowered or raised the menu price;
-* and most of the restaurants in the control group did not adjust their hours and days of operation, while most of the ones in the intervention group reduced their operating schedule.
-
-Pearson’s Chi-squared (*X*^2^) test is used to see if there is a statistically significant difference between the intervention and the adjustments of the restaurants. The test results show that the p-value of each of those adjustments is less than 0.001, meaning that there is a high correlation between those variables. Consequently, it is expected that restaurants will most likely adjust the menu price and reduce their operating schedule if they operate on a delivery and take-out only basis.
-
-
-## Figures
-
-### Sample Characteristics
-
-```{r Q1, echo = FALSE, message = FALSE, fig.cap = "Location of restaurants by borough"}
-ggplot(data = all_simulated_dataset, mapping = aes (x = Q1, fill = type)) +
+```{r Q1, echo = FALSE, message = FALSE, fig.cap = "Location of Restaurants by Borough"}
+q1 <- ggplot(data = all_simulated_dataset, mapping = aes (x = Q1, fill = type)) +
   geom_bar() + coord_flip() +
   theme_fivethirtyeight() +
   scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE)) +
-  labs(fill = "Condition", title = "Location of restaurants")
+  labs(fill = "Condition", title = "Location of restaurants") + 
+  theme(title=element_text(size=9))
 ```
 
 ```{r Q2, echo = FALSE, message = FALSE, fig.cap = "Scale of restaurant in terms of space and seating capacity"}
@@ -186,15 +175,17 @@ ggplot(data = all_simulated_dataset, mapping = aes (x = Q1, fill = type)) +
 ### Small (full seating capacity is under 30)
 ### Medium (full seating capacity between 30 and 60)
 ### Large (full seating capacity is 60+) "
-ggplot(data = all_simulated_dataset, mapping = aes (x = Q2, fill = type)) +
+q2 <- ggplot(data = all_simulated_dataset, mapping = aes (x = Q2, fill = type)) +
     geom_bar() +
   scale_x_discrete(limit = c ("Small", "Medium", "Large")) +
   labs(x = "Seating Capacity",
        y = "# of Restaurants",
        fill = "Condition",
-       title = "Scale of restaurant") +
+       title = "Restaurant Scale") +
   theme_fivethirtyeight() +
-  scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE))
+  scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE)) + 
+  theme(title=element_text(size=9))
+  
 ```
 
 ```{r Q3, echo = FALSE, message = FALSE, fig.cap = "Types of Restaurants"}
@@ -203,15 +194,16 @@ ggplot(data = all_simulated_dataset, mapping = aes (x = Q2, fill = type)) +
 ### Casual Dining
 ### Fine Dining
 ### Other
-ggplot(data = all_simulated_dataset, mapping = aes (x = Q3, fill = type)) +
-  geom_bar() +
+q3 <- ggplot(data = all_simulated_dataset, mapping = aes (x = Q3, fill = type)) +
+  geom_bar() + coord_flip() + 
   scale_x_discrete(limit = c ("Fine Dining", "Casual Dining", "Fast-food/quick service", "Other")) +
   labs(x = "Restaurant Type",
        y = "# of Restaurants",
        fill = "Condition",
-       title = "Type of restaurant") +
+       title = "Restaurant Type") +
   theme_fivethirtyeight() +
-  scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE))
+  scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE)) +
+  theme(title=element_text(size=9))
 ```
 
 ```{r Q4, echo = FALSE, message = FALSE, fig.cap = "Number of years restaurants have been in operation"}
@@ -220,62 +212,26 @@ ggplot(data = all_simulated_dataset, mapping = aes (x = Q3, fill = type)) +
 ### 5-7 years
 ### 8-10 years
 ### 10 or more years
-ggplot(data = all_simulated_dataset, mapping = aes (x = Q4, fill = type)) +
+q4 <- ggplot(data = all_simulated_dataset, mapping = aes (x = Q4, fill = type)) +
   geom_bar() + coord_flip() +
   scale_x_discrete(limit = c ("3 years or less", "5-7 years", "8-10 years", "10 or more years")) +
   labs(x = "Years of Operation",
        y = "# of Restaurants",
        fill = "Condition",
-       title = str_wrap("Number of years in operation", 30)) +
+       title = str_wrap("Number of Years in Operation", 30)) +
   theme_fivethirtyeight() +
-  scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE))
-```
-
-```{r Q10, echo = FALSE, message = FALSE, fig.cap = "The most used food courier service"}
-### Between Oct 1 and Dec 31, which food courier service did you receive the most orders from?
-### UberEats
-### SkiptheDishes 
-### DoorDash
-### Other
-### In-house delivery service
-### None
-ggplot(data = all_simulated_dataset, mapping = aes(x = Q11, fill = type)) +
-  geom_bar(position = "stack") + coord_flip() +
-  scale_x_discrete(limit = c("UberEats", "SkiptheDishes", "DoorDash", "In-house delivery service", "Other", "None")) +
-  labs(x = "Delivery Service",
-       y = "# of Restaurants",
-       title = "Food courier service popularity",
-       fill = "Condition") +
   scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE)) + 
-  theme_fivethirtyeight()
+  theme(title=element_text(size=9))
 ```
 
-### Effects of Intervention on Number of Employees
-
-```{r Q5Q6mean, echo = FALSE, message = FALSE}
-### Prior to (intervention start date), how many people did you employ?
-### How many people do you currently employ?
-t1 <-
-all_simulated_dataset %>%
-  group_by(type) %>%
-  summarise(prior_employees = mean(Q5, na.rm = TRUE, .groups = NULL))
-t2 <-
-all_simulated_dataset %>%
-  group_by(type) %>%
-  summarise(curr_employees = mean(Q6, na.rm = TRUE), .groups = NULL)
-total <- merge(t1, t2, by = c("type"))
-# kable(total,
-#       booktabs = T,
-#       digits = 3,
-#       col.names = c("Group Type",
-#                   "# of Employees Prior to Intervention",
-#                   "Current # of Employees")) %>%
-#       footnote(general = "Change in # of employees before and after intervention period (Q5 + Q6)") %>%
-#   kable_paper()
-  # This table could be excluded because the means will be displayed anyway in the following T-test table?
+```{r samplechar, fig.width=9, fig.height=7, echo = FALSE, message = FALSE, fig.cap="Sample Characteristics of Restaurants by Condition"}
+grid.arrange(q1, q2, q3, q4)
 ```
 
-```{r Q5Q6tTest, echo = FALSE, message = FALSE}
+Table \@ref(tab:Q5Q6tTest) displays changes in the numbers of employees working at restaurants in the sample prior to the intervention period (Oct 1) and following the intervention period (Dec 31). This shows us that initially, both the control and treatment group had a very similar number of employees on average. Following the intervention period, however, the treatment group appears to have 10.26 fewer employees on average. Two-tailed Welch's t-tests comparing the two groups' mean employees shows that the difference prior to the intervention period is not a significant finding ( *t*(330) = -8.56, *p* > .05)., but the difference in employee numbers between the two groups post-intervention is significant( *t*(330) = 19.46, *p* < .05).
+
+
+```{r Q5Q6tTest, echo = FALSE, message = FALSE, tab.post = "H"}
 ### T-Tests (Welch's)
 #Q5
 control_q5 <-
@@ -320,9 +276,69 @@ t_tests %>%
 
   ) %>%
   add_header_above(c(" ", "Control" = 1, "Treated" = 1, " ", " ", " ")) %>%
-  kable_styling(full_width = F)
+  kable_styling(full_width = F, latex_options = "HOLD_position") 
 ```
 
+In terms of effects on revenue and/or overall sales for restaurants during the intervention period, Figure 5 shows us that more restaurants within the treatment group saw decreases in revenue compared to the prior quarter (July 1 - Sep 30), while the control group's revenue largely remained the same. In addition to this, Figure 6 shows that of those restaurants that saw a decrease in revenue, the treatment group saw the harshest declines in revenue during the intervention period. A Chi-Square test for whether the restaurant saw a decrease in revenue showed that restaurants in the treatment group were more likely to report a decrease in revenue *X*^2^ (2, *N* = 330) = 220.73, *p* < 2.2e-16. The percentage decrease in revenues also showed a significant relationship, where restaurants in the treatment group are most likely to report higher loss of revenue during the intervention period *X*^2^ (3, *N* = 330) = 178.33, *p* < 2.2e-16. Prior to the intervention period, it appears as though both groups had similar breakdowns of revenue coming from take-out and/or delivery (Figure 7).
+
+Questions related to the adjustments of the restaurants during the intervention, such as a menu price, and hours and days of operation (Figures 8-12) show us that:
+
+* Most of the restaurants in the control group did not make any alterations to their menu prices, while most restaurants in the intervention group either lowered or raised the menu price;
+* Most of the restaurants in the control group did not adjust their hours our days of operation, while most of the ones in the intervention group reduced their operating schedules.
+
+Pearson’s Chi-squared (*X*^2^) test was used to see if there is a statistically significant difference between the intervention and the adjustments of the restaurants. The test results show that the p-value of each of those adjustments is less than 0.001, meaning that there is a high correlation between those variables. Consequently, it is expected that restaurants will most likely adjust the menu price and reduce their operating schedule if they operate on a delivery and take-out only basis.
+
+
+
+
+
+## Figures
+
+### Sample Characteristics
+
+```{r Q10, echo = FALSE, message = FALSE, fig.cap = "The most used food courier service"}
+### Between Oct 1 and Dec 31, which food courier service did you receive the most orders from?
+### UberEats
+### SkiptheDishes 
+### DoorDash
+### Other
+### In-house delivery service
+### None
+ggplot(data = all_simulated_dataset, mapping = aes(x = Q11, fill = type)) +
+  geom_bar(position = "stack") + coord_flip() +
+  scale_x_discrete(limit = c("UberEats", "SkiptheDishes", "DoorDash", "In-house delivery service", "Other", "None")) +
+  labs(x = "Delivery Service",
+       y = "# of Restaurants",
+       title = "Food courier service popularity",
+       fill = "Condition") +
+  scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE)) + 
+  theme_fivethirtyeight()
+```
+
+### Effects of Intervention on Number of Employees
+
+```{r Q5Q6mean, echo = FALSE, message = FALSE}
+### Prior to (intervention start date), how many people did you employ?
+### How many people do you currently employ?
+t1 <-
+all_simulated_dataset %>%
+  group_by(type) %>%
+  summarise(prior_employees = mean(Q5, na.rm = TRUE, .groups = NULL))
+t2 <-
+all_simulated_dataset %>%
+  group_by(type) %>%
+  summarise(curr_employees = mean(Q6, na.rm = TRUE), .groups = NULL)
+total <- merge(t1, t2, by = c("type"))
+# kable(total,
+#       booktabs = T,
+#       digits = 3,
+#       col.names = c("Group Type",
+#                   "# of Employees Prior to Intervention",
+#                   "Current # of Employees")) %>%
+#       footnote(general = "Change in # of employees before and after intervention period (Q5 + Q6)") %>%
+#   kable_paper()
+  # This table could be excluded because the means will be displayed anyway in the following T-test table?
+```
 
 ### Effects of Intervention on Revenue
 
