@@ -194,7 +194,7 @@ ggplot(data = all_simulated_dataset, mapping = aes (x = Q2, fill = type)) +
   scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE))
 ```
 
-```{r Q3, echo = FALSE, message = FALSE}
+```{r Q3, echo = FALSE, message = FALSE, fig.cap = "Types of Restaurants"}
 ### What best describes your restaurant segmentation?
 ### Fast-food/quick service
 ### Casual Dining
@@ -211,7 +211,7 @@ ggplot(data = all_simulated_dataset, mapping = aes (x = Q3, fill = type)) +
   scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE))
 ```
 
-```{r Q4, echo = FALSE, message = FALSE}
+```{r Q4, echo = FALSE, message = FALSE, fig.cap = "Number of years restaurants have been in operation"}
 ### How many years has your restaurant been in operation?
 ### 1-4 years
 ### 5-7 years
@@ -219,16 +219,16 @@ ggplot(data = all_simulated_dataset, mapping = aes (x = Q3, fill = type)) +
 ### 10 or more years
 ggplot(data = all_simulated_dataset, mapping = aes (x = Q4, fill = type)) +
   geom_bar() + coord_flip() +
-  scale_x_discrete(limit = c ("1-4 years", "5-7 years", "8-10 years", "10 or more years")) +
+  scale_x_discrete(limit = c ("3 years or less", "5-7 years", "8-10 years", "10 or more years")) +
   labs(x = "Years of Operation",
        y = "# of Restaurants",
        fill = "Condition",
-       title = str_wrap("Number of years restaurants have been in operation", 30)) +
+       title = str_wrap("Number of years in operation", 30)) +
   theme_fivethirtyeight() +
   scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE))
 ```
 
-```{r Q11, echo = FALSE, message = FALSE}
+```{r Q10, echo = FALSE, message = FALSE, fig.cap = "The most used food courier service"}
 ### Between Oct 1 and Dec 31, which food courier service did you receive the most orders from?
 ### UberEats
 ### SkiptheDishes 
@@ -241,7 +241,7 @@ ggplot(data = all_simulated_dataset, mapping = aes(x = Q11, fill = type)) +
   scale_x_discrete(limit = c("UberEats", "SkiptheDishes", "DoorDash", "In-house delivery service", "Other", "None")) +
   labs(x = "Delivery Service",
        y = "# of Restaurants",
-       title = "Food courier service popularity (most orders)",
+       title = "Food courier service popularity",
        fill = "Condition") +
   scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE)) + 
   theme_fivethirtyeight()
@@ -249,7 +249,7 @@ ggplot(data = all_simulated_dataset, mapping = aes(x = Q11, fill = type)) +
 
 ### Effects of Intervention on Number of Employees
 
-```{r Q5 + Q6 Table, echo = FALSE, message = FALSE}
+```{r Q5Q6mean, echo = FALSE, message = FALSE}
 ### Prior to (intervention start date), how many people did you employ?
 ### How many people do you currently employ?
 t1 <-
@@ -261,14 +261,18 @@ all_simulated_dataset %>%
   group_by(type) %>%
   summarise(curr_employees = mean(Q6, na.rm = TRUE), .groups = NULL)
 total <- merge(t1, t2, by = c("type"))
-kable(total,
-      booktabs = T,
-      digits = 3,
-      col.names = c("Intervention Group",
-                  "# of Employees Prior to Intervention",
-                  "Current # of Employees")) %>%
-      footnote(general = "Change in # of employees before and after intervention period (Q5 + Q6)") %>%
-  kable_paper(c("striped", "hover"))
+# kable(total,
+#       booktabs = T,
+#       digits = 3,
+#       col.names = c("Group Type",
+#                   "# of Employees Prior to Intervention",
+#                   "Current # of Employees")) %>%
+#       footnote(general = "Change in # of employees before and after intervention period (Q5 + Q6)") %>%
+#   kable_paper()
+  # This table could be excluded because the means will be displayed anyway in the following T-test table?
+```
+
+```{r Q5Q6tTest, echo = FALSE, message = FALSE}
 ### T-Tests (Welch's)
 #Q5
 control_q5 <-
@@ -302,6 +306,7 @@ t_tests[] <- lapply(t_tests, round, 2)
 t_tests %>%
   kable(
     booktabs = T,
+    caption = "Welch's T-test to examine effects of intervention on the number of employees",
     digits = 3,
     col.names = c("Mean Difference",
                   "Mean (Pre-Intervention)",
@@ -314,6 +319,7 @@ t_tests %>%
   add_header_above(c(" ", "Control" = 1, "Treated" = 1, " ", " ", " ")) %>%
   kable_styling(full_width = F)
 ```
+
 
 ### Effects of Intervention on Revenue
 
@@ -381,7 +387,7 @@ ggplot(data = all_simulated_dataset, mapping = aes (x = Q9, fill = type)) +
 
 ## Effects of Intervention on Menu Prices 
 
-```{r Q10, echo = FALSE, message = FALSE}
+```{r Q11, echo = FALSE, message = FALSE}
 ### Between (start date of intervention) and (end date of intervention), did you make any adjustments to your menu prices?
 ### Yes, prices were raised
 ### Yes, prices were lowered
