@@ -170,7 +170,7 @@ Pearson’s Chi-squared (*X*^2^) test is used to see if there is a statistically
 
 ### Sample Characteristics
 
-```{r Q1, echo = FALSE, message=FALSE}
+```{r Q1, echo = FALSE, message = FALSE, fig.cap = "Location of restaurants by borough"}
 ggplot(data = all_simulated_dataset, mapping = aes (x = Q1, fill = type)) +
   geom_bar() + coord_flip() +
   theme_fivethirtyeight() +
@@ -178,7 +178,7 @@ ggplot(data = all_simulated_dataset, mapping = aes (x = Q1, fill = type)) +
   labs(fill = "Condition", title = "Location of restaurants")
 ```
 
-```{r Q2, echo = FALSE, message = FALSE}
+```{r Q2, echo = FALSE, message = FALSE, fig.cap = "Scale of restaurant in terms of space and seating capacity"}
 ### How would you best describe the scale of your restaurant? (in terms of space and seating capacity)
 ### Small (full seating capacity is under 30)
 ### Medium (full seating capacity between 30 and 60)
@@ -189,7 +189,7 @@ ggplot(data = all_simulated_dataset, mapping = aes (x = Q2, fill = type)) +
   labs(x = "Seating Capacity",
        y = "# of Restaurants",
        fill = "Condition",
-       title = "Scale of restaurant (space/[eseating capacity)") +
+       title = "Scale of restaurant") +
   theme_fivethirtyeight() +
   scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE))
 ```
