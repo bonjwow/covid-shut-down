@@ -300,7 +300,7 @@ t_tests <- map_df(list(t3, t4), tidy) %>%
   subset(select = -c(alternative, method, conf.low, conf.high))
 
 # Round values
-t_tests[] <- lapply(t_tests, round, 2)
+t_tests[] <- lapply(t_tests, round, 3)
 
 # Output data table
 t_tests %>%
@@ -340,7 +340,7 @@ ggplot(data = all_simulated_dataset, mapping = aes(x = Q7, fill = type)) +
 ### Chi-squared test
 q7_chi <- table(all_simulated_dataset$Q7, all_simulated_dataset$type) %>%
   chisq.test()
-tableChisq("Pearson's Chi-squared Test for Q7", q7_chi$statistic, q7_chi$parameter, q7_chi$p.value)
+tableChisq("Pearson's Chi-squared test to examine the possibility of an association between the intervention and the total sales", q7_chi$statistic, q7_chi$parameter, q7_chi$p.value)
 ```
 
 ```{r Q8, echo = FALSE, message = FALSE}
@@ -362,7 +362,7 @@ ggplot(data = all_simulated_dataset, mapping = aes (x = Q8, fill = type)) +
 ### Chi-squared test
 q8_chi <- table(all_simulated_dataset$Q8, all_simulated_dataset$type) %>%
   chisq.test()
-tableChisq("Pearson's Chi-squared Test for Q8", q8_chi$statistic, q8_chi$parameter, q8_chi$p.value)
+tableChisq("Pearson's Chi-squared test to examine the relation between the intervention and the total sales and a decline in revenue", q8_chi$statistic, q8_chi$parameter, q8_chi$p.value)
 ```
 
 ```{r Q9, echo = FALSE, message = FALSE}
@@ -404,9 +404,9 @@ ggplot(data = all_simulated_dataset, mapping = aes (x = Q10, fill = type)) +
   theme_fivethirtyeight()
 
 ### Chi-squared test
-q10_chi <- table(all_simulated_dataset$Q10, all_simulated_dataset$type) %>%
+q11_chi <- table(all_simulated_dataset$Q11, all_simulated_dataset$type) %>%
   chisq.test()
-tableChisq("Pearson's Chi-squared Test for Q10", q10_chi$statistic, q10_chi$parameter, q10_chi$p.value)
+tableChisq("Pearson's Chi-squared test to examine the association of the intervention with price adjustments", q11_chi$statistic, q11_chi$parameter, q11_chi$p.value)
 ```
 
 ## Effects of Intervention on Hours/Days of Operation
