@@ -22,16 +22,16 @@ library(ggplot2)
 library(kableExtra)
 library(janitor)
 library(dplyr)
-library(palettetown)
-library(RColorBrewer)
 library(ggthemes)
-library(scales)
 library(broom)
 library(purrr)
 #devtools::install_github("johannesbjork/LaCroixColoR")
 library(LaCroixColoR)
 all_simulated_dataset <- 
   readr::read_csv("../../inputs/data/simulated_data.csv")
+
+
+citation("LaCroixColoR")
 ```
 
 ```{r, echo = FALSE, include=FALSE, message = FALSE}
@@ -528,7 +528,41 @@ knitr::include_graphics("survey/02.png")
 
 ## Funding Acknowledgement
 
-We would like to thank the Ontario Government for generously providing Petit Poll with $240,000 CAD in funding to carry out this study. The funding was used to provide compensation to restaurants for participating in the intervention. A sample size of 200 for the intervention condition was selected based on this amount, in which each restaurant who participated in the intervention received $1200. A total of 150 restaurants participated in the intervention and received payment, making the total amount of funding spent during the study $180,000 CAD. 
+We would like to thank the Ontario Government for generously providing Petit Poll with $240,000 CAD in funding to carry out this study. The funding was used to provide compensation to restaurants for participating in the intervention. A sample size of 200 for the intervention condition was selected based on this amount, in which each restaurant who participated in the intervention received $1200. A total of 150 restaurants participated in the intervention and received payment, making the total amount of funding spent during the study $180,000 CAD
+
+## Packages
+
+The subsection lists the R packages used in the making of this report.
+
+### General data cleaning and analysis
+
+* `tidyverse` [@tidy]
+* `dplyr` [@dplyr]
+* `janitor` [@janitor]
+* `purr` [@purrr]
+* `broom` [@broom]
+
+
+### Figures
+
+* `ggplot2` [@ggplot]
+* `ggthemes` - Themes and colour palettes used in Figure 2 onwards [@ggthemes]
+* `LaCroixColoR` - Colour palette used for Figure 1 [@lacroix]
+
+### Tables
+
+* `kableExtra` [@kable]
+
+### RMarkdown Report
+
+* `knitr` [@knitr]
+* `bookdown` [@bookdown]
+* `tinytex` [@tinytex]
+
+### Other
+
+* `opendatatoronto` [@opendatatoronto]
+* We attempted to use this package to obtain the business licensing dataset used for sampling, however due to an unknown error on the publisher's end, we were unable to access it via the package. 
 
 
 \newpage
