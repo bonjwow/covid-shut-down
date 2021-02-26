@@ -280,7 +280,7 @@ t_tests %>%
   kable_styling(full_width = F, latex_options = "HOLD_position") 
 ```
 
-In terms of effects on revenue and/or overall sales for restaurants during the intervention period, Figure \@ref(fig:reveffects) shows us that more restaurants within the treatment group saw decreases in revenue compared to the prior quarter (July 1 - Sep 30), while the control group's revenue largely remained the same. In addition to this, it shows that of those restaurants that saw a decrease in revenue, the treatment group saw the harshest declines in revenue during the intervention period. A Chi-Square test for whether the restaurant saw a decrease in revenue showed that restaurants in the treatment group were more likely to report a decrease in revenue *X*^2^ (2, *N* = 330) = 220.73, *p* < 2.2e-16. The percentage decrease in revenues also showed a significant relationship, where restaurants in the treatment group are most likely to report higher loss of revenue during the intervention period *X*^2^ (3, *N* = 330) = 178.33, *p* < 2.2e-16. Prior to the intervention period, it appears as though both groups had similar breakdowns of revenue coming from take-out and/or delivery (Figure 7).
+In terms of effects on revenue and/or overall sales for restaurants during the intervention period, Figure \@ref(fig:reveffects) shows us that more restaurants within the treatment group saw decreases in revenue compared to the prior quarter (July 1 - Sep 30), while the control group's revenue largely remained the same. In addition to this, it shows that of those restaurants that saw a decrease in revenue, the treatment group saw the harshest declines in revenue during the intervention period. A Chi-Square test for whether the restaurant saw a decrease in revenue showed that restaurants in the treatment group were more likely to report a decrease in revenue *X*^2^ (2, *N* = 330) = 220.73, *p* < 2.2e-16. The percentage decrease in revenues also showed a significant relationship, where restaurants in the treatment group are most likely to report higher loss of revenue during the intervention period *X*^2^ (3, *N* = 330) = 178.33, *p* < 2.2e-16. Prior to the intervention period, it appears as though both groups had similar breakdowns of revenue coming from take-out and/or delivery.
 
 ```{r Q7, echo = FALSE, message = FALSE}
 ### Between Oct 1 and Dec 31 was your total sales revenue higher, lower, or about the same as it was during the previous quarter (last quarter dates)? *
@@ -366,19 +366,17 @@ q10 <- ggplot(data = all_simulated_dataset, mapping = aes(x = Q11, fill = type))
 grid.arrange(q7, q8, q9, q10)
 ```
 
-Questions related to the adjustments of the restaurants during the intervention, such as a menu price, and hours and days of operation (Figure \@ref(fig:opseffects)) show us that:
+Questions related to the adjustments of the restaurants during the intervention, such as a menu price, and hours and days of operation (Figures \@ref(fig:Q11), \@ref(fig:opshourseffects), and \@ref(fig:opsdayseffects)) show us that:
 
 * Most of the restaurants in the control group did not make any alterations to their menu prices, while most restaurants in the intervention group either lowered or raised the menu price;
 * Most of the restaurants in the control group did not adjust their hours our days of operation, while most of the ones in the intervention group reduced their operating schedules.
 
-Pearson’s Chi-squared (*X*^2^) test was used to see if there is a statistically significant difference between the intervention and the adjustments of the restaurants. The test results show that the p-value of each of those adjustments is less than 0.001, meaning that there is a high correlation between those variables. Consequently, it is expected that restaurants will most likely adjust the menu price and reduce their operating schedule if they operate on a delivery and take-out only basis.
-
-```{r Q11, echo = FALSE, message = FALSE}
+```{r Q11, fig.height = 2.5, fig.width = 6, echo = FALSE, message = FALSE, fig.cap = "Menu adjustments during the intervention period (Oct 1 - Dec 31)"}
 ### Between (start date of intervention) and (end date of intervention), did you make any adjustments to your menu prices?
 ### Yes, prices were raised
 ### Yes, prices were lowered
 ### No changes were made
-q11 <- ggplot(data = all_simulated_dataset, mapping = aes (x = Q10, fill = type)) +
+ggplot(data = all_simulated_dataset, mapping = aes (x = Q10, fill = type)) +
   geom_bar() +  
   coord_flip() + 
   scale_x_discrete(limit = c("Yes, prices were raised", "Yes, prices were lowered", "No changes were made")) + 
@@ -403,7 +401,7 @@ q12 <- ggplot(data = all_simulated_dataset, mapping = aes(x = Q12, fill = type))
   geom_bar(position = position_dodge(1)) +
   labs(x = "Reduction in hours of operation",
        y = "# of restaurants",
-       title = str_wrap("Reducton in operating hours between Oct 1 and Dec 31", 30),
+       title = str_wrap("Reduction in operating hours between Oct 1 and Dec 31", 30),
        fill = "Condition") +
   theme_fivethirtyeight() +
   scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE))
@@ -429,6 +427,10 @@ q13 <- ggplot(data = all_simulated_dataset, mapping = aes(x = Q13, fill = type))
        fill = "Condition") +
   scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE)) +
   theme_fivethirtyeight()
+```
+
+```{r opshourseffects, fig.width = 5, fig.height = 4.8, echo = FALSE, message = FALSE, fig.cap="Effects on hours and days of operation as a result of intervention by condition"}
+grid.arrange(q12, q13)
 ```
 
 ```{r Q14, echo = FALSE, message = FALSE}
@@ -469,9 +471,11 @@ q15 <- ggplot(data = all_simulated_dataset, mapping = aes(x = Q15, fill = type))
   theme_fivethirtyeight()
 ```
 
-```{r opseffects, fig.width=11.5, fig.height=10, echo = FALSE, message = FALSE, fig.cap="Effects on hours and days of operation as a result of intervention by condition"}
-grid.arrange(q11, q12, q13, q14, q15)
+```{r opsdayseffects, fig.width = 6, fig.height = 4.8, echo = FALSE, message = FALSE, fig.cap="Effects on hours and days of operation as a result of intervention by condition"}
+grid.arrange(q14, q15)
 ```
+
+Pearson’s Chi-squared (*X*^2^) test was used to see if there is a statistically significant difference between the intervention and the adjustments of the restaurants. The test results show that the p-value of each of those adjustments is less than 0.001, meaning that there is a high correlation between those variables. Consequently, it is expected that restaurants will most likely adjust the menu price and reduce their operating schedule if they operate on a delivery and take-out only basis.
 
 ```{r Q16, echo = FALSE, message = FALSE}
 ### Have you applied for and received any external funding or grants for your restaurant since (intervention start date)?
