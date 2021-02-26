@@ -1,6 +1,10 @@
 ## About The Project
 
+<<<<<<< HEAD
 The purpose of this project was to examine the effects of switching restaurants to a take-out/delivery only based business model in light of COVID-19 restrictions of Toronto. Results were written up based on survey [data](https://github.com/bonjwow/covid-shut-down/blob/main/inputs/data/simulated_data.csv) simulated in R. A pdf of the final report can be viewed [here](https://github.com/bonjwow/covid-shut-down/blob/main/outputs/paper/paper.pdf).
+=======
+The purpose of this project was to examine the effects of switching restaurants to a take-out/delivery only based business model in light of COVID-19 restrictions of Toronto. Results were written up based on survey [data](https://github.com/bonjwow/covid-shut-down/blob/main/inputs/data/simulated_data.csv) simulated in R]. A pdf of the final report can be viewed [here](https://github.com/bonjwow/covid-shut-down/blob/main/outputs/paper/paper.pdf).
+>>>>>>> c041694c5d3c49cf6303d2d51df89ac639840e0a
 
 ## Package Requirments
 * R
