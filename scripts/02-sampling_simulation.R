@@ -70,7 +70,7 @@ simulatingDataset <- function(dataset, group_type, param_q1, param_q2, param_q3,
         prob = param_q3
       ),
       Q4 = sample(x = c(
-        "1-4 years",
+        "3 years or less",
         "5-7 years",
         "8-10 years",
         "10 or more years"),
