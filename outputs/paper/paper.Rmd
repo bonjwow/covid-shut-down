@@ -1,6 +1,5 @@
 ---
-title: "TBD"
-subtitle: "TBD"
+title: "Indoor Dining Shutdowns Negatively Affect Toronto Restaurants’ Performance and Business Practices"
 author: "Najma Osman, Rachit Srivastava, Morgaine Westin, and Bongju Yoo"
 thanks: "Code and data are available at: https://github.com/bonjwow/covid-shut-down"
 date: "`r format(Sys.time(), '%d %B %Y')`"
