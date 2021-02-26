@@ -134,7 +134,7 @@ simulatingDataset <- function(dataset, group_type, param_q1, param_q2, param_q3,
         prob = param_q12
       ),
       Q13 = sample(x = c(
-        "15% or less",
+        "Less than 15%",
         "15-30%",
         "30-50%",
         "50-75%",
