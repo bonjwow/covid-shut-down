@@ -243,7 +243,7 @@ treatment_q5 <-
   all_simulated_dataset %>%
   filter(type == "Treated") %>%
   select(Q5)
-t3 <- t.test(control_q5, treatment_q5, paired = FALSE)
+t1 <- t.test(control_q5, treatment_q5, paired = FALSE)
 #Q6
 control_q6 <-
   all_simulated_dataset %>%
@@ -253,10 +253,10 @@ treatment_q6 <-
   all_simulated_dataset %>%
   filter(type == "Treated") %>%
   select(Q6)
-t4 <- t.test(control_q6, treatment_q6, paired = FALSE)
+t2 <- t.test(control_q6, treatment_q6, paired = FALSE)
 
 ### Q5 + Q6 compiled t-test table
-t_tests <- map_df(list(t3, t4), tidy) %>%
+t_tests <- map_df(list(t1, t2), tidy) %>%
   subset(select = -c(alternative, method, conf.low, conf.high))
 
 # Round values
@@ -280,120 +280,54 @@ t_tests %>%
   kable_styling(full_width = F, latex_options = "HOLD_position") 
 ```
 
-In terms of effects on revenue and/or overall sales for restaurants during the intervention period, Figure 5 shows us that more restaurants within the treatment group saw decreases in revenue compared to the prior quarter (July 1 - Sep 30), while the control group's revenue largely remained the same. In addition to this, Figure 6 shows that of those restaurants that saw a decrease in revenue, the treatment group saw the harshest declines in revenue during the intervention period. A Chi-Square test for whether the restaurant saw a decrease in revenue showed that restaurants in the treatment group were more likely to report a decrease in revenue *X*^2^ (2, *N* = 330) = 220.73, *p* < 2.2e-16. The percentage decrease in revenues also showed a significant relationship, where restaurants in the treatment group are most likely to report higher loss of revenue during the intervention period *X*^2^ (3, *N* = 330) = 178.33, *p* < 2.2e-16. Prior to the intervention period, it appears as though both groups had similar breakdowns of revenue coming from take-out and/or delivery (Figure 7).
+In terms of effects on revenue and/or overall sales for restaurants during the intervention period, Figure \@ref(fig:reveffects) shows us that more restaurants within the treatment group saw decreases in revenue compared to the prior quarter (July 1 - Sep 30), while the control group's revenue largely remained the same. In addition to this, it shows that of those restaurants that saw a decrease in revenue, the treatment group saw the harshest declines in revenue during the intervention period. A Chi-Square test for whether the restaurant saw a decrease in revenue showed that restaurants in the treatment group were more likely to report a decrease in revenue *X*^2^ (2, *N* = 330) = 220.73, *p* < 2.2e-16. The percentage decrease in revenues also showed a significant relationship, where restaurants in the treatment group are most likely to report higher loss of revenue during the intervention period *X*^2^ (3, *N* = 330) = 178.33, *p* < 2.2e-16. Prior to the intervention period, it appears as though both groups had similar breakdowns of revenue coming from take-out and/or delivery (Figure 7).
 
-Questions related to the adjustments of the restaurants during the intervention, such as a menu price, and hours and days of operation (Figures 8-12) show us that:
-
-* Most of the restaurants in the control group did not make any alterations to their menu prices, while most restaurants in the intervention group either lowered or raised the menu price;
-* Most of the restaurants in the control group did not adjust their hours our days of operation, while most of the ones in the intervention group reduced their operating schedules.
-
-Pearson’s Chi-squared (*X*^2^) test was used to see if there is a statistically significant difference between the intervention and the adjustments of the restaurants. The test results show that the p-value of each of those adjustments is less than 0.001, meaning that there is a high correlation between those variables. Consequently, it is expected that restaurants will most likely adjust the menu price and reduce their operating schedule if they operate on a delivery and take-out only basis.
-
-
-
-
-
-## Figures
-
-### Sample Characteristics
-
-```{r Q10, echo = FALSE, message = FALSE, fig.cap = "The most used food courier service"}
-### Between Oct 1 and Dec 31, which food courier service did you receive the most orders from?
-### UberEats
-### SkiptheDishes 
-### DoorDash
-### Other
-### In-house delivery service
-### None
-ggplot(data = all_simulated_dataset, mapping = aes(x = Q11, fill = type)) +
-  geom_bar(position = "stack") + coord_flip() +
-  scale_x_discrete(limit = c("UberEats", "SkiptheDishes", "DoorDash", "In-house delivery service", "Other", "None")) +
-  labs(x = "Delivery Service",
-       y = "# of Restaurants",
-       title = "Food courier service popularity",
-       fill = "Condition") +
-  scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE)) + 
-  theme_fivethirtyeight()
-```
-
-### Effects of Intervention on Number of Employees
-
-```{r Q5Q6mean, echo = FALSE, message = FALSE}
-### Prior to (intervention start date), how many people did you employ?
-### How many people do you currently employ?
-t1 <-
-all_simulated_dataset %>%
-  group_by(type) %>%
-  summarise(prior_employees = mean(Q5, na.rm = TRUE, .groups = NULL))
-t2 <-
-all_simulated_dataset %>%
-  group_by(type) %>%
-  summarise(curr_employees = mean(Q6, na.rm = TRUE), .groups = NULL)
-total <- merge(t1, t2, by = c("type"))
-# kable(total,
-#       booktabs = T,
-#       digits = 3,
-#       col.names = c("Group Type",
-#                   "# of Employees Prior to Intervention",
-#                   "Current # of Employees")) %>%
-#       footnote(general = "Change in # of employees before and after intervention period (Q5 + Q6)") %>%
-#   kable_paper()
-  # This table could be excluded because the means will be displayed anyway in the following T-test table?
-```
 
 ### Effects of Intervention on Revenue
 
-```{r Q7, echo = FALSE, message = FALSE, fig.cap = "The changes of revenue between Oct 1 and Dec 31"}
+```{r Q7, echo = FALSE, message = FALSE}
 ### Between Oct 1 and Dec 31 was your total sales revenue higher, lower, or about the same as it was during the previous quarter (last quarter dates)? *
 ### Higher
 ### Lower
 ### Around the Same
-ggplot(data = all_simulated_dataset, mapping = aes(x = Q7, fill = type)) + 
+q7 <- ggplot(data = all_simulated_dataset, mapping = aes(x = Q7, fill = type)) + 
   geom_bar() +
   labs(x = "Revenue Change",
        y = "# of Restaurants",
-       title = "Revenue changes during the intervention",
+       title = "Revenue changes between Oct 1 and Dec 31",
        fill = "Condition") +
   theme_fivethirtyeight() + 
   scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE))
 
-```
-
-```{r, echo = FALSE, message = FALSE}
 ### Chi-squared test
 q7_chi <- table(all_simulated_dataset$Q7, all_simulated_dataset$type) %>%
   chisq.test()
-tableChisq("Pearson's Chi-squared test to examine the possibility of an association between the intervention and the total sales", q7_chi$statistic, q7_chi$parameter, q7_chi$p.value)
+#tableChisq("Pearson's Chi-squared test to examine the possibility of an association between the intervention and the total sales", q7_chi$statistic, q7_chi$parameter, q7_chi$p.value)
 ```
 
-
-```{r Q8, echo = FALSE, message = FALSE, fig.cap = "The percentage of total sales revenue decrease between Oct 1 and Dec 31"}
+```{r Q8, echo = FALSE, message = FALSE}
 ### What was the approximate percentage decrease in total sales revenue between Oct 1 and Dec 31 compared to the during the previous quarter (last quarter dates)? *
 ### Decline of 50% or more
 ### Decline of 25% to 50%
 ### Decline of 10% to 25%
 ### Decline of 10% or less
-ggplot(data = all_simulated_dataset, mapping = aes (x = Q8, fill = type)) +
+q8 <- ggplot(data = all_simulated_dataset, mapping = aes (x = Q8, fill = type)) +
   geom_bar(position = "stack") + coord_flip() +
   scale_x_discrete(limit = c("Decline of 50% or more", "Decline of 25% to 50%", "Decline of 10% to 25%", "Decline of 10% or less")) + 
   labs(x = "Aprrox. % Decrease in Total Sales Revenue",
        y = "# of Restaurants",
-       title = str_wrap("Percentage of total sales revenue decrease during the intervention", 40),
+       title = str_wrap("Percentage of total sales revenue decrease between Oct 1 and Dec 31", 40),
        fill = "Condition") +
   theme_fivethirtyeight() + 
   scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE))
 
-```
-
-```{r, echo = FALSE, message = FALSE}
 ### Chi-squared test
 q8_chi <- table(all_simulated_dataset$Q8, all_simulated_dataset$type) %>%
   chisq.test()
-tableChisq("Pearson's Chi-squared test to examine the relation between the intervention and the total sales and a decline in revenue", q8_chi$statistic, q8_chi$parameter, q8_chi$p.value)
+#tableChisq("Pearson's Chi-squared test to examine the relation between the intervention and the total sales and a decline in revenue", q8_chi$statistic, q8_chi$parameter, q8_chi$p.value)
 ```
 
-
-```{r Q9, echo = FALSE, message = FALSE, fig.cap = "The total revenue from takeout or delivery prior to Oct 1"}
+```{r Q9, echo = FALSE, message = FALSE}
 ### Before Oct 1st, approximately how much of your total monthly sales revenue came from takeout or delivery? *
 ### Did not offer takeout or delivery
 ### 25% or less
@@ -401,8 +335,7 @@ tableChisq("Pearson's Chi-squared test to examine the relation between the inter
 ### 50-75%
 ### 75% or more
  
-my_title = "Total revenue from takeout/delivery prior to the intervention"
-ggplot(data = all_simulated_dataset, mapping = aes (x = Q9, fill = type)) +
+q9 <- ggplot(data = all_simulated_dataset, mapping = aes (x = Q9, fill = type)) +
   geom_bar(position = "stack") +  coord_flip() + 
   scale_x_discrete(limit = c("Did not offer takeout or delivery", "25% or less", "25-50%", "50-75%", "75% or more")) + 
   labs(x = "Total Monthly Sales Revenue Fromt Takeout or Delivery",
@@ -413,98 +346,115 @@ ggplot(data = all_simulated_dataset, mapping = aes (x = Q9, fill = type)) +
   scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE))
 ```
 
-## Effects of Intervention on Menu Prices 
+```{r Q10, echo = FALSE, message = FALSE, fig.cap = "The most used food courier service"}
+### Between Oct 1 and Dec 31, which food courier service did you receive the most orders from?
+### UberEats
+### SkiptheDishes 
+### DoorDash
+### Other
+### In-house delivery service
+### None
+q10 <- ggplot(data = all_simulated_dataset, mapping = aes(x = Q11, fill = type)) +
+  geom_bar(position = "stack") + coord_flip() +
+  scale_x_discrete(limit = c("UberEats", "SkiptheDishes", "DoorDash", "In-house delivery service", "Other", "None")) +
+  labs(x = "Delivery Service",
+       y = "# of Restaurants",
+       title = "Food courier service popularity",
+       fill = "Condition") +
+  scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE)) + 
+  theme_fivethirtyeight()
+```
 
-```{r Q11, echo = FALSE, message = FALSE, fig.cap = "Price changes on the menu between Oct 1 and Dec 31"}
+```{r reveffects, fig.width=12, fig.height=8, echo = FALSE, message = FALSE, fig.cap="Effects on revenue as a result of intervention by condition"}
+grid.arrange(q7, q8, q9, q10)
+```
+
+Questions related to the adjustments of the restaurants during the intervention, such as a menu price, and hours and days of operation (Figure \@ref(fig:opseffects)) show us that:
+
+* Most of the restaurants in the control group did not make any alterations to their menu prices, while most restaurants in the intervention group either lowered or raised the menu price;
+* Most of the restaurants in the control group did not adjust their hours our days of operation, while most of the ones in the intervention group reduced their operating schedules.
+
+Pearson’s Chi-squared (*X*^2^) test was used to see if there is a statistically significant difference between the intervention and the adjustments of the restaurants. The test results show that the p-value of each of those adjustments is less than 0.001, meaning that there is a high correlation between those variables. Consequently, it is expected that restaurants will most likely adjust the menu price and reduce their operating schedule if they operate on a delivery and take-out only basis.
+
+```{r Q11, echo = FALSE, message = FALSE}
 ### Between (start date of intervention) and (end date of intervention), did you make any adjustments to your menu prices?
 ### Yes, prices were raised
 ### Yes, prices were lowered
 ### No changes were made
-ggplot(data = all_simulated_dataset, mapping = aes (x = Q10, fill = type)) +
+q11 <- ggplot(data = all_simulated_dataset, mapping = aes (x = Q10, fill = type)) +
   geom_bar() +  
   coord_flip() + 
   scale_x_discrete(limit = c("Yes, prices were raised", "Yes, prices were lowered", "No changes were made")) + 
   labs(x = "Adjustments to Menu Prices",
        y = "# of Restaurants",
-       title = str_wrap("Price adjustments during the intervention", 30),
+       title = str_wrap("Menu adjustments between Oct 1 and Dec 31", 30),
        fill = "Condition") +
   scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE)) +
   theme_fivethirtyeight()
-```
 
-```{r, echo = FALSE, message = FALSE}
 ### Chi-squared test
 q11_chi <- table(all_simulated_dataset$Q11, all_simulated_dataset$type) %>%
   chisq.test()
-tableChisq("Pearson's Chi-squared test to examine the association of the intervention with price adjustments", q11_chi$statistic, q11_chi$parameter, q11_chi$p.value)
+#tableChisq("Pearson's Chi-squared test to examine the association of the intervention with price adjustments", q11_chi$statistic, q11_chi$parameter, q11_chi$p.value)
 ```
 
-
-## Effects of Intervention on Hours/Days of Operation
-
-```{r Q12, echo = FALSE, message = FALSE, fig.cap = "Reduced operating hours between Oct 1 and Dec 31"}
+```{r Q12, echo = FALSE, message = FALSE}
 ### Between (start date of intervention) and (end date of intervention) did you reduce your ### restaurant’s hours of operation?
 ### Yes
 ### No
-ggplot(data = all_simulated_dataset, mapping = aes(x = Q12, fill = type)) +
+q12 <- ggplot(data = all_simulated_dataset, mapping = aes(x = Q12, fill = type)) +
   geom_bar(position = position_dodge(1)) +
   labs(x = "Reduction in hours of operation",
        y = "# of restaurants",
-       title = str_wrap("Reducton in operating hours during the intervention", 30),
+       title = str_wrap("Reducton in operating hours between Oct 1 and Dec 31", 30),
        fill = "Condition") +
   theme_fivethirtyeight() +
   scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE))
-```
 
-```{r, echo = FALSE, message = FALSE}
 ### Chi-squared test
 q12_chi <- table(all_simulated_dataset$Q12, all_simulated_dataset$type) %>%
   chisq.test()
-tableChisq("Pearson's Chi-squared Test for Q12", q12_chi$statistic, q12_chi$parameter, q12_chi$p.value)
+#tableChisq("Pearson's Chi-squared Test for Q12", q12_chi$statistic, q12_chi$parameter, q12_chi$p.value)
 ```
 
-
-```{r Q13, echo = FALSE, message = FALSE, fig.cap = "The percentage of operating hours reduced between Oct 1 and Dec 31"}
+```{r Q13, echo = FALSE, message = FALSE}
 ### If yes, approximately how many hours per week did you reduce by
 ### 15% or less
 ### 15-30%
 ### 30-50%
 ### 50-75%
 ### 75% or more
-ggplot(data = all_simulated_dataset, mapping = aes(x = Q13, fill = type)) +
+q13 <- ggplot(data = all_simulated_dataset, mapping = aes(x = Q13, fill = type)) +
   geom_bar(position = "stack") +
   labs(x = "Hours Reduced per Week",
        y = "# of Restaurants",
-       title = str_wrap("Percentage of reduced operating hours during the intervention", 30),
+       title = str_wrap("Percentage of hours reduced between Oct 1 and Dec 31", 30),
        fill = "Condition") +
   scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE)) +
   theme_fivethirtyeight()
 ```
 
-```{r Q14, echo = FALSE, message = FALSE, fig.cap = "Operating days reduced between Oct 1 and Dec 31"}
+```{r Q14, echo = FALSE, message = FALSE}
 ### Between (start date of intervention) and (end date of intervention) did you reduce the 
 ### number of days your restaurant was open to the public?
 ### Yes
 ### No 
-ggplot(data = all_simulated_dataset, mapping = aes(x = Q14, fill = type)) +
+q14 <- ggplot(data = all_simulated_dataset, mapping = aes(x = Q14, fill = type)) +
   geom_bar(position = position_dodge(1)) +
   labs(x = "Reduction in Days of Operation",
        y = "# of Restaurants",
-       title = str_wrap("Operating days reduced during the intervention", 30),
+       title = str_wrap("Reduction of operating days between Oct 1 and Dec 31", 30),
        fill = "Condition") +
   scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE)) +
   theme_fivethirtyeight()
-```
 
-```{r, echo = FALSE, message = FALSE}
 ### Chi-squared test
 q14_chi <- table(all_simulated_dataset$Q14, all_simulated_dataset$type) %>%
   chisq.test()
-tableChisq("Pearson's Chi-squared Test for Q14", q14_chi$statistic, q14_chi$parameter, q14_chi$p.value)
+#tableChisq("Pearson's Chi-squared Test for Q14", q14_chi$statistic, q14_chi$parameter, q14_chi$p.value)
 ```
 
-
-```{r Q15, echo = FALSE, message = FALSE, fig.cap = "The percentage of operating days reduced between Oct 1 and Dec 31"}
+```{r Q15, echo = FALSE, message = FALSE}
 ### If yes, how many days per week did you reduce by?
 ### 1-2 days
 ### 3-4 days
@@ -512,17 +462,21 @@ tableChisq("Pearson's Chi-squared Test for Q14", q14_chi$statistic, q14_chi$para
 ### 7 days
 ### Not Applicable
 ### bar graph/pie chart/line
-ggplot(data = all_simulated_dataset, mapping = aes(x = Q15, fill = type)) +
+q15 <- ggplot(data = all_simulated_dataset, mapping = aes(x = Q15, fill = type)) +
   geom_bar(position = "stack") +
   labs(x = "Days Reduced",
        y = "# of Restaurants",
-       title = "Percentage of reduced operating days during the intervention",
+       title = "Reduction in days of operation per week",
        fill = "Condition") +
     scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE)) +
   theme_fivethirtyeight()
 ```
 
-```{r Q16, echo = FALSE, message = FALSE, fig.cap = "Funding applications during the intervention"}
+```{r opseffects, fig.width=11.5, fig.height=10, echo = FALSE, message = FALSE, fig.cap="Effects on hours and days of operation as a result of intervention by condition"}
+grid.arrange(q11, q12, q13, q14, q15)
+```
+
+```{r Q16, echo = FALSE, message = FALSE}
 ### Have you applied for and received any external funding or grants for your restaurant since (intervention start date)?
 ### Yes
 ### No
@@ -530,7 +484,7 @@ ggplot(data = all_simulated_dataset, mapping = aes(x = Q16, fill = type)) +
   geom_bar(position = position_dodge(1)) +
   labs(x = "Application status",
        y = "# of restaurants",
-       title = str_wrap("Funding applications between Oct 1 and Dec 31", 30),
+       title = str_wrap("Funding Applications between Oct 1 and Dec 31", 30),
        fill = "Condition") +
   theme_fivethirtyeight() +
   scale_fill_tableau(labels = c("Control", "Intervention"), guide = guide_legend(reverse = TRUE))
