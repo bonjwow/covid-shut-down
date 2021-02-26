@@ -282,9 +282,6 @@ t_tests %>%
 
 In terms of effects on revenue and/or overall sales for restaurants during the intervention period, Figure \@ref(fig:reveffects) shows us that more restaurants within the treatment group saw decreases in revenue compared to the prior quarter (July 1 - Sep 30), while the control group's revenue largely remained the same. In addition to this, it shows that of those restaurants that saw a decrease in revenue, the treatment group saw the harshest declines in revenue during the intervention period. A Chi-Square test for whether the restaurant saw a decrease in revenue showed that restaurants in the treatment group were more likely to report a decrease in revenue *X*^2^ (2, *N* = 330) = 220.73, *p* < 2.2e-16. The percentage decrease in revenues also showed a significant relationship, where restaurants in the treatment group are most likely to report higher loss of revenue during the intervention period *X*^2^ (3, *N* = 330) = 178.33, *p* < 2.2e-16. Prior to the intervention period, it appears as though both groups had similar breakdowns of revenue coming from take-out and/or delivery (Figure 7).
 
-
-### Effects of Intervention on Revenue
-
 ```{r Q7, echo = FALSE, message = FALSE}
 ### Between Oct 1 and Dec 31 was your total sales revenue higher, lower, or about the same as it was during the previous quarter (last quarter dates)? *
 ### Higher
