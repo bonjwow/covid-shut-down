@@ -25,6 +25,7 @@ The purpose of this project was to examine the effects shutting down indoor dini
 2. Run `00-import_business_licences.R` in the `scripts` folder to obtain the most updated data from Open Data Portal
 3. Run `01-data_cleaning_business_licences.R` to clean the dataset
 4. Run `02-simulated_data.R` to create simulated sample dataset
+5. Knit `paper.Rmd` in the `paper` folder to update `paper.pdf`
 
 ## License
 Distributed under the MIT License. See `LICENSE` for more information.

@@ -261,7 +261,11 @@ ggplot(data = all_simulated_dataset, mapping = aes(x = Q11, fill = type)) +
 ```
 
 
+<<<<<<< HEAD
 Table \@ref(tab:Q5Q6tTest) displays changes in the numbers of employees working at restaurants in the sample prior to the intervention period (Oct 1) and following the intervention period (Dec 31). This shows us that initially, both the control and treatment group had a very similar number of employees on average. Following the intervention period, however, the treatment group appears to have 10.26 fewer employees on average. Two-tailed Welch's t-tests comparing the two groups' mean employees shows that the difference prior to the intervention period is not a significant finding \newline(*t*(330) = -8.56, *p* > .05), but the difference in employee numbers between the two groups post-intervention is significant(*t*(330) = 19.46, *p* < .05). This suggests shutting down indoor dining resulted in restaurants having to either let go employees, or employees chose to leave. These results do not indicate the position of the employees who were no longer at the restaurant at the end of the intervention, but we might assume many of the employees who left the restaurant during the study period were customer facing staff, such as waiters, whose full services were no longer required after indoor dining was shutdown.  
+=======
+Table \@ref(tab:Q5Q6tTest) displays changes in the numbers of employees working at restaurants in the sample prior to the intervention period (Oct 1) and following the intervention period (Dec 31). This shows us that initially, both the control and treatment group had a very similar number of employees on average. Following the intervention period, however, the treatment group appears to have 10.26 fewer employees on average. Two-tailed Welch's t-tests comparing the two groups' mean employees shows that the difference prior to the intervention period is not a significant finding \newline(*t*(330) = -8.56, *p* > .05), but the difference in employee numbers between the two groups post-intervention is significant(*t*(330) = 19.46, *p* < .05).
+>>>>>>> e20f891dd53f7040f646e4223fbbe4bbec2103b5
 
 
 ```{r Q5Q6tTest, echo = FALSE, message = FALSE, tab.post = "H"}
@@ -391,7 +395,11 @@ Questions related to the adjustments of the restaurants during the intervention,
 * For restaurants who reduced their hours of operation, most restaurants reduced their hours by 15%-30%, followed by 30%-50%; and
 * Most restaurants who reduced their days of operation did so by 1-2 days.
 
+<<<<<<< HEAD
 Pearson’s Chi-squared (*X*^2^) tests were conducted to see if there is a statistically significant difference between responses regarding restaurant adjustments in the intervention and control conditions. The test results show that the p-value of each of those adjustments is less than 0.001, meaning there is a significant relationship between condition (whether or not indoor dining services were shut down or not) and adjustments made to menu prices, hours of operation, and days of operations. That is, restaurants in the intervention condition were more likely to change their menu prices and reduce their operational hours and days. 
+=======
+Pearson’s Chi-squared (*X*^2^) tests were conducted to see if there is a statistically significant difference between responses regarding restaurant adjustments in the intervention and control conditions. The test results show that the p-value of each of those adjustments is less than .001, meaning there is a significant relationship between condition (whether or not indoor dining services were shut down or not) and adjustments made to menu prices, hours of operation, and days of operations. That is, restaurants in the intervention condition were more likely to change their menu prices and reduce their operational hours and days. 
+>>>>>>> e20f891dd53f7040f646e4223fbbe4bbec2103b5
 
 These results suggest restaurants in the intervention condition who had to shutdown their indoor dining services had to make several changes to their business practices to account for the circumstances of the intervention and the loss of revenue which previously came from indoor dining. For instance, menu prices might have been lowered to entice more customers, and opening hours and days may have been reduced to help save on operational costs. However, this information does not tell us when exactly these adjustments were made, only that they occurred at some point in the intervention period. This means we cannot tell if restaurants made these changes early on in the study as a precautionary measure, or if the changes were made later in the study period as a reactionary measure to make up for losses the restaurants had been experiencing as a result of the intervention. 
 
