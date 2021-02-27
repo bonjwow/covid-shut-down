@@ -554,29 +554,29 @@ Based on the limitations identified above, we have several suggestions for how o
 
 # Appendix {-}
 
-## Survey
+## Survey {-}
 
 Figure \@ref(fig:survey1) and Figure \@ref(fig:survey2) display screenshots of the Google Forms Survey e-mailed to restaurants in the intervention and control groups. The survey can be accessed [here]("https://forms.gle/hLPNhyjBCXxGiDPz5").
 
-```{r survey1, echo = FALSE, message = FALSE, fig.cap = "Screenshot of Google Forms Survey Questions 1-8", out.width="90%"}
+```{r survey1, echo = FALSE, message = FALSE, fig.cap = "Screenshot of Google Forms Survey Questions 1-8", out.width="95%"}
 knitr::include_graphics("survey/01.png")
 ```
 
-```{r survey2, echo = FALSE, message = FALSE, fig.cap="Screenshot of Google Forms Survey Questions 9-16", out.width="90%"}
+```{r survey2, echo = FALSE, message = FALSE, fig.cap="Screenshot of Google Forms Survey Questions 9-16", out.width="95%"}
 knitr::include_graphics("survey/02.png")
 ```
 
 \newpage
 
-## Funding Acknowledgement
+## Funding Acknowledgement {-}
 
 We would like to thank the Ontario Government for generously providing Petit Poll with $240,000 CAD in funding to carry out this study. The funding was used to provide compensation to restaurants for participating in the intervention. A sample size of 200 for the intervention condition was selected based on this amount, in which each restaurant who participated in the intervention received $1,200. A total of 150 restaurants participated in the intervention and received payment, making the total amount of funding spent during the study $180,000 CAD
 
-## Packages
+## Packages {-}
 
 This subsection lists the R packages used in the making of this report.
 
-### General data cleaning and analysis
+### General data cleaning and analysis {-}
 
 * `tidyverse` [@tidy]
 * `dplyr` [@dplyr]
@@ -585,23 +585,23 @@ This subsection lists the R packages used in the making of this report.
 * `broom` [@broom]
 
 
-### Figures
+### Figures {-}
 
 * `ggplot2` [@ggplot]
 * `ggthemes` - Themes and colour palettes used in Figure 2 onwards [@ggthemes]
 * `LaCroixColoR` - Colour palette used for Figure 1 [@lacroix]
 
-### Tables
+### Tables {-}
 
 * `kableExtra` [@kable]
 
-### RMarkdown Report
+### RMarkdown Report {-}
 
 * `knitr` [@knitr]
 * `bookdown` [@bookdown]
 * `tinytex` [@tinytex]
 
-### Other
+### Other {-}
 
 * `opendatatoronto` [@opendatatoronto]
 * We attempted to use this package to obtain the business licensing dataset used for sampling, however due to an unknown error on the publisher's end, we were unable to access it via the package. 
