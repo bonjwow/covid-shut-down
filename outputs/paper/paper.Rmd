@@ -85,10 +85,6 @@ Toronto is a cluster of diverse communities with many different aspects that mak
 As data scientists for Petit Poll, we narrowed down our test to restaurants in the city of Toronto as it condenses our test results into one precise area within Ontario. By using a business licensing dataset obtained from the Toronto Open Data Portal [@todp2021], we were able to obtain information on all restaurants in the city. Since eating establishments have been impacted by COVID-19 in the past year, to which there have been irregular restrictions on the businesses, we believed this characteristic was best suited for this study. In Toronto, pandemic restrictions likely had an impact on customers’ dining behaviours, as they were forced to order restaurant food for take-out and delivery only. Now that restaurants are able to open up their full services again, will customers' dining habits shift as they have become accustomed to the convenience of food delivery? Exploring how shutting down indoor dining services again after they have just reopened may affect performance such as revenue can also provide insights on Torontonians’ dining habits and preferences in these regards. 
  
 This study was conducted for three months, from October 1st to December 31st, 2020 where we studied the comparison between a control group and an intervention group. The intervention group had to partake in the study by their business as a take-out and delivery only restaurant, while the control group remained fully operational with indoor dining services available. This was done intentionally to maintain the integrity of the study by studying the differences between restaurants that closed their indoor dining services and the ones that did not. Survey data was collected via Google Forms to measure the effects of the intervention on restaurant’s employee numbers and revenue, and if changes were made in menu prices and operation days and hours during the intervention period. Responses were processed and analyzed in R [@citeR], and a complete list of packages and their usages can be found in the Appendix. Based on survey responses, it was revealed that most restaurants in the intervention group who shut down their indoor dining services experienced a decrease in their total sales revenue compared to the previous quarter, with many reporting an overall decline of 50% or more. During the study period, restaurants in the intervention group made several changes to their restaurant practices to account for these changes such as reducing the number of employees, adjusting their menu prices, and reducing their hours and days of operation. Meanwhile, the restaurants in the control group who continued operating at full capacity remained relatively stable in terms of their revenue, and did not make any significant changes to their employee counts, menu prices, or operational periods. This suggests that shutdowns of indoor dining practices due to COVID-19 have large implications on restaurant performance, where the revenue, hours and days of operation, and menu prices all get impacted to adjust to deviations from the restaurant’s original business model.
-```{r}
-
-```
-
 
 # Data
 
@@ -235,12 +231,12 @@ q4 <- ggplot(data = all_simulated_dataset, mapping = aes (x = Q4, fill = type)) 
   theme(title=element_text(size=9))
 ```
 
-```{r samplechar, fig.width=9, fig.height=7, echo = FALSE, message = FALSE, fig.cap="Sample Characteristics of Restaurants by Condition"}
+```{r samplechar, fig.width=8.5, fig.height=7, echo = FALSE, message = FALSE, fig.cap="Sample Characteristics of Restaurants by Condition"}
 #combining plots for q1-4
 grid.arrange(q1, q2, q3, q4)
 ```
 
-```{r Q10, echo = FALSE, message = FALSE, fig.cap = "Food Courier Service Restaurants Received the Most Orders From During Study Period", fig.width=5, fig.height=3.5}
+```{r Q10, echo = FALSE, message = FALSE, fig.cap = "Food Courier Service Restaurants Received the Most Orders From During Study Period", fig.width=5, fig.height=3}
 ### Between Oct 1 and Dec 31, which food courier service did you receive the most orders from?
 ### UberEats
 ### SkiptheDishes 
@@ -261,11 +257,9 @@ ggplot(data = all_simulated_dataset, mapping = aes(x = Q11, fill = type)) +
 ```
 
 
-<<<<<<< HEAD
 Table \@ref(tab:Q5Q6tTest) displays changes in the numbers of employees working at restaurants in the sample prior to the intervention period (Oct 1) and following the intervention period (Dec 31). This shows us that initially, both the control and treatment group had a very similar number of employees on average. Following the intervention period, however, the treatment group appears to have 10.26 fewer employees on average. Two-tailed Welch's t-tests comparing the two groups' mean employees shows that the difference prior to the intervention period is not a significant finding \newline(*t*(330) = -8.56, *p* > .05), but the difference in employee numbers between the two groups post-intervention is significant(*t*(330) = 19.46, *p* < .05). This suggests shutting down indoor dining resulted in restaurants having to either let go employees, or employees chose to leave. These results do not indicate the position of the employees who were no longer at the restaurant at the end of the intervention, but we might assume many of the employees who left the restaurant during the study period were customer facing staff, such as waiters, whose full services were no longer required after indoor dining was shutdown.  
-=======
+
 Table \@ref(tab:Q5Q6tTest) displays changes in the numbers of employees working at restaurants in the sample prior to the intervention period (Oct 1) and following the intervention period (Dec 31). This shows us that initially, both the control and treatment group had a very similar number of employees on average. Following the intervention period, however, the treatment group appears to have 10.26 fewer employees on average. Two-tailed Welch's t-tests comparing the two groups' mean employees shows that the difference prior to the intervention period is not a significant finding \newline(*t*(330) = -8.56, *p* > .05), but the difference in employee numbers between the two groups post-intervention is significant(*t*(330) = 19.46, *p* < .05).
->>>>>>> e20f891dd53f7040f646e4223fbbe4bbec2103b5
 
 
 ```{r Q5Q6tTest, echo = FALSE, message = FALSE, tab.post = "H"}
@@ -316,7 +310,7 @@ t_tests %>%
   kable_styling(full_width = F, latex_options = "HOLD_position") 
 ```
 
-In terms of effects on revenue for restaurants during the intervention period, Figure \@ref(fig:reveffects) shows us that more restaurants within the treatment group saw decreases in revenue compared to the prior quarterly revenue in which they were offering their full services (July 1 - Sep 30), while the control group's revenue largely remained the same compared to their previous quarterly revenue. In addition to this, for restaurants that saw a decrease in revenue, the intervention group saw the harshest declines (declines of around 50%) in revenue during the intervention period. A Chi-Square test for whether the restaurant saw a decrease in revenue showed that restaurants in the treatment group were more likely to report a decrease in revenue *X*^2^ (2, *N* = 330) = 220.73, *p* < 2.2e-16. The percentage decrease in revenues also showed a significant relationship, where restaurants in the treatment group are most likely to report higher loss of revenue during the intervention period *X*^2^ (3, *N* = 330) = 178.33, *p* < 2.2e-16. Prior to the intervention period, it appears as though both groups had similar breakdowns of revenue which came from take-out and/or delivery as shown in Figure \@ref(fig:Q9). 
+Regarding revenue for restaurants during the intervention period, Figure \@ref(fig:reveffects) shows us that more restaurants within the intervention group saw decreases in revenue compared to the prior quarterly revenue in which they were offering their full services (July 1 - Sep 30), while the control group's revenue largely remained the same compared to their previous quarterly revenue. In addition to this, for restaurants that saw a decrease in revenue, the intervention group saw the harshest declines (declines of around 50%) in revenue during the intervention period. A Chi-Square test for whether the restaurant saw a decrease in revenue showed that restaurants in the treatment group were more likely to report a decrease in revenue *X*^2^ (2, *N* = 330) = 220.73, *p* < 2.2e-16. The percentage decrease in revenues also showed a significant relationship, where restaurants in the treatment group are most likely to report higher loss of revenue during the intervention period *X*^2^ (3, *N* = 330) = 178.33, *p* < 2.2e-16. Prior to the intervention period, it appears as though both groups had similar breakdowns of revenue which came from take-out and/or delivery as shown in Figure \@ref(fig:Q9). 
 
 ```{r Q7, echo = FALSE, message = FALSE}
 ### Between Oct 1 and Dec 31 was your total sales revenue higher, lower, or about the same as it was during the previous quarter (last quarter dates)? *
@@ -362,7 +356,7 @@ q8_chi <- table(all_simulated_dataset$Q8, all_simulated_dataset$type) %>%
 #tableChisq("Pearson's Chi-squared test to examine the relation between the intervention and the total sales and a decline in revenue", q8_chi$statistic, q8_chi$parameter, q8_chi$p.value)
 ```
 
-```{r reveffects, echo = FALSE, message = FALSE, fig.height=5.5, fig.width=5, fig.cap="Changes in Revenue During Intervention Period Compared to the Previous Quarter"}
+```{r reveffects, echo = FALSE, message = FALSE, fig.height=4.7, fig.width=5, fig.cap="Changes in Revenue During Intervention Period Compared to the Previous Quarter"}
 grid.arrange(q7, q8)
 ```
 
@@ -386,8 +380,6 @@ ggplot(data = all_simulated_dataset, mapping = aes (x = Q9, fill = type)) +
   theme(title=element_text(size=8))
 ```
 
-\newpage
-
 Questions related to the adjustments of the restaurants during the intervention, such as a menu price, and hours and days of operation (Figures \@ref(fig:Q11), \@ref(fig:opshourseffects), and \@ref(fig:opsdayseffects)) show us that:
 
 * Most of the restaurants in the control group did not make any alterations to their menu prices, while most restaurants in the intervention group made alterations by raising or lowering prices, more of which chose to reduce their menu prices;
@@ -395,16 +387,15 @@ Questions related to the adjustments of the restaurants during the intervention,
 * For restaurants who reduced their hours of operation, most restaurants reduced their hours by 15%-30%, followed by 30%-50%; and
 * Most restaurants who reduced their days of operation did so by 1-2 days.
 
-<<<<<<< HEAD
 Pearson’s Chi-squared (*X*^2^) tests were conducted to see if there is a statistically significant difference between responses regarding restaurant adjustments in the intervention and control conditions. The test results show that the p-value of each of those adjustments is less than 0.001, meaning there is a significant relationship between condition (whether or not indoor dining services were shut down or not) and adjustments made to menu prices, hours of operation, and days of operations. That is, restaurants in the intervention condition were more likely to change their menu prices and reduce their operational hours and days. 
-=======
+
 Pearson’s Chi-squared (*X*^2^) tests were conducted to see if there is a statistically significant difference between responses regarding restaurant adjustments in the intervention and control conditions. The test results show that the p-value of each of those adjustments is less than .001, meaning there is a significant relationship between condition (whether or not indoor dining services were shut down or not) and adjustments made to menu prices, hours of operation, and days of operations. That is, restaurants in the intervention condition were more likely to change their menu prices and reduce their operational hours and days. 
->>>>>>> e20f891dd53f7040f646e4223fbbe4bbec2103b5
+
 
 These results suggest restaurants in the intervention condition who had to shutdown their indoor dining services had to make several changes to their business practices to account for the circumstances of the intervention and the loss of revenue which previously came from indoor dining. For instance, menu prices might have been lowered to entice more customers, and opening hours and days may have been reduced to help save on operational costs. However, this information does not tell us when exactly these adjustments were made, only that they occurred at some point in the intervention period. This means we cannot tell if restaurants made these changes early on in the study as a precautionary measure, or if the changes were made later in the study period as a reactionary measure to make up for losses the restaurants had been experiencing as a result of the intervention. 
 
 
-```{r Q11, fig.height = 3.5, fig.width = 5, echo = FALSE, message = FALSE, fig.cap = "Adjustments Made to Menu Prices During the Intervention Period"}
+```{r Q11, fig.height = 3, fig.width = 5, echo = FALSE, message = FALSE, fig.cap = "Adjustments Made to Menu Prices During the Intervention Period"}
 ### Between (start date of intervention) and (end date of intervention), did you make any adjustments to your menu prices?
 ### Yes, prices were raised
 ### Yes, prices were lowered
@@ -505,11 +496,11 @@ q15 <- ggplot(data = all_simulated_dataset, mapping = aes(x = Q15, fill = type))
   theme(title=element_text(size=9))
 ```
 
-```{r opshourseffects, fig.height=3.5, fig.width=8, echo = FALSE, message = FALSE, fig.cap="Effects on Hours of Operation During Intervention Period by Condition"}
+```{r opshourseffects, fig.height=3.3, fig.width=8, echo = FALSE, message = FALSE, fig.cap="Effects on Hours of Operation During Intervention Period by Condition"}
 grid.arrange(q12, q13, ncol = 2)
 ```
 
-```{r opsdayseffects, fig.height=3.5, fig.width=8, echo = FALSE, message = FALSE, fig.cap="Effects on Days of Operation During Intervention Period by Condition"}
+```{r opsdayseffects, fig.height=3.3, fig.width=8, echo = FALSE, message = FALSE, fig.cap="Effects on Days of Operation During Intervention Period by Condition"}
 grid.arrange(q14, q15, ncol = 2)
 ```
 
